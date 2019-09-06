@@ -10,10 +10,12 @@ This repo contains all files for the XYZ style. Each branch of this repo represe
 
 <h2 align="center">Current Branches</h2>
 
-<h4 align="center" href="tree/base">Base</h4>
+<h4 align="center">Master</h4>
+
 This is the main version of XYZ. Other branches of XYZ are built from this one.
 
 <h4 align="center" href="tree/jekyll">Jekyll</h4>
+
 This is designed to work with Jekyll powered webpages. More information on setting this theme can be found on the README for that branch
- 
+
 <h2 align="center">Style Rules</h2>

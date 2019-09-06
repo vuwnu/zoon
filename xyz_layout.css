@@ -1,0 +1,34 @@
+.xyz__header {
+	grid-area: header;
+	border-bottom: 4px double var(--border-color);
+  background: black;
+}
+.xyz__main {
+	grid-area: main;
+	font-size: 1.5em;
+	padding: 0 3vw;
+	display: grid;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.xyz__extra {
+	grid-area: extra;
+	padding: 0 3vw;
+}
+.xyz__footer {
+	grid-area: footer;
+	font-size: 1em;
+	border-top: 4px double var(--border-color);
+  background: black;
+}
+
+.xyz {
+	min-height: 100vh;
+	display: grid;
+	grid-gap: 5px;
+	grid: [row1-start] "header" 60px [row1-end]
+				[row2-start] "extra" 50px  [row2-end]
+			  [row3-start] "main" 1fr 	 [row3-end]
+			  [row4-start] "footer" 50px [row4-end]
+			  / 100%
+}

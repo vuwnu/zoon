@@ -1,0 +1,92 @@
+.ts.rb {
+  color: red;
+}
+
+/* This is the styling for JADE */
+.jade {
+  position: sticky;
+  z-index: 1;
+  transform: scale(.9)
+}
+
+.eye {
+  cursor: pointer;
+  transition: transform 1s ease;
+  transform: scale(.9);
+  animation: 2s infinite ease-out;
+  stroke: darkslategrey;
+  stroke-width: 0;
+  fill: url(#RadialGradient1);
+}
+
+.eye:hover {
+  transform: scale(1.1)
+}
+
+@keyframes glow {
+  0% {
+    transform: scaleX(.9) scaleY(1.1);
+  }
+
+  25% {
+    transform: scaleX(1) scaleY(.8);
+  }
+
+  50% {
+    transform: scaleX(1.1) scaleY(.9);
+  }
+
+  75% {
+    transform: scaleX(1.2) scaleY(1);
+  }
+
+  100% {
+    transform: scaleX(.9) scaleY(1.1);
+  }
+}
+
+.outerhex {
+  transform: scale(.9);
+  animation: outer 5s infinite;
+  fill: rgb(7, 7, 7);
+  stroke-width: 5px;
+  stroke: #1f0;
+  filter: drop-shadow(rgba(0, 255, 0, 1) 5px 5px 5px);
+}
+
+.innerhex {
+  transform: scale(.8);
+  animation: inner 5s infinite linear;
+  fill: black;
+  stroke-width: 5px;
+  stroke: #1f0;
+  filter: drop-shadow(rgba(0, 255, 0, 1) 0 0 50px);
+}
+
+@keyframes inner {
+  0% {
+    transform: scale(.6) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(.8) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(.6) rotate(360deg);
+  }
+}
+
+@keyframes outer {
+  0% {
+    transform: scale(.9) rotate(30deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(-60deg);
+  }
+
+  100% {
+    transform: scale(.9) rotate(30deg);
+  }
+}

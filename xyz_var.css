@@ -1,0 +1,36 @@
+/* Variables */
+:root {
+
+  /************
+   *  Colors  *
+   ************/
+  --primary-color: lime;
+
+  --secondary-color: limegreen;
+
+  --border-color: #32cd32;
+
+  --background-color: #333;
+
+  --foreground-color: #000;
+
+  /***********
+   *  Fonts  *
+   ***********/
+  --header-font: 'EXEPixelPerfect', monospace;
+
+  --primary-font: 'EXEPixelPerfect', monospace;
+
+  --button-font: 'VT323', monospace;
+
+  --font-size: var(--responsive-font-size);
+
+
+
+}
+
+/* Color Pallete
+
+#17ff00
+
+#1cbdae*/
