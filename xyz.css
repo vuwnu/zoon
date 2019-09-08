@@ -1,8 +1,23 @@
 @charset 'UTF-8';
-@import 'xyz_fonts.css';
-@import 'xyz_layout.css';
-@import 'xyz_var.css';
-@import 'xyz_fun.css';
+/************  START IMPORTS  ************/
+
+/**********
+ *  Core  *
+ **********/
+@import 'core/xyz_fonts.css';
+@import 'core/xyz_layout.css';
+
+/*************
+ *  Modules  *
+ *************/
+@import 'modules/xyz_fun.css';
+
+/***********
+ *  Theme  *
+ ***********/
+@import 'themes/green.css';
+
+/************  END IMPORTS  ************/
 
 /****************
  *  Background  *
@@ -13,7 +28,7 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background: #333  url("/img/bg/1.jpg");
+  background: #333  url("img/1.jpg");
   filter: blur(1px) hue-rotate(90deg);
 }
 
@@ -113,12 +128,18 @@ a.red {
   background: limegreen;
 }
 
+/****************
+ *  Containers  *
+ ****************/
+
+
 
 /***********
  *  Extra  *
  ***********/
 .xyz__extra div {
   padding: 5px;
+  font-size: 2em;
 }
 
 /**********
