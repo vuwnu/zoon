@@ -5,6 +5,7 @@
  *  Core  *
  **********/
 @import 'core/xyz_fonts.css';
+@import 'core/xyz_config.css';
 @import 'core/xyz_layout.css';
 
 /*************
@@ -22,14 +23,13 @@
 /****************
  *  Background  *
  ****************/
-.vbg {
+.bg {
   position: absolute;
   z-index: -1;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background: #333  url("img/1.jpg");
-  filter: blur(1px) hue-rotate(90deg);
+  background: #333;
 }
 
 html,
@@ -46,6 +46,10 @@ body {
 /*************
  *  V Style  *
  *************/
+
+/************
+ *  Border  *
+ ************/
 .v {
   font-family: var(--primary-font);
   text-align: center;
@@ -199,4 +203,36 @@ a.red {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: limegreen;
+}
+
+/*******************
+ *  Media Queries  *
+ *******************/
+
+@media screen and (max-width: 450px) {
+	.xyz {
+		grid: [row1-start] "header" 60px [row1-end]
+					[row2-start] "extra" 50px  [row2-end]
+				  [row3-start] "main" 1fr 	 [row3-end]
+				  [row4-start] "footer" 50px [row4-end]
+				  / 100%
+	}
+	.xyz__main {
+		font-size: 1.5em;
+	}
+	.xyz__header nav {
+	  margin: 10px;
+	}
+	.xyz__footer {
+		font-size: .8em;
+	}
+	.xyz__header .menu {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.xyz__header nav {
+	  font-size: 1.5em;
+	}
 }

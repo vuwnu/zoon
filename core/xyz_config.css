@@ -1,4 +1,8 @@
-/* Variables */
+@charset 'UTF-8';
+
+/***************
+ *  Variables  *
+ ***************/
 :root {
 
   /************
@@ -14,23 +18,26 @@
 
   --foreground-color: #000;
 
+  /************
+   *  Images  *
+   ************/
+
+   --background-image: url();
+
   /***********
    *  Fonts  *
    ***********/
-  --header-font: 'EXEPixelPerfect', monospace;
 
-  --primary-font: 'EXEPixelPerfect', monospace;
+  --header-font: Verdana, Geneva, sans-serif;
 
-  --button-font: 'VT323', monospace;
+  --primary-font: Arial, Helvetica, sans-serif;
+
+  --button-font: Tahoma, Geneva, sans-serif;
 
   --font-size: var(--responsive-font-size);
 
-
-
 }
 
-/* Color Pallete
-
-#17ff00
-
-#1cbdae*/
+/***************
+ *  Font-Face  *
+ ***************/
