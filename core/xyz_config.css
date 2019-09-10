@@ -4,40 +4,46 @@
  *  Variables  *
  ***************/
 :root {
+  /******************
+   *  Core Control  *
+   ******************/
+  --theme-set: var(--theme1);
+  /************
+   *  Themes  *
+   ************/
+  --primary-color:
+  --secondary-color:
+  --tertiary-color:
 
+  --inner-border-color:
+  --outer-border-color:
   /************
    *  Colors  *
    ************/
-  --primary-color: lime;
-
-  --secondary-color: limegreen;
-
-  --border-color: #32cd32;
-
-  --background-color: #333;
-
-  --foreground-color: #000;
-
+  --C1: lime;
+  --C2: gray;
+  --C3: #32cd32;
+  --C4: #333;
+  --C5: lime;
+  --C6: limegreen;
+  --C7: #32cd32;
+  --C8: #333;
   /************
    *  Images  *
    ************/
-
-   --background-image: url();
-
+  --background-image: url();
   /***********
    *  Fonts  *
    ***********/
-
-  --header-font: Verdana, Geneva, sans-serif;
-
-  --primary-font: Arial, Helvetica, sans-serif;
-
-  --button-font: Tahoma, Geneva, sans-serif;
-
+  --F1: Verdana, Geneva, sans-serif;
+  --F2: Arial, Helvetica, sans-serif;
+  --F3: Tahoma, Geneva, sans-serif;
   --font-size: var(--responsive-font-size);
-
 }
 
 /***************
  *  Font-Face  *
  ***************/
+/************
+ *  Custom  *
+ ************/
