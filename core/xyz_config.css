@@ -8,15 +8,16 @@
    *  Core Control  *
    ******************/
   --theme-set: var(--theme1);
-  /************
-   *  Themes  *
-   ************/
-  --primary-color:
-  --secondary-color:
-  --tertiary-color:
+  /****************
+   *  Main Theme  *
+   ****************/
+  --primary-color: green;
+  --secondary-color: lime;
+  --tertiary-color: limegreen;
+  --background-color: grey;
 
-  --inner-border-color:
-  --outer-border-color:
+  --inner-border-color: lime ;
+  --outer-border-color: green;
   /************
    *  Colors  *
    ************/
@@ -28,6 +29,12 @@
   --C6: limegreen;
   --C7: #32cd32;
   --C8: #333;
+  /***************
+   *  Font Size  *
+   ***************/
+  --small: .8em;
+  --medium: 1.1em;
+  --large: 1.4em;
   /************
    *  Images  *
    ************/
