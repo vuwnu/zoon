@@ -1,25 +1,24 @@
 .xyz__header {
 	grid-area: header;
-	border-bottom: 4px double var(--border-color);
-  background: black;
+	border-bottom: 4px double var(--outer-border-color);
+  background: var(--background-color);
 }
 .xyz__main {
 	grid-area: main;
-	font-size: 1.5em;
-	padding: 0 3vw;
-	display: grid;
+	font-size: 1.3em;
 	max-width: 900px;
+	display: grid;
 	margin: 0 auto;
 }
 .xyz__extra {
 	grid-area: extra;
-	padding: 0 3vw;
+	display: grid;
 }
 .xyz__footer {
 	grid-area: footer;
-	font-size: 1em;
-	border-top: 4px double var(--border-color);
-  background: black;
+	font-size: 1.1em;
+	border-top: 4px double var(--outer-border-color);
+  background: var(--background-color);
 }
 
 .xyz {

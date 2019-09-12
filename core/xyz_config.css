@@ -4,31 +4,19 @@
  *  Variables  *
  ***************/
 :root {
-  /******************
-   *  Core Control  *
-   ******************/
-  --theme-set: var(--theme1);
   /****************
    *  Main Theme  *
    ****************/
   --primary-color: green;
   --secondary-color: lime;
   --tertiary-color: limegreen;
-  --background-color: grey;
+  --background-color: black;
 
   --inner-border-color: lime ;
   --outer-border-color: green;
   /************
    *  Colors  *
    ************/
-  --C1: lime;
-  --C2: gray;
-  --C3: #32cd32;
-  --C4: #333;
-  --C5: lime;
-  --C6: limegreen;
-  --C7: #32cd32;
-  --C8: #333;
   /***************
    *  Font Size  *
    ***************/

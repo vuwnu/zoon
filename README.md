@@ -12,9 +12,26 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 ***
 
+<h2 align="center">The Pillars</h2>
+
+<h4 align="center">Responsiveness</h4>
+
+
+
+<h4 align="center">Contextuality</h4>
+
+
+
+<h4 align="center">Fonts</h4>
+
+
+
+***
+
+<h2 align="center">Branches</h2>
+
 This repo contains all files for the XYZ style. Each branch of this repo represents a different application and is updated seperately.
 
-<h2 align="center">Current Branches</h2>
 
 <h4 align="center">Master</h4>
 
@@ -27,3 +44,15 @@ This is designed to work with Jekyll powered webpages. More information on setti
 ***
 
 <h2 align="center">Style Rules</h2>
+
+<h4 align="center">Fonts</h4>
+
+fonts are automatically applied based on context using the default html elements
+
+<h4 align="center">Colors</h4>
+
+the primary theme for your website consists of a primary, secondary and tertiary color which can be customised in the config file.
+
+<h4 align="center">Borders</h4>
+
+borders are used in XYZ to separate areas up so they are easily distinguishable
