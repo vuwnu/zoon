@@ -16,14 +16,15 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 <h4 align="center">Responsiveness</h4>
 
-
+A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available
 
 <h4 align="center">Contextuality</h4>
 
+Not every part of a style should need to be applied manually. XYZ will apply certain styles for using based on context.
 
+<h4 align="center">Presentation</h4>
 
-<h4 align="center">Fonts</h4>
-
+Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks.
 
 
 ***
