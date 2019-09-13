@@ -4,11 +4,13 @@
 
 ***
 
-XYZ is my own personal design language and framework. I've designed it to be fully modular and fit most use cases. XYZ is constantly evolving, changing and improving as I learn more about designing software.
+XYZ is my own personal design language and framework. I've designed it to be fully modular and fit most use cases. XYZ is constantly evolving, changing and improving as I learn more about designing software. I'm primarily creating this framework for use in my own work so I can have stylistic consistency across all of the sites that I work on, but I plan for it to be customisable and approachable enough for others to use in their own creations.
 
-I wanted XYZ to be super simple to setup and get started with. All you need to do to start using it is add a link to the main style sheet in the head of your HTML file.
+I wanted XYZ to be super simple to setup and get started with. All you need to do to start using it is add a link to the main style sheet in the head of your HTML file. This will instantly give you access to all of the different classes and stylings that XYZ provides.
 
-If you would then like to customise your XYZ setup you can add the xyz_config.css template file locally and make changes to customise how XYZ looks. This file is designed to let you make big changes easily without having to edit large parts of your HTML.
+<h2 align="center">xyz_config.css</h2>
+
+If you would then like to customise your XYZ setup you can add the xyz_config.css template file locally and make changes to customise how XYZ looks. This file is designed to let you make big changes easily without having to edit large parts of your HTML. It makes use of CSS variables that will override the default variables that the theme comes with. It is highly recommended that you use this file alongside XYZ to get the most out of it.
 
 ***
 
@@ -16,7 +18,7 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 <h4 align="center">Responsiveness</h4>
 
-A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available
+A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable.
 
 <h4 align="center">Contextuality</h4>
 
