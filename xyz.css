@@ -11,12 +11,19 @@
 @import 'modules/xyz_fun.css';
 
 /************  END IMPORTS  ************/
+body {
+  font-family: var(--primary-font);
+}
+
 /****************
  *  Background  *
  ****************/
-body {
+.bg {
   background: #333;
-  font-family: var(--primary-font);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
 /************
@@ -24,8 +31,8 @@ body {
  ************/
 .border {
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   border: 3px double var(--secondary-color);
   background: var(--background-color);
   filter: brightness(100%)
@@ -59,7 +66,7 @@ a.red {
  *  Header  *
  ************/
 .xyz__header header {
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 12% auto;
 }
 
@@ -78,6 +85,11 @@ a.red {
 /********************
  *  Navigation Bar  *
  ********************/
+.xyz__navbar ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
 nav a {
   display: inline-block;
   margin: auto;
@@ -97,26 +109,10 @@ nav a:hover {
   background: limegreen;
 }
 
-/****************
- *  Containers  *
- ****************/
-
-/***********
- *  Extra  *
- ***********/
-.xyz__extra div {
-  font-size: 2em;
-  padding: 5px;
-}
-
 /**********
  *  Main  *
  **********/
-.xyz__main div {
-  padding: 5px;
-}
-
-.xyz h3 {
+.xyz__main h3 {
   margin: 10px 0;
   text-transform: uppercase;
   color: var(--secondary-color);
@@ -124,18 +120,18 @@ nav a:hover {
   font-weight: normal;
 }
 
-.xyz p {
+.xyz__main p {
   margin: 0;
   text-transform: lowercase;
   color: var(--primary-color);
   font-family: var(--primary-font);
 }
 
-.xyz ul {
+.xyz__main ul {
   padding: 0;
 }
 
-.xyz ul li {
+.xyz__main ul li {
   margin: 10px;
   padding: 10px;
   list-style-type: none;
@@ -174,9 +170,9 @@ nav a:hover {
 /*******************
  *  Media Queries  *
  *******************/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .xyz {
-    grid: [row1-start] 'header'40px [row1-end]
+    grid: [row1-start] 'header'50px [row1-end]
           [row2-start] 'navbar'50px [row2-end]
           [row3-start] 'main'1fr [row3-end]
           [row4-start] 'footer'50px [row4-end]
@@ -196,19 +192,14 @@ nav a:hover {
   }
 
   .xyz__footer {
-    font-size: .9em;
+    font-size: 1em;
   }
+
   nav a {
-    width: 13%;
-    padding: 1px 4px;
+    width: 18%;
+    padding: 10px 4px;
     user-select: none;
     border: 4px double var(--primary-color);
     background: black;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .xyz__navbar {
-    font-size: 1.5em;
   }
 }
