@@ -14,18 +14,90 @@
 body {
   font-family: var(--primary-font);
 }
-
-/****************
- *  Background  *
- ****************/
-.bg {
-  background: #333;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
+html {
+  margin-left: calc(100vw - 100%);
 }
 
+/***********
+ *  Table  *
+ ***********/
+table, th, td {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid var(--secondary-color);
+  background: var(--background-color);
+  filter: brightness(130%)
+}
+thead {
+  font-family: var(--header-font);
+  filter: brightness(80%);
+  text-align: left;
+}
+tr:nth-child(even) {
+  filter: brightness(120%);
+}
+table {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  table tr td:nth-of-type(2) {
+    display: none;
+  }
+  table tr td:nth-of-type(1) {
+    background: 0;
+    border: 0;
+  }
+  table td {
+    display: block;
+  }
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
 /************
  *  Border  *
  ************/
@@ -40,8 +112,16 @@ body {
 .border .border {
   margin: 10px;
   padding: 10px;
+  border: 1px solid var(--primary-color);
+  filter: brightness(130%)
+}
+.border-light {
+  text-align: center;
+  margin: 1px;
+  padding: 1px;
   border: 1px solid var(--secondary-color);
-  filter: brightness(120%)
+  background: var(--background-color);
+  filter: brightness(100%);
 }
 /***********
  *  Links  *
@@ -50,16 +130,27 @@ a {
   text-decoration: none;
 }
 
-a.blue {
+.blue {
   color: #55acee;
 }
 
-a.purple {
+.purple {
   color: #6441a4;
 }
 
-a.red {
+.red {
   color: #f00;
+}
+.green {
+  color: lime;
+}
+
+.darkblue {
+  color: #4078c0;
+}
+
+.orange {
+  color: #f96854;
 }
 
 /************
@@ -79,7 +170,7 @@ a.red {
 .xyz__header header a:hover {
   text-decoration: none;
   color: black;
-  background: lime;
+  background: var(--secondary-color);
 }
 
 /********************
@@ -112,8 +203,7 @@ nav a:hover {
 /**********
  *  Main  *
  **********/
-.xyz__main h3 {
-  margin: 10px 0;
+.xyz__main h3,h4 {
   text-transform: uppercase;
   color: var(--secondary-color);
   font-family: var(--header-font);
@@ -121,21 +211,24 @@ nav a:hover {
 }
 
 .xyz__main p {
-  margin: 0;
-  text-transform: lowercase;
-  color: var(--primary-color);
+  margin: 5px;
   font-family: var(--primary-font);
 }
 
 .xyz__main ul {
+  display: flex;
+  flex-flow: row wrap;
   padding: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .xyz__main ul li {
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   list-style-type: none;
   border: 1px solid var(--primary-color);
+  flex: 2 0 250px;
 }
 
 /************
@@ -153,7 +246,7 @@ nav a:hover {
  ***************/
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
@@ -164,7 +257,7 @@ nav a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: limegreen;
+  background: var(--primary-color);
 }
 
 /*******************

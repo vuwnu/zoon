@@ -1,41 +1,45 @@
 .xyz {
-	min-height: 100vh;
-	display: grid;
-	grid-gap: 5px;
-	grid:
-	[row1-start] "header" 70px [row1-end]
-	[row2-start] "navbar" 30px [row2-end]
-	[row3-start] "main" 1fr 	 [row3-end]
-	[row4-start] "footer" 50px [row4-end]
-	/ 100%
+  display    : grid;
+  min-height : 100vh;
+  grid       : [row1-start] "header" 70px [row1-end]
+	 						 [row2-start] "navbar" 30px [row2-end]
+							 [row3-start] "main" 1fr [row3-end]
+							 [row4-start] "footer" 50px [row4-end]
+							 / 100%;
+  grid-gap   : 5px;
 }
 
 .xyz__header {
-	grid-area: header;
-	display: grid;
-	margin: 0 auto;
-	max-width: 900px;
+  display   : grid;
+  max-width : 900px;
+  margin    : 0 auto;
+  grid-area : header;
 }
+
 .xyz__navbar {
-	grid-area: navbar;
-	display: block;
-  font-family: var(--primary-font);
-	margin: 5px auto;
-	width: 100%;
-	max-width: 800px;
-	text-align: center;
+  display     : block;
+  width       : 100%;
+  max-width   : 800px;
+  margin      : 5px auto;
+  text-align  : center;
+  font-family : var(--primary-font);
+  grid-area   : navbar;
 }
+
 .xyz__main {
-	grid-area: main;
-	font-size: 1.3em;
-	max-width: 900px;
-	display: grid;
-	margin: 0 auto;
+  display   : grid;
+  max-width : 900px;
+  margin    : 0 auto;
+  color     : var(--primary-color);
+  font-size : 1.3em;
+  grid-area : main;
 }
+
 .xyz__footer {
-	grid-area: footer;
-	font-size: 1.1em;
-  font-family: var(--primary-font);
-	border-top: 4px double var(--outer-border-color);
-  background: var(--background-color);
+  overflow    : overlay;
+  border-top  : 4px double var(--outer-border-color);
+  background  : var(--background-color);
+  font-family : var(--primary-font);
+  font-size   : 1.1em;
+  grid-area   : footer;
 }
