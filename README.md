@@ -16,15 +16,19 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 <h2 align="center">The Pillars</h2>
 
-<h4 align="center">Responsiveness</h4>
+| Responsiveness | Contextuality | Presentation |
+|:--------------:|:-------------:|:------------:|
+| A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable. | Not every part of a style should need to be applied manually. XYZ will apply certain styles for using based on context. | Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks. |
+
+<h5 align="center">Responsiveness</h5>
 
 A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable.
 
-<h4 align="center">Contextuality</h4>
+<h5 align="center">Contextuality</h5>
 
 Not every part of a style should need to be applied manually. XYZ will apply certain styles for using based on context.
 
-<h4 align="center">Presentation</h4>
+<h5 align="center">Presentation</h5>
 
 Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks.
 
@@ -36,11 +40,11 @@ Not only do I want XYZ to function well, I want it to look good too. Using XYZ i
 This repo contains all files for the XYZ style. Each branch of this repo represents a different application and is updated seperately.
 
 
-<h4 align="center">Master</h4>
+<h5 align="center">Master</h5>
 
 This is the main version of XYZ. Other branches of XYZ are built from this one.
 
-<h4 align="center" href="tree/jekyll">Jekyll</h4>
+<h5 align="center" href="tree/jekyll">Jekyll</h5>
 
 This is designed to work with Jekyll powered webpages. More information on setting this theme can be found on the README for that branch
 
@@ -48,14 +52,14 @@ This is designed to work with Jekyll powered webpages. More information on setti
 
 <h2 align="center">Style Rules</h2>
 
-<h4 align="center">Fonts</h4>
+<h5 align="center">Fonts</h5>
 
 fonts are automatically applied based on context using the default html elements
 
-<h4 align="center">Colors</h4>
+<h5 align="center">Colors</h5>
 
 the primary theme for your website consists of a primary, secondary and tertiary color which can be customised in the config file.
 
-<h4 align="center">Borders</h4>
+<h5 align="center">Borders</h5>
 
 borders are used in XYZ to separate areas up so they are easily distinguishable

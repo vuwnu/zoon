@@ -14,6 +14,7 @@
 body {
   font-family: var(--primary-font);
 }
+
 html {
   margin-left: calc(100vw - 100%);
 }
@@ -22,27 +23,30 @@ html {
  *  Table  *
  ***********/
 table, th, td {
-  text-align: center;
   margin: 5px;
   padding: 5px;
+  text-align: center;
   border: 1px solid var(--secondary-color);
   background: var(--background-color);
   filter: brightness(130%)
 }
+
 thead {
+  text-align: left;
   font-family: var(--header-font);
   filter: brightness(80%);
-  text-align: left;
 }
+
 tr:nth-child(even) {
   filter: brightness(120%);
 }
+
 table {
-  border: none;
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   table-layout: fixed;
+  border: none;
 }
 
 table tr {
@@ -56,73 +60,81 @@ table td {
 }
 
 table th {
-  font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
+  font-size: .85em;
 }
 
 @media screen and (max-width: 600px) {
-
   table thead {
-    border: none;
+    position: absolute;
+    overflow: hidden;
     clip: rect(0 0 0 0);
+    width: 1px;
     height: 1px;
     margin: -1px;
-    overflow: hidden;
     padding: 0;
-    position: absolute;
-    width: 1px;
+    border: none;
   }
+
   table tr {
     display: block;
     margin-bottom: .625em;
   }
+
   table tr td:nth-of-type(2) {
     display: none;
   }
+
   table tr td:nth-of-type(1) {
-    background: 0;
     border: 0;
+    background: 0;
   }
+
   table td {
     display: block;
   }
+
   table td::before {
+    float: left;
     /*
     * aria-label has no advantage, it won't be read inside a table
     content: attr(aria-label);
     */
     content: attr(data-label);
-    float: left;
-    font-weight: bold;
     text-transform: uppercase;
+    font-weight: bold;
   }
 }
+
 /************
  *  Border  *
  ************/
 .border {
-  text-align: center;
   margin: 5px;
   padding: 5px;
+  text-align: center;
   border: 3px double var(--secondary-color);
   background: var(--background-color);
   filter: brightness(100%)
 }
+
 .border .border {
   margin: 10px;
   padding: 10px;
   border: 1px solid var(--primary-color);
   filter: brightness(130%)
 }
+
 .border-light {
-  text-align: center;
   margin: 1px;
   padding: 1px;
-  border: 1px solid var(--secondary-color);
-  background: var(--background-color);
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  background: black;
   filter: brightness(100%);
 }
+
 /***********
  *  Links  *
  ***********/
@@ -141,6 +153,7 @@ a {
 .red {
   color: #f00;
 }
+
 .green {
   color: lime;
 }
@@ -157,8 +170,8 @@ a {
  *  Header  *
  ************/
 .xyz__header header {
-  font-size: 2.5em;
   margin: 12% auto;
+  font-size: 2.5em;
 }
 
 .xyz__header header a {
@@ -183,27 +196,27 @@ a {
 
 nav a {
   display: inline-block;
-  margin: auto;
   width: 20%;
+  margin: auto;
   padding: 3px 6px;
   user-select: none;
   transition: background ease-in-out .2s;
   text-align: center;
   text-decoration: none;
-  color: var(--primary-color);
-  border: 4px double var(--primary-color);
+  color: var(--secondary-color);
+  border: 4px double var(--secondary-color);
   background: black;
 }
 
 nav a:hover {
   color: black;
-  background: limegreen;
+  background: border-box lime;
 }
 
 /**********
  *  Main  *
  **********/
-.xyz__main h3,h4 {
+.xyz__main h3, h4 {
   text-transform: uppercase;
   color: var(--secondary-color);
   font-family: var(--header-font);
@@ -218,27 +231,40 @@ nav a:hover {
 .xyz__main ul {
   display: flex;
   flex-flow: row wrap;
-  padding: 0;
-  width: 100%;
   justify-content: center;
+  width: 100%;
+  padding: 0;
 }
 
 .xyz__main ul li {
+  flex: 2 0 250px;
   margin: 5px;
   padding: 5px;
   list-style-type: none;
   border: 1px solid var(--primary-color);
+}
+.block-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.block {
   flex: 2 0 250px;
+  margin: 5px;
+  padding: 5px;
 }
 
 /************
  *  Footer  *
  ************/
 .xyz__footer div {
-  font-family: var(--primary-font);
   margin: 5px;
   text-align: center;
   color: var(--primary-color);
+  font-family: var(--primary-font);
 }
 
 /***************
@@ -268,8 +294,7 @@ nav a:hover {
     grid: [row1-start] 'header'50px [row1-end]
           [row2-start] 'navbar'50px [row2-end]
           [row3-start] 'main'1fr [row3-end]
-          [row4-start] 'footer'50px [row4-end]
-          / 100%;
+          [row4-start] 'footer'50px [row4-end] / 100%;
   }
 
   .xyz__header {
