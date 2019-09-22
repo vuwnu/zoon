@@ -16,22 +16,9 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 <h2 align="center">The Pillars</h2>
 
-| Responsiveness | Contextuality | Presentation |
+| <h4 align="center">Responsiveness | <h4 align="center">Contextuality | <h4 align="center">Presentation |
 |:--------------:|:-------------:|:------------:|
-| A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable. | Not every part of a style should need to be applied manually. XYZ will apply certain styles for using based on context. | Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks. |
-
-<h5 align="center">Responsiveness</h5>
-
-A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable.
-
-<h5 align="center">Contextuality</h5>
-
-Not every part of a style should need to be applied manually. XYZ will apply certain styles for using based on context.
-
-<h5 align="center">Presentation</h5>
-
-Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks.
-
+| A site built with XYZ should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable. | Not every part of a style should need to be applied manually. XYZ will apply certain stylings for you automatically based on the context of what you're writing. | Not only do I want XYZ to function well, I want it to look good too. Using XYZ it should be easy to build a site that works as well as it looks. |
 
 ***
 
@@ -52,6 +39,29 @@ This is designed to work with Jekyll powered webpages. More information on setti
 
 <h2 align="center">Style Rules</h2>
 
+<h5 align="center">Grid System</h5>
+
+Each site should begin by splitting the page up into segments using the XYZ grid system, this allows contextual styling to work properly and keeps your site looking clean.
+Working with the grid system is easy to do, simply create div elements with class for each section you want, then wrap that all in a div with the "xyz" class.
+
+    <div class="xyz">
+
+      <div class="xyz__header">
+        {{HEADER HERE}}
+      </div>
+
+      <div class="xyz__main">
+        {{MAIN CONTENT HERE}}
+      </div>
+
+      <div class="xyz__footer">
+        {{FOOTER HERE}}
+      </div>
+
+    </div>
+
+You now have the basic structure of your website setup!
+
 <h5 align="center">Fonts</h5>
 
 fonts are automatically applied based on context using the default html elements
@@ -63,3 +73,16 @@ the primary theme for your website consists of a primary, secondary and tertiary
 <h5 align="center">Borders</h5>
 
 borders are used in XYZ to separate areas up so they are easily distinguishable
+
+<h5 align="center">Flexbox</h5>
+
+XYZ uses flexbox for properly sorting your content on the page. It allows content to be shown in a more interesting fashion and have a great level of responsiveness as it automatically changes to work with smaller viewports.
+
+***
+
+<h2 align="center">Installation</h2>
+
+1. Add a link to the main stylesheet in the HEAD of your file
+2. Download a copy of `xyz_config.ccs` and place it in your project folder
+3. Change the contents of the config file to suit your needs
+4. Add a local link to the config file in the HEAD of your file
