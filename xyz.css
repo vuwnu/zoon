@@ -1,16 +1,28 @@
 @charset 'UTF-8';
 /************  START IMPORTS  ************/
+
 /**********
  *  Core  *
  **********/
+
 @import 'core/xyz_config.css';
 @import 'core/xyz_layout.css';
+@import 'core/xyz_table.css';
+@import 'core/xyz_hover.css';
+
 /*************
  *  Modules  *
  *************/
+
 @import 'modules/xyz_fun.css';
 
 /************  END IMPORTS  ************/
+
+
+/*********
+*  Base  *
+**********/
+
 body {
   font-family: var(--primary-font);
 }
@@ -19,93 +31,6 @@ html {
   margin-left: calc(100vw - 100%);
 }
 
-/***********
- *  Table  *
- ***********/
-table, th, td {
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  border: 1px solid var(--secondary-color);
-  background: var(--background-color);
-  filter: brightness(130%)
-}
-
-thead {
-  text-align: left;
-  font-family: var(--header-font);
-  filter: brightness(80%);
-}
-
-tr:nth-child(even) {
-  filter: brightness(120%);
-}
-
-table {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  table-layout: fixed;
-  border: none;
-}
-
-table tr {
-  padding: .35em;
-}
-
-table th,
-table td {
-  padding: .625em;
-  text-align: center;
-}
-
-table th {
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  font-size: .85em;
-}
-
-@media screen and (max-width: 600px) {
-  table thead {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: none;
-  }
-
-  table tr {
-    display: block;
-    margin-bottom: .625em;
-  }
-
-  table tr td:nth-of-type(2) {
-    display: none;
-  }
-
-  table tr td:nth-of-type(1) {
-    border: 0;
-    background: 0;
-  }
-
-  table td {
-    display: block;
-  }
-
-  table td::before {
-    float: left;
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-}
 
 /************
  *  Border  *
@@ -114,15 +39,16 @@ table th {
   margin: 5px;
   padding: 5px;
   text-align: center;
-  border: 3px double var(--secondary-color);
+  border: var(--border-thickness) var(--border-type) var(--secondary-color);
   background: var(--background-color);
-  filter: brightness(100%)
+  filter: brightness(100%);
+  border-radius: 5px;
 }
 
 .border .border {
   margin: 10px;
   padding: 10px;
-  border: 1px solid var(--primary-color);
+  border: var(--border-thickness) var(--border-type) var(--secondary-color);
   filter: brightness(130%)
 }
 
@@ -166,69 +92,11 @@ a {
   color: #f96854;
 }
 
-/************
- *  Header  *
- ************/
-.xyz__header header {
-  margin: 12% auto;
-  font-size: 2.5em;
-}
+/*****************
+ *  Button List  *
+ *****************/
 
-.xyz__header header a {
-  user-select: none;
-  transition: background ease-in-out .2s;
-  text-decoration: none;
-}
-
-.xyz__header header a:hover {
-  text-decoration: none;
-  color: black;
-  background: var(--secondary-color);
-}
-
-/********************
- *  Navigation Bar  *
- ********************/
-.xyz__navbar ul {
-  display: inline-block;
-  list-style-type: none;
-}
-
-nav a {
-  display: inline-block;
-  width: 20%;
-  margin: auto;
-  padding: 3px 6px;
-  user-select: none;
-  transition: background ease-in-out .2s;
-  text-align: center;
-  text-decoration: none;
-  color: var(--secondary-color);
-  border: 4px double var(--secondary-color);
-  background: black;
-}
-
-nav a:hover {
-  color: black;
-  background: border-box lime;
-}
-
-/**********
- *  Main  *
- **********/
-.xyz__main h3, h4 {
-  text-transform: uppercase;
-  color: var(--secondary-color);
-  font-family: var(--header-font);
-  font-weight: normal;
-}
-
-.xyz__main p {
-  margin: 5px;
-  font-family: var(--primary-font);
-}
-
-.xyz__main ul {
+.button-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -236,12 +104,50 @@ nav a:hover {
   padding: 0;
 }
 
-.xyz__main ul li {
-  flex: 2 0 250px;
+.button-list a {
+  flex: 2 0 130px;
+  margin: 10px 5px;
+  padding: 5px;
+  font-size: 1.4em;
+  list-style-type: none;
+  transition: color ease-in-out .2s;
+}
+.button-list a:hover {
+  color: white;
+}
+.button-list a p {
+  font-size: 1.3em;
+  margin: 0;
+}
+/**********
+ *  Main  *
+ **********/
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-family: var(--header-font);
+  font-weight: normal;
+  margin: .5em 0 .5em 0;
+}
+
+.xyz__main p {
+  margin: 5px;
+  font-family: var(--primary-font);
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+ul li {
+  flex: 2 0 130px;
   margin: 5px;
   padding: 5px;
   list-style-type: none;
-  border: 1px solid var(--primary-color);
 }
 .block-group {
   display: flex;
@@ -257,15 +163,7 @@ nav a:hover {
   padding: 5px;
 }
 
-/************
- *  Footer  *
- ************/
-.xyz__footer div {
-  margin: 5px;
-  text-align: center;
-  color: var(--primary-color);
-  font-family: var(--primary-font);
-}
+
 
 /***************
  *  Scrollbar  *
@@ -290,19 +188,13 @@ nav a:hover {
  *  Media Queries  *
  *******************/
 @media screen and (max-width: 500px) {
-  .xyz {
-    grid: [row1-start] 'header'50px [row1-end]
-          [row2-start] 'navbar'50px [row2-end]
-          [row3-start] 'main'1fr [row3-end]
-          [row4-start] 'footer'50px [row4-end] / 100%;
-  }
 
   .xyz__header {
     font-size: .7em;
   }
 
   .xyz__main {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .xyz__navbar {
@@ -314,10 +206,26 @@ nav a:hover {
   }
 
   nav a {
-    width: 18%;
+    width: 28%;
     padding: 10px 4px;
-    user-select: none;
-    border: 4px double var(--primary-color);
-    background: black;
   }
+}
+@media (max-width: 768px) {
+  .xyz_hg {
+    grid-template-areas:
+      "header"
+      "main"
+      "right"
+      "left"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      minmax(75px, auto) /* Nav */
+      1fr /* Content */
+      minmax(75px, auto) /* Sidebar */
+      auto; /* Footer */
+  }
+
 }
