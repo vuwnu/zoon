@@ -39,10 +39,10 @@ html {
   margin: 5px;
   padding: 5px;
   text-align: center;
-  border: var(--border-thickness) var(--border-type) var(--secondary-color);
+  border: var(--border-thickness) var(--border-type) var(--border-color);
   background: var(--background-color);
   filter: brightness(100%);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 .border .border {
@@ -210,6 +210,7 @@ ul li {
     padding: 10px 4px;
   }
 }
+
 @media (max-width: 768px) {
   .xyz_hg {
     grid-template-areas:
