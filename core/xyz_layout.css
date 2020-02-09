@@ -10,7 +10,7 @@
   "left main right"
   "footer footer footer";
 
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 150px 1fr 150px;
   grid-template-rows: auto
                       1fr
                       auto;
@@ -24,6 +24,7 @@
   max-width: 900px;
   margin: 0 auto;
   grid-area: header;
+  text-align: center;
 }
 
 .xyz__navbar {
@@ -45,7 +46,6 @@
 .xyz__left {
   display: grid;
   max-width: 900px;
-
   color: var(--primary-color);
   font-size: 1em;
   grid-area: left;
@@ -71,11 +71,30 @@
   height: 50%;
 }
 
+/* Flexbox */
+
+.flexbox {
+  margin: 15px;
+  background: red;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
 /************
  *  Header  *
  ************/
 .xyz__header header {
-  margin: 10% auto 4% auto;
+  margin: 3% auto 3% auto;
   font-size: 3em;
   user-select: none;
 }
@@ -99,8 +118,9 @@ nav a {
   text-align: center;
   text-decoration: none;
   color: var(--secondary-color);
-  border: var(--border-thickness) var(--border-type) var(--secondary-color);
+  border: var(--border-thickness) var(--border-type) var(--border-color);
   background: var(--background-color);
+  border-radius: var(--border-radius);
 }
 
 nav a:hover {

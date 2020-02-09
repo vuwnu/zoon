@@ -31,63 +31,72 @@ html {
   margin-left: calc(100vw - 100%);
 }
 
+::selection {
+  background: yellow;
+  color: white;
+}
 
 /************
  *  Border  *
  ************/
 .border {
   margin: 5px;
-  padding: 5px;
+  padding: 20px;
   text-align: center;
   border: var(--border-thickness) var(--border-type) var(--border-color);
   background: var(--background-color);
-  filter: brightness(100%);
   border-radius: var(--border-radius);
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
 }
 
-.border .border {
-  margin: 10px;
-  padding: 10px;
-  border: var(--border-thickness) var(--border-type) var(--secondary-color);
-  filter: brightness(130%)
-}
-
-.border-light {
-  margin: 1px;
-  padding: 1px;
-  text-align: center;
-  border: 1px solid var(--primary-color);
-  background: black;
-  filter: brightness(100%);
-}
-
-/***********
- *  Links  *
- ***********/
+/* Links */
 a {
   text-decoration: none;
 }
 
+/* Button */
+.btn {
+  border: solid 1px darkgray;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 40px;
+}
+.btn:hover {
+  filter: brightness(120%);
+}
+
+/***********
+ *  Color  *
+ ***********/
+.black {
+ color: black;
+}
+.white {
+ color: white;
+}
+.whitesmoke {
+ color: whitesmoke;
+}
+.dimgrey {
+ color: dimgrey;
+}
 .blue {
   color: #55acee;
 }
-
 .purple {
   color: #6441a4;
 }
-
 .red {
   color: #f00;
 }
-
 .green {
-  color: lime;
+  color: green;
 }
-
 .darkblue {
   color: #4078c0;
 }
-
 .orange {
   color: #f96854;
 }
@@ -106,14 +115,15 @@ a {
 
 .button-list a {
   flex: 2 0 130px;
-  margin: 10px 5px;
-  padding: 5px;
+  margin: 10px 0;
+  padding: 5px 0;
   font-size: 1.4em;
   list-style-type: none;
   transition: color ease-in-out .2s;
 }
 .button-list a:hover {
   color: white;
+  filter: brightness(500%);
 }
 .button-list a p {
   font-size: 1.3em;
@@ -127,12 +137,7 @@ h1, h2, h3, h4 {
   color: var(--secondary-color);
   font-family: var(--header-font);
   font-weight: normal;
-  margin: .5em 0 .5em 0;
-}
-
-.xyz__main p {
-  margin: 5px;
-  font-family: var(--primary-font);
+  margin: .2em 0 .2em 0;
 }
 
 ul {
@@ -159,11 +164,15 @@ ul li {
 
 .block {
   flex: 2 0 250px;
-  margin: 5px;
-  padding: 5px;
 }
 
+/************
+ *  Inputs  *
+ ************/
 
+input.xyz {
+  margin: 0 auto;
+}
 
 /***************
  *  Scrollbar  *
@@ -194,7 +203,6 @@ ul li {
   }
 
   .xyz__main {
-    font-size: 1.3em;
   }
 
   .xyz__navbar {

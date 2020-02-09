@@ -82,7 +82,7 @@ XYZ uses flexbox for properly sorting your content on the page. It allows conten
 
 <h2 align="center">Installation</h2>
 
-1. Add a link to the main stylesheet in the HEAD of your file
-2. Download a copy of `xyz_config.ccs` and place it in your project folder
-3. Change the contents of the config file to suit your needs
-4. Add a local link to the config file in the HEAD of your file
+1.  Add a link to the main stylesheet in the HEAD of your file
+2.  Download a copy of `xyz_config.css` and place it in your project folder
+3.  Change the contents of the config file to suit your needs
+4.  Add a local link to the config file in the HEAD of your file
