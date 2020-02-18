@@ -5,13 +5,14 @@
 table.xyz {
  margin: auto;
  padding: 0;
- table-layout: fixed;
+ table-layout: auto;
  border: none;
+ width: 95%;
 }
 
 table, th, td {
   text-align: center;
-  border: 1px solid;
+  border: 1px solid var(--border-color);
   background: var(--background-color);
   filter: brightness(130%)
 }
@@ -28,12 +29,12 @@ tr:nth-child(even) {
 
 
 table tr {
-  padding: .35em;
+  padding: .2em;
 }
 
 table th,
 table td {
-  padding: .625em;
+  padding: .15em;
   text-align: center;
 }
 
@@ -43,6 +44,9 @@ table th {
   font-size: .85em;
 }
 
+select.xyz {
+  height: 40px;
+}
 /**********************
  *  Responsive Table  *
  **********************/

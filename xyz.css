@@ -217,10 +217,13 @@ input.xyz {
     width: 28%;
     padding: 10px 4px;
   }
+  table.xyz {
+    font-size: .8em;
+  }
 }
 
 @media (max-width: 768px) {
-  .xyz_hg {
+  .layout-holygrail {
     grid-template-areas:
       "header"
       "main"
@@ -229,6 +232,7 @@ input.xyz {
       "footer";
 
     grid-template-columns: 1fr;
+
     grid-template-rows:
       auto /* Header */
       minmax(75px, auto) /* Nav */
