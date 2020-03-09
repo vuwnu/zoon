@@ -32,7 +32,7 @@ html {
 }
 
 ::selection {
-  background: yellow;
+  background: lightblue;
   color: white;
 }
 

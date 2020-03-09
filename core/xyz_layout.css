@@ -126,7 +126,7 @@
   list-style-type: none;
 }
 
-nav a {
+.xyz__navbar nav a {
   display: inline-block;
   width: 25%;
   margin: auto;
@@ -141,7 +141,7 @@ nav a {
   border-radius: var(--border-radius);
 }
 
-nav a:hover {
+.xyz__navbar nav a:hover {
   color: white;
   border-color: white;
 }

@@ -1,0 +1,27 @@
+/* Markdown Styling for XYZ */
+
+
+/* Content Styling */
+.xyz-md h1,.xyz-md h2, .xyz-md h3,.xyz-md h4 {
+  text-align: center;
+  background: #333;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.xyz-md a {
+  color: #4ebeff;
+  text-decoration: none;
+  max-width: 800px;
+  width: 80vw;
+  display: block;
+  margin: auto;
+  text-align: center;
+  background: #333;
+  border: 10px solid #333;
+}
+.xyz-md p {
+  margin: 1em;
+  text-align: justify;
+}
