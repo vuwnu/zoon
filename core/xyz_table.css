@@ -10,12 +10,12 @@ table.xyz {
  width: 95%;
 }
 
-table, th, td {
+/* table, th, td {
   text-align: center;
   border: 1px solid var(--border-color);
   background: var(--background-color);
   filter: brightness(130%)
-}
+} */
 
 thead {
   text-align: left;
@@ -23,9 +23,9 @@ thead {
   filter: brightness(80%);
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   filter: brightness(120%);
-}
+} */
 
 
 table tr {

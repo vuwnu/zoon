@@ -7,33 +7,34 @@
   /****************
    *  Main Theme  *
    ****************/
-  --primary-color: green;
-  --secondary-color: lime;
-  --tertiary-color: limegreen;
-  --background-color: black;
+  --primary-color: grey;
+  --secondary-color: darkgrey;
+  --tertiary-color: lime;
+  --background-color: #111;
 
-  --inner-border-color: lime ;
-  --outer-border-color: green;
-  /************
-   *  Colors  *
-   ************/
-  /***************
-   *  Font Size  *
-   ***************/
-  --small: .8em;
-  --medium: 1.1em;
-  --large: 1.4em;
-  /************
-   *  Images  *
-   ************/
-  --background-image: url();
+  /* Border */
+  --border-type: solid;
+  --border-thickness: 2px;
+  --border-radius: 0px;
+  --border-color: black;
+
+  /***********
+   *  Sizes  *
+   ***********/
+  --max-width: 1300px;
+  --margin-width: 900px;
+
   /***********
    *  Fonts  *
    ***********/
-  --F1: Verdana, Geneva, sans-serif;
-  --F2: Arial, Helvetica, sans-serif;
-  --F3: Tahoma, Geneva, sans-serif;
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --header-font: 'Open Sans', sans-serif;
   --font-size: var(--responsive-font-size);
+
+  /************
+   *  Images  *
+   ************/
 }
 
 /***************

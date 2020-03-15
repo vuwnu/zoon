@@ -15,7 +15,7 @@
                       1fr
                       auto;
 
-  grid-gap: 1px;
+  grid-gap: 0px;
   min-height: 100vh;
 }
 
@@ -39,8 +39,6 @@
 
 .xyz__header {
   display: grid;
-  max-width: 900px;
-  margin: 0 auto;
   grid-area: header;
   text-align: center;
 }
@@ -58,28 +56,24 @@
 .xyz__main {
   display: grid;
   color: var(--primary-color);
-  font-size: 1.6em;
   grid-area: main;
 }
 .xyz__left {
   display: grid;
   max-width: 900px;
   color: var(--primary-color);
-  font-size: 1em;
   grid-area: left;
 }
 .xyz__right {
   display: grid;
   max-width: 900px;
   color: var(--primary-color);
-  font-size: 1em;
   grid-area: right;
 }
 
 .xyz__footer {
   overflow: hidden;
   font-family: var(--primary-font);
-  font-size: 1.3em;
   grid-area: footer;
 }
 
@@ -111,12 +105,6 @@
 /************
  *  Header  *
  ************/
-.xyz__header header {
-  margin: 3% auto 3% auto;
-  font-size: 3em;
-  user-select: none;
-}
-
 
 /********************
  *  Navigation Bar  *
