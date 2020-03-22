@@ -46,6 +46,20 @@
  *  Custom  *
  ************/
 
+.logo {
+  text-align: center;
+  font-size: 130%;
+}
+.x {
+  color: red;
+}
+.y {
+  color: blue;
+}
+.z {
+  color: green;
+}
+
 /* XYZ */
 .xyz-theme {
   color: grey;
