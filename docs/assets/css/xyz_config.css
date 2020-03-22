@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+/***************
+ *  Variables  *
+ ***************/
+:root {
+  /****************
+   *  Main Theme  *
+   ****************/
+  --primary-color: grey;
+  --secondary-color: darkgrey;
+  --tertiary-color: lime;
+  --background-color: #111;
+
+  /* Border */
+  --border-type: solid;
+  --border-thickness: 2px;
+  --border-radius: 0px;
+  --border-color: black;
+
+  /***********
+   *  Sizes  *
+   ***********/
+  --max-width: 1300px;
+  --margin-width: 900px;
+
+  /***********
+   *  Fonts  *
+   ***********/
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --header-font: 'Open Sans', sans-serif;
+  --font-size: var(--responsive-font-size);
+
+  /************
+   *  Images  *
+   ************/
+}
+
+/***************
+ *  Font-Face  *
+ ***************/
+
+
+/************
+ *  Custom  *
+ ************/
+
+/* XYZ */
+.xyz-theme {
+  color: grey;
+  background: #161515;
+}
+.xyz-theme .btn {
+  color: dimgrey;
+  background: #0b0b0b;
+}
+.xyz-theme img {
+  object-fit: cover;
+  height: 70px;
+}
+
+
+html {
+  background: #111;
+}
