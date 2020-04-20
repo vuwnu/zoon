@@ -1,22 +1,25 @@
 @charset 'UTF-8';
 
-/***************
- *  Variables  *
- ***************/
 :root {
-  /****************
-   *  Main Theme  *
-   ****************/
-  --primary-color: grey;
+  /** Theme Colors **/
+  /* These are the main colors used for stlying elements across the app */
+  --primary-color: #bbb;
   --secondary-color: darkgrey;
   --tertiary-color: lime;
-  --background-color: #111;
+  --background-color: #222;
+  --background-border-color: #1d1d1d;
+  --border-bg-color: #2e2e2e;
 
-  /* Border */
+  /** Border **/
   --border-type: solid;
-  --border-thickness: 2px;
+  --border-thickness: 1px;
   --border-radius: 0px;
-  --border-color: black;
+  --border-color: #333;
+
+  /* Scrollbar */
+  --scrollbar-width: 5px;
+  --scrollbar-track: #111;
+  --scrollbar-handle: grey;
 
   /***********
    *  Sizes  *
