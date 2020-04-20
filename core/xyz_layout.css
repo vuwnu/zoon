@@ -2,40 +2,6 @@
  *  Grid  *
  **********/
 
-.layout-single {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-  "header"
-  "main"
-  "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto
-                      1fr
-                      auto;
-
-  grid-gap: 0px;
-  min-height: 100vh;
-}
-
-.layout-holygrail {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-  "header header header"
-  "left main right"
-  "footer footer footer";
-
-  grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: auto
-                      1fr
-                      auto;
-
-  grid-gap: 1px;
-  min-height: 100vh;
-}
 
 .xyz__header {
   display: grid;
@@ -101,10 +67,6 @@
   flex-basis: 100%;
   flex: 1;
 }
-
-/************
- *  Header  *
- ************/
 
 /********************
  *  Navigation Bar  *
