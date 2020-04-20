@@ -47,8 +47,10 @@
  ************/
 
 .logo {
+  font-size: 4em;
   text-align: center;
   font-size: 4em;
+  margin: auto;
 }
 .x {
   color: red;
