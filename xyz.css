@@ -176,7 +176,13 @@ a {
 }
 
 .block {
+  flex: 1 1 350px;
+}
+.block-2 {
   flex: 2 0 250px;
+}
+.block-3 {
+  flex: 1 0 150px;
 }
 
 /************
