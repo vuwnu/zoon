@@ -18,14 +18,46 @@
 
 /************  END IMPORTS  ************/
 
+/**** Base Stlying ****/
 
-/*********
-*  Base  *
-**********/
-
+/*** Body Wrapper ***/
 .xyz {
+  padding: 0 10px;
   line-height: 1.5;
+  min-height: 100vh;
+
+  /* Apply Base Font */
   font-family: var(--primary-font);
+  max-width: var(--max-width);
+  color: var(--primary-color);
+  background: var(--background-color);
+
+  /* Flex */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: auto;
+
+  /* Borders */
+  border-left: 10px solid var(--background-border-color);
+  border-right: 10px solid var(--background-border-color);
+}
+
+::selection {
+  background: lightblue;
+  color: white;
+}
+
+/*** Scrollbar ***/
+
+/** Width **/
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
 }
 
 html {
