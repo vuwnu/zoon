@@ -66,7 +66,29 @@ html {
 
 ::selection {
   background: lightblue;
+/* Navbar */
+.navbar, .navbar-b {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  order: 2;
+}
+.navbar a {
+  flex: 1 0 50px;
+  background: grey;
   color: white;
+  margin: 0 2px;
+}
+.navbar-b a {
+  flex: 1 0 50px;
+  color: white;
+  margin: 0 2px;
+  border: var(--border-thickness) var(--border-type) var(--border-color);
+  background: var(--border-bg-color);
+  border-radius: var(--border-radius);
+}
+#active {
+  background-color: #555;
 }
 
 /************
