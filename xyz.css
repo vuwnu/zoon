@@ -137,12 +137,11 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 100%;
   padding: 0;
+  align-items: center;
 }
-
 .button-list a {
-  flex: 2 0 130px;
+  flex: 1 0 100px;
   margin: 10px 0;
   padding: 5px 0;
   font-size: 1em;
