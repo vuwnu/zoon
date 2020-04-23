@@ -60,12 +60,31 @@
   background: var(--scrollbar-track);
 }
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-handle);
+}
+
+/* Scrollbar Fix */
 html {
   margin-left: calc(100vw - 100%);
 }
+@media screen and (max-width: 1300px) {
+  html {
+    margin-left: 0;
+  }
+}
 
-::selection {
-  background: lightblue;
+/* Header */
+.xyz header {
+  width: 100%;
+  background: var(--background-color);
+  display: flex;
+  align-content: center;
+  padding: 29px 0;
+  order: 1;
+}
+
 /* Navbar */
 .navbar, .navbar-b {
   display: flex;
