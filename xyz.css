@@ -104,19 +104,44 @@ html {
   background-color: #555;
 }
 
-/************
- *  Border  *
- ************/
+/* Main */
+.xyz main {
+  order: 3;
+}
+
+/* Footer */
+.xyz footer {
+  width: 100%;
+  background: var(--background-color);
+  display: flex;
+  align-content: center;
+  padding: 29px 0;
+  text-align: center;
+  order: 5;
+}
+.xyz footer p {
+  margin: auto;
+}
+.xyz footer div {
+  margin: auto;
+}
+
+/* Aside */
+.xyz aside {
+  order: 4;
+}
+
+/*** Border ***/
 .border {
   margin: 5px;
   padding: 20px;
   text-align: center;
   border: var(--border-thickness) var(--border-type) var(--border-color);
-  background: var(--background-color);
+  background: var(--border-bg-color);
   border-radius: var(--border-radius);
-  -moz-box-shadow: inset 0 0 10px #000000;
+  /* -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000; */
 }
 
 /* Links */
