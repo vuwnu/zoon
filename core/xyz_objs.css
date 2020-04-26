@@ -1,0 +1,10 @@
+/* Styling for all of the different objects within an XYZ page */
+.obj {
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.obj.title {
+  background: 0;
+}
