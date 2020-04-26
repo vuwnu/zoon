@@ -6,6 +6,7 @@
 @import 'core/xyz_layout.css';
 @import 'core/xyz_table.css';
 @import 'core/xyz_hover.css';
+@import 'core/xyz_objs.css';
 
 /* Modules */
 @import 'modules/xyz_fun.css';
