@@ -62,12 +62,17 @@
 
 /* Scrollbar Fix */
 html {
-  margin-left: calc(100vw - 100%);
+  padding-left: calc(100vw - 100%);
 }
 @media screen and (max-width: 1300px) {
   html {
-    margin-left: 0;
+    padding-left: 0;
   }
+}
+
+/* Variables */
+variables {
+  display: none;
 }
 
 /* Header */
@@ -76,30 +81,38 @@ html {
   background: var(--background-color);
   display: flex;
   align-content: center;
-  padding: 29px 0;
+  padding: 10px 0;
   order: 1;
 }
 
 /* Navbar */
-.navbar, .navbar-b {
+.navbar {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   order: 2;
 }
-.navbar a {
-  flex: 1 0 50px;
-  background: grey;
-  color: white;
-  margin: 0 2px;
-}
-.navbar-b a {
+.navbar.b a {
   flex: 1 0 50px;
   color: white;
-  margin: 0 2px;
+  margin: 5px;
+  padding: 5px 0;
+
   border: var(--border-thickness) var(--border-type) var(--border-color);
   background: var(--border-bg-color);
   border-radius: var(--border-radius);
+}
+.navbar a {
+  flex: 1 0 50px;
+  color: white;
+  margin: 0 2px;
+  transition: background-color .1s;
+}
+.navbar a:hover {
+  background-color: #444;
+}
+.navbar a:active {
+  background-color: #333;
 }
 #active {
   background-color: #555;
@@ -289,7 +302,7 @@ input.xyz {
 
 @media screen and (max-width: 500px) {
   .xyz header {
-    padding: 20px 0;
+    padding: 5px 0;
   }
   .xyz footer {
     padding: 20px 0;
