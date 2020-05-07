@@ -70,6 +70,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.js {
+  background: -webkit-linear-gradient(270deg, rgb(145, 0, 148) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.css {
+  background: -webkit-linear-gradient(270deg, rgb(105, 0, 148) 0%, rgb(155, 65, 217) 50%, rgb(105, 0, 148) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* XYZ */
 .xyz-theme {
