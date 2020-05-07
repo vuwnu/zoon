@@ -71,7 +71,7 @@
   -webkit-text-fill-color: transparent;
 }
 .js {
-  background: -webkit-linear-gradient(270deg, rgb(145, 0, 148) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
+  background: -webkit-linear-gradient(270deg, rgb(145, 148, 0) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
