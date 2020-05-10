@@ -38,7 +38,7 @@
 /* Images */
 .xyz-md img {
   max-width: 800px;
-  width: 80vw;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -67,7 +67,6 @@
   color: #4ebeff;
   text-decoration: none;
   max-width: 800px;
-  width: 80vw;
   display: block;
   margin: 1em auto;
   text-align: center;
