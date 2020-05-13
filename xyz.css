@@ -29,8 +29,7 @@
 
   /* Flex */
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  flex-flow: column;
   margin: auto;
 
   /* Borders */
