@@ -80,7 +80,7 @@ variables {
   background: var(--background-color);
   display: flex;
   align-content: center;
-  padding: 10px 0;
+  padding: 5px 0;
   order: 1;
 }
 
