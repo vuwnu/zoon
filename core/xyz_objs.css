@@ -30,7 +30,7 @@
   padding: 5px 5px;
   margin: 5px;
   user-select: none;
-  transition: color ease-in-out .2s, border ease-in-out .2s;
+  transition: background-color .1s;
   text-decoration: none;
   color: var(--secondary-color);
   border: var(--border-thickness) var(--border-type) var(--border-color);
