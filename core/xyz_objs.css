@@ -38,6 +38,8 @@
   border-radius: var(--border-radius);
 }
 .navbox .nav a:hover {
-  color: white;
-  border-color: white;
+background-color: #444;
+}
+.navbox .nav a:active {
+background-color: #333;
 }
