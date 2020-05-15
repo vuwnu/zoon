@@ -1,18 +1,52 @@
 /* Styling for all of the different objects within an XYZ page */
+
+/* Objects */
 .obj {
   margin: 5px;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+
+  flex: 1 1 42%;
+}
+obj > * {
+  margin: auto;
 }
 
 .obj.title {
   background: 0;
 }
 
-/* Grouping */
+/** Object Modifiers **/
 
-.group-h {
+.obj.bg {
+  background: var(--border-bg-color);
+}
+.obj.bdr {
+  border: var(--border-thickness) var(--border-type) var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+/* Flex Weights */
+.obj.fl-s {
+  flex: 1 1;
+}
+.obj.fl-m {
+  flex: 5 1;
+}
+.obj.fl-l {
+  flex: 10 1;
+}
+
+/* Grouping */
+.group-r {
   flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+}
+.group-c {
+  flex-flow: column wrap;
   display: flex;
   justify-content: center;
 }
