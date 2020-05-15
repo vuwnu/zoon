@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/viri-space/brand/master/XYZ/logo.png" width="350">
+<img src="xyz_logo.png" width="350">
 </p>
 
 ***
