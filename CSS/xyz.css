@@ -272,6 +272,10 @@ input.xyz {
   margin: 0 auto;
 }
 
+.center {
+  margin: auto;
+}
+
 /********** Media Queries **********/
 
 @media screen and (max-width: 500px) {
