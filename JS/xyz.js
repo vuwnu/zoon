@@ -1,15 +1,12 @@
 console.log("XYZ.js has loaded for " + siteName);
 
-let d = new Date();
-document.getElementById("year").innerHTML = d.getFullYear();
-
 // Set Page Title
 function setTitle() {
   let title = siteName + ' | ' + pageName;
   document.title = title
 }
 
-// Page loader
+// Text loader
 function loadPage(url, output) {
   fetch(url)
   .then(response => response.text())
@@ -47,4 +44,28 @@ const params = new URLSearchParams(window.location.search);
 //Iterate the search parameters.
 for (const param of params) {
   console.log(param);
+  document.getElementById("js-param").innerHTML = 'Welcome to my website, ' + param[1] + '!';
+}
+
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let d = new Date();
+document.getElementById("day").innerHTML = days[d.getDay()];
+
+// Set Date
+function setDate() {
+  document.getElementById("year").innerHTML = d.getFullYear();
+}
+
+// Sets active class on current page in navbar
+function setNavigation() {
+  let current_location = location.pathname;
+  if (current_location === "") return;
+  let nav_items = document.querySelector("nav").getElementsByTagName("a");
+  for (let i = 0, len = nav_items.length; i < len; i++)
+  {
+    if (nav_items[i].getAttribute("href").indexOf(current_location) !== -1)
+    {
+      nav_items[i].className = "currentPage";
+    }
+  }
 }
