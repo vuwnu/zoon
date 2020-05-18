@@ -5,21 +5,25 @@
   margin: 5px;
   padding: 20px;
   text-align: center;
+  /* flex */
   display: flex;
   flex-flow: column;
-
   flex: 1 1 42%;
 }
 obj > * {
   margin: auto;
 }
-
 .obj.title {
   background: 0;
 }
+/* Image Styling */
+.obj img {
+  width: 70%;
+  margin: auto;
+  max-width: 250px;
+}
 
 /** Object Modifiers **/
-
 .obj.bg {
   background: var(--border-bg-color);
 }
