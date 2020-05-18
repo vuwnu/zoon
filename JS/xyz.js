@@ -17,6 +17,30 @@ function loadPage(url, output) {
   .catch((err) => {document.getElementById(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"});
 }
 
+// Build page
+function XYZBuildPage(url) {
+  fetch(url + 'navbar.html')
+  .then(response => response.text())
+  .then(text => {
+    document.querySelector('nav').innerHTML = text
+  })
+
+  fetch(url + 'header.html')
+  .then(response => response.text())
+  .then(text => {
+    document.querySelector('header').innerHTML = text
+  })
+
+  fetch(url + 'footer.html')
+  .then(response => response.text())
+  .then(text => {
+    document.querySelector('footer').innerHTML = text
+  })
+  // .catch((err) => {
+  //   document.getElementById('nav').innerHTML = "Can’t access " + url + " response. Blocked by browser?"
+  // });
+}
+
 //SearchParams Test
 const params = new URLSearchParams(window.location.search);
 
