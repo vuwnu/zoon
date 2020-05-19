@@ -92,6 +92,9 @@ variables {
 }
 
 /* Navbar */
+.navbar.b a.currentPage {
+  background-color: #555;
+}
 .navbar {
   display: flex;
   justify-content: space-evenly;
