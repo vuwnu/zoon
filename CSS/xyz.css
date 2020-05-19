@@ -148,6 +148,14 @@ variables {
 .xyz footer div {
   margin: auto;
 }
+/* Social Links */
+.xyz footer .social {
+  margin: 10px;
+  font-size: 200%;
+}
+.xyz footer .social a {
+  margin: 10px;
+}
 
 /* Aside */
 .xyz aside {
