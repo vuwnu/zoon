@@ -16,22 +16,23 @@ function loadPage(url, output) {
 
 // Build page
 function XYZBuildPage(url) {
+  let xyzBody = document.querySelector('body')
+
   fetch(url + 'navbar.html')
   .then(response => response.text())
   .then(text => {
-    document.querySelector('nav').innerHTML = text
+    xyzBody.insertAdjacentHTML('beforeend', text)
   })
 
   fetch(url + 'header.html')
   .then(response => response.text())
   .then(text => {
-    document.querySelector('header').innerHTML = text
+    xyzBody.insertAdjacentHTML('beforeend', text)
   })
-
   fetch(url + 'footer.html')
   .then(response => response.text())
   .then(text => {
-    document.querySelector('footer').innerHTML = text
+    xyzBody.insertAdjacentHTML('beforeend', text)
   })
   // .catch((err) => {
   //   document.getElementById('nav').innerHTML = "Can’t access " + url + " response. Blocked by browser?"
