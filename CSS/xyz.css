@@ -194,6 +194,12 @@ a {
 /***********
  *  Color  *
  ***********/
+.spotify {
+  color: #1ed761;
+}
+.instagram {
+  color: #55acee;
+}
 .black {
  color: black;
 }
