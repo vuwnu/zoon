@@ -203,11 +203,11 @@ a {
 
 /* Button */
 .btn {
-  border: solid 1px darkgray;
+  color: var(--tertiary-color);
   display: inline-block;
   margin: 5px;
-  padding: 5px 40px;
-  flex: 1 1 200px;
+  padding: 5px;
+  flex: 1 1;
 }
 .btn:hover {
   filter: brightness(120%);
