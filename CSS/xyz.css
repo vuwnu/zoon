@@ -14,6 +14,9 @@
 /************  Imports  ************/
 
 /**** Base Stlying ****/
+html {
+  background: var(--background, black);
+}
 
 /*** Body Wrapper ***/
 .xyz {
