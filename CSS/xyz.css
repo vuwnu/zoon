@@ -91,14 +91,37 @@ html {
 }
 
 /* Navbar */
+/* Class for showing current page */
 .navbar.b a.currentPage {
   background-color: #555;
 }
+.navbar.a a.currentPage {
+  background-color: #555;
+}
+/* Main navbar styling */
 .navbar {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   order: 2;
+}
+.navbar.a {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  order: 2;
+  background: #333;
+  margin: 5px;
+}
+/* Navbar link styling */
+.navbar.a a {
+  flex: .1 0 50px;
+  color: white;
+  padding: 5px 0;
+
+  border: var(--border-thickness) var(--border-type) var(--border-color);
+  background: #333;
+  border-radius: var(--border-radius);
 }
 .navbar.b a {
   flex: 1 0 50px;
