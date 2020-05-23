@@ -133,6 +133,7 @@ html {
   background: var(--border-bg-color);
   border-radius: var(--border-radius);
 }
+
 .navbar a {
   flex: 1 0 50px;
   color: white;
@@ -145,9 +146,7 @@ html {
 .navbar a:active {
   background-color: #333;
 }
-#active {
-  background-color: #555;
-}
+
 
 /* Main */
 .xyz main {
