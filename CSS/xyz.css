@@ -135,7 +135,6 @@ html {
 .xyz footer {
   width: 100%;
   background: var(--background-color);
-  display: flex;
   align-content: center;
   padding: 29px 0;
   text-align: center;
