@@ -1,5 +1,7 @@
 @charset 'UTF-8';
-/************  Imports  ************/
+  /***************/
+ /*** Imports ***/
+/***************/
 
 /* Core */
 @import 'core/xyz_config.css';
@@ -7,18 +9,16 @@
 @import 'core/xyz_table.css';
 @import 'core/xyz_hover.css';
 @import 'core/xyz_objs.css';
-
 /* Modules */
 @import 'modules/xyz_fun.css';
 
-/************  Imports  ************/
+  /********************/
+ /*** Base Styling ***/
+/********************/
 
-/**** Base Stlying ****/
 html {
   background: var(--background, black);
 }
-
-/*** Body Wrapper ***/
 .xyz {
   padding: 5px 10px;
   line-height: 1.5;
@@ -47,23 +47,27 @@ html {
   }
 }
 
+  /*****************/
+ /*** SELECTION ***/
+/*****************/
+
 ::selection {
   background: lightblue;
   color: white;
 }
 
-/*** Scrollbar ***/
+  /*****************/
+ /*** SCROLLBAR ***/
+/*****************/
 
-/** Width **/
+/* Width */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-handle);
@@ -79,8 +83,10 @@ html {
   }
 }
 
+  /**************/
+ /*** HEADER ***/
+/**************/
 
-/* Header */
 .xyz header {
   width: 100%;
   background: var(--background-color);
@@ -90,7 +96,10 @@ html {
   order: 1;
 }
 
-/* Navbar */
+  /**************/
+ /*** NAVBAR ***/
+/**************/
+
 /* Class for showing current page */
 .navbar.b a.currentPage {
   background-color: #555;
