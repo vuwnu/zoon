@@ -22,45 +22,7 @@ If you would then like to customise your XYZ setup you can add the xyz_config.cs
 
 ***
 
-<h2 align="center">Branches</h2>
-
-This repo contains all files for the XYZ style. Each branch of this repo represents a different application and is updated seperately.
-
-
-<h5 align="center">Master</h5>
-
-This is the main version of XYZ. Other branches of XYZ are built from this one.
-
-<h5 align="center" href="tree/jekyll">Jekyll</h5>
-
-This is designed to work with Jekyll powered webpages. More information on setting this theme can be found on the README for that branch
-
-***
-
 <h2 align="center">Style Rules</h2>
-
-<h5 align="center">Grid System</h5>
-
-Each site should begin by splitting the page up into segments using the XYZ grid system, this allows contextual styling to work properly and keeps your site looking clean.
-Working with the grid system is easy to do, simply create div elements with class for each section you want, then wrap that all in a div with the "xyz" class.
-
-    <div class="xyz">
-
-      <div class="xyz__header">
-        {{HEADER HERE}}
-      </div>
-
-      <div class="xyz__main">
-        {{MAIN CONTENT HERE}}
-      </div>
-
-      <div class="xyz__footer">
-        {{FOOTER HERE}}
-      </div>
-
-    </div>
-
-You now have the basic structure of your website setup!
 
 <h5 align="center">Fonts</h5>
 
@@ -86,3 +48,11 @@ XYZ uses flexbox for properly sorting your content on the page. It allows conten
 2.  Download a copy of `xyz_config.css` and place it in your project folder
 3.  Change the contents of the config file to suit your needs
 4.  Add a local link to the config file in the HEAD of your file
+
+***
+
+<h2 align="center">To Do</h2>
+
+1.  URL Routing
+2.  Input Handling
+3.  Session Storage
