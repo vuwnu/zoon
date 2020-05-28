@@ -65,13 +65,13 @@
  }
 }
 
+/* JADE */
 /* This is the styling for JADE */
 .jade {
   position: sticky;
   z-index: 1;
   transform: scale(.9)
 }
-
 .eye {
   cursor: pointer;
   transition: transform 1s ease;
@@ -81,11 +81,9 @@
   stroke-width: 0;
   fill: url(#RadialGradient1);
 }
-
 .eye:hover {
   transform: scale(1.1)
 }
-
 @keyframes glow {
   0% {
     transform: scaleX(.9) scaleY(1.1);
@@ -107,7 +105,6 @@
     transform: scaleX(.9) scaleY(1.1);
   }
 }
-
 .outerhex {
   transform: scale(.9);
   animation: outer 5s infinite;
@@ -116,7 +113,6 @@
   stroke: #1f0;
   filter: drop-shadow(rgba(0, 255, 0, 1) 5px 5px 5px);
 }
-
 .innerhex {
   transform: scale(.8);
   animation: inner 5s infinite linear;
@@ -125,7 +121,6 @@
   stroke: #1f0;
   filter: drop-shadow(rgba(0, 255, 0, 1) 0 0 50px);
 }
-
 @keyframes inner {
   0% {
     transform: scale(.6) rotate(0deg);
@@ -139,7 +134,6 @@
     transform: scale(.6) rotate(360deg);
   }
 }
-
 @keyframes outer {
   0% {
     transform: scale(.9) rotate(30deg);
