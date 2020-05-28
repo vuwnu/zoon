@@ -97,8 +97,18 @@ html {
   background: var(--background-color);
   display: flex;
   align-content: center;
+  align-items: center;
   padding: 5px 0;
   order: 1;
+}
+.xyz header.row {
+  flex-flow: row;
+}
+.xyz header.column {
+  flex-flow: column;
+}
+.xyz header.space-between {
+  justify-content: space-between;
 }
 
   /**************/
