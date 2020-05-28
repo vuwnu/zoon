@@ -139,7 +139,7 @@ html {
 }
 /* Navbar link styling */
 .navbar.a a {
-  flex: .1 0 50px;
+  flex: 1 0 50px;
   color: white;
   padding: 5px 0;
 
@@ -229,6 +229,7 @@ a {
 /* Button */
 .btn {
   color: var(--tertiary-color);
+  background: var(--colorGradient4);
   display: inline-block;
   margin: 5px;
   padding: 5px;
