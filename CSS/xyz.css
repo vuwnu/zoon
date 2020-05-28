@@ -46,7 +46,12 @@ html {
     padding: 1px;
   }
 }
-
+.xyz.center {
+  justify-content: center;
+}
+.xyz.space-between {
+  justify-content: space-between;
+}
   /*****************/
  /*** SELECTION ***/
 /*****************/
