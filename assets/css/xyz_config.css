@@ -49,6 +49,7 @@
  *  Custom  *
  ************/
 .docsContents {
+  flex: .1 1 10%;
   order: 2;
   overflow: scroll;
   height: 300px;
