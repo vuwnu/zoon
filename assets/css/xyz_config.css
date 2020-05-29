@@ -24,7 +24,7 @@
   /***********
    *  Sizes  *
    ***********/
-  --max-width: 1300px;
+  --max-width: 800px;
   --margin-width: 900px;
 
   /***********
@@ -52,7 +52,7 @@
 .logo {
   font-size: 4em;
   text-align: center;
-  margin: auto;
+  margin: 0 20px;
   font-weight: 800;
 }
 .x {
