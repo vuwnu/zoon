@@ -8,11 +8,11 @@
   --tertiary-color: lime;
   --background-color: #222;
   --background-border-color: #1d1d1d;
-  --border-bg-color: #2e2e2e;
+  --border-bg-color: #222;
 
   /** Border **/
   --border-type: solid;
-  --border-thickness: 1px;
+  --border-thickness: 0px;
   --border-radius: 0px;
   --border-color: #333;
 
@@ -48,7 +48,9 @@
 /************
  *  Custom  *
  ************/
-
+header {
+  margin: 0 20px;
+}
 .logo {
   font-size: 4em;
   text-align: center;
