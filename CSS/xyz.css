@@ -178,6 +178,15 @@ html {
   display: flex;
   flex-flow: column wrap;
 }
+.xyz main.row {
+  flex-flow: row wrap
+}
+
+.xyz main.column {
+  flex-flow: column wrap
+}
+
+
 
 /* Footer */
 .xyz footer {
