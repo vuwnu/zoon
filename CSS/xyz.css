@@ -356,6 +356,10 @@ input.xyz {
   margin: auto;
 }
 
+#XYZContent {
+  order: 3;
+}
+
 /********** Media Queries **********/
 
 @media screen and (max-width: 500px) {
