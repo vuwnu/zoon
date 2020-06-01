@@ -333,15 +333,14 @@ a {
   padding: 0;
 }
 
-.block {
-  flex: 1 1 350px;
+.row {
+  flex-flow: row wrap
 }
-.block-2 {
-  flex: 2 0 250px;
+
+.column {
+  flex-flow: column wrap
 }
-.block-3 {
-  flex: 1 0 150px;
-}
+
 
 /************
  *  Inputs  *
