@@ -93,7 +93,6 @@ html {
 /**************/
 
 .xyz header {
-  width: 100%;
   background: var(--background-color);
   display: flex;
   align-content: center;
