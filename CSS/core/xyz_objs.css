@@ -18,9 +18,11 @@ obj > * {
 }
 /* Image Styling */
 .obj img {
-  width: 70%;
-  margin: auto;
-  max-width: 250px;
+  margin: 0 auto;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
 }
 
 /** Object Modifiers **/
