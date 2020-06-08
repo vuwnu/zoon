@@ -35,16 +35,20 @@ function XYZConsole(text) {
   console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
 }
 
-function XYZReadConfig() {
-  fetch('/XYZ_Config.json')
-    .then(response => response.json())
-    .then(data => XYZSite = data)
-    .then(() => console.log(XYZSite))
-    .catch(console.error);
-  // let jsonTest = JSON.parse('true')
-  // console.log(jsonTest);
+
+let xyzConfig
+fetch('/XYZ_Config.json')
+  .then(response => response.json())
+  .then(data => xyzConfig = data)
+  .then(() => console.log(xyzConfig))
+  .catch(console.error);
+
+function SetXYZVariables() {
+    for (var key in xyzConfig) {
+        window[key] = xyzConfig[key];
+    }
+    XYZConsole('config file parsed')
 }
-XYZReadConfig();
 
 // XYZ Time
 class XYZTime extends HTMLElement {
