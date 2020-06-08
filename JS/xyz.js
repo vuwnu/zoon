@@ -16,7 +16,7 @@ define custom elements
 
 */
 
-let layout;
+let layout
 
 // Custom logging function
 function XYZConsole(text) {
@@ -65,14 +65,12 @@ class XYZTime extends HTMLElement {
     }).format(date);
   }
 }
-
 // XYZ Variable
 class XYZVariable extends HTMLElement {
   connectedCallback() {
     this.innerHTML = window[this.innerHTML] || "";
   }
 }
-
 // XYZ Navbar
 class XYZNavbar extends HTMLElement {
   connectedCallback() {
@@ -141,7 +139,7 @@ function XYZLoadLayout(url) {
       .then(text => {
         xyzBody.insertAdjacentHTML('beforeend', text)
       })
-      XYZConsole('Layout = default');
+    XYZConsole('Layout = default');
   } else {
     currentLayout = layout
     fetch(url + layout + '.html')
@@ -152,7 +150,7 @@ function XYZLoadLayout(url) {
       .then(text => {
         xyzBody.insertAdjacentHTML('beforeend', text)
       })
-      XYZConsole('Layout = ' + layout);
+    XYZConsole('Layout = ' + layout);
   }
 
   XYZConsole('Page succesfully built');
@@ -211,6 +209,7 @@ function setNavigation() {
 // These take place after the main content of the page has been loaded in
 window.addEventListener('DOMContentLoaded', (event) => {
   setTitle();
+  SetXYZVariables();
   XYZLoadLayout('/assets/html/layouts/');
 
   setTimeout(() => {
@@ -218,5 +217,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     defineElements(); //Function to define all custom elements
   }, 100);
 
-  XYZConsole('XYZ.JS has loaded for ' + siteName);
+  XYZConsole(`XYZ.JS has loaded for ${siteName}`);
 });
