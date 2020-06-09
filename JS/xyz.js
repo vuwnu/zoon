@@ -98,23 +98,16 @@ function defineElements() {
 // Set Page Title
 function setTitle() {
   if (pageName !== undefined) {
-    document.title = siteName + ' | ' + pageName;
+    document.title = XYZ.default.siteName + ' | ' + pageName;
     XYZConsole('Title set');
   } else {
     return;
   }
 }
 
-function setContent() {
-  var newParent = document.querySelector('main');
-  var oldParent = document.getElementById('XYZContent');
-
-  while (oldParent.childNodes.length > 0) {
-    newParent.appendChild(oldParent.childNodes[0]);
-  }
-  oldParent.remove();
-}
-
+// ===================================
+// ============== LAYOUT =============
+// ===================================
 // Build page
 function XYZLoadLayout(url) {
   let xyzBody = document.querySelector('body')
