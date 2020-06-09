@@ -1,0 +1,11 @@
+{
+  "default": {
+    "siteName": "XYZ",
+    "siteDescription": "web framework",
+    "siteConfig": "/",
+    "siteFiles": "assets"
+  },
+  "custom": {
+    "language": "Javascript"
+  }
+}
