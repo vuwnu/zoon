@@ -168,23 +168,6 @@ function loadPage(url, output) {
     });
 }
 
-
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let d = new Date();
-
-// Sets active class on current page in navbar
-function setNavigation() {
-  let current_location = location.pathname;
-  if (current_location === "/") return;
-  let nav_items = document.querySelector("nav").getElementsByTagName("a");
-  for (let i = 0, len = nav_items.length; i < len; i++) {
-    if (nav_items[i].getAttribute("href").indexOf(current_location) !== -1) {
-      nav_items[i].className = "currentPage";
-    }
-  }
-}
-
-
 // //SearchParams Test
 // const params = new URLSearchParams(window.location.search);
 //
