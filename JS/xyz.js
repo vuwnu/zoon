@@ -31,25 +31,28 @@ function XYZConsole(text) {
   let xyzTag = '%c[%cX%cY%cZ%c] %s'
   // Sending the message to the log
   let type = log;
-
   console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
 }
 
-
-let xyzConfig
+let XYZ
 fetch('/XYZ_Config.json')
   .then(response => response.json())
-  .then(data => xyzConfig = data)
-  .then(() => console.log(xyzConfig))
+  .then(data => XYZ = data)
+  .then(() => console.log(XYZ))
   .catch(console.error);
 
-function SetXYZVariables() {
-    for (var key in xyzConfig) {
-        window[key] = xyzConfig[key];
-    }
-    XYZConsole('config file parsed')
-}
 
+// function setXYZVariables() {
+//     for (var key in XYZ) {
+//         window[key] = XYZ[key];
+//     }
+//     XYZConsole('config file parsed')
+// }
+// setXYZVariables();
+
+// ===================================
+// ========= CUSTOM ELEMENTS =========
+// ===================================
 // XYZ Time
 class XYZTime extends HTMLElement {
   connectedCallback() {
