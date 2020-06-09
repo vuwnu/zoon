@@ -187,18 +187,21 @@ function loadPage(url, output) {
 
 
 
-
+// ===================================
+// ========== INITIALISATION =========
+// ===================================
 // Actions to take once DOM has loaded
 // These take place after the main content of the page has been loaded in
 window.addEventListener('DOMContentLoaded', (event) => {
-  setTitle();
-  SetXYZVariables();
   XYZLoadLayout('/assets/html/layouts/');
+  setTimeout(() => {
+    setSiteTheme();
+    setTitle();
+  }, 50);
 
   setTimeout(() => {
     setContent();
     defineElements(); //Function to define all custom elements
+    XYZConsole(`XYZ.JS has loaded for ${XYZ.default.siteName}`);
   }, 100);
-
-  XYZConsole(`XYZ.JS has loaded for ${siteName}`);
 });
