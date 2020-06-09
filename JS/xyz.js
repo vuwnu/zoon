@@ -68,7 +68,10 @@ class XYZTime extends HTMLElement {
 // XYZ Variable
 class XYZVariable extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = window[this.innerHTML] || "";
+    let varScope = 'XYZ.' + this.getAttribute('scope')
+    let variable = varScope[this.innerHTML]
+    this.innerHTML = variable || "";
+    console.log(this.innerHTML);
   }
 }
 // XYZ Navbar
@@ -86,8 +89,8 @@ class XYZNavbar extends HTMLElement {
   }
 }
 
+// Defining all custom elements
 function defineElements() {
-  // Defining all custom elements
   customElements.define("xyz-time", XYZTime); // Time Element
   customElements.define("xyz-v", XYZVariable); // Variable Element
   customElements.define("xyz-nav", XYZNavbar); // Navbar Element
