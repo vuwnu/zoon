@@ -156,6 +156,25 @@ function XYZLoadLayout(url) {
   XYZConsole('Page succesfully built');
 }
 
+function setContent() {
+  var newParent = document.querySelector('main');
+  var oldParent = document.getElementById('XYZContent');
+
+  while (oldParent.childNodes.length > 0) {
+    newParent.appendChild(oldParent.childNodes[0]);
+  }
+  oldParent.remove();
+}
+
+function setSiteTheme() {
+  var element = document.querySelector('html');
+  if (XYZ.default.siteTheme === undefined) {
+    element.classList.add(`default-theme`);
+  } else {
+    element.classList.add(`${XYZ.default.siteTheme}`)
+  }
+}
+
 // Text loader
 function loadPage(url, output) {
   fetch(url)
