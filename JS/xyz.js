@@ -21,12 +21,12 @@ let layout
 // Custom logging function
 function XYZConsole(text) {
   // Log types
-  let log = 'color:#888;font-size:20px;'
+  let log = 'color:#888;font-size:15px;'
   let warn = 'color:#e00000;font-size:20px;background-color:red;'
   // Styling the XYZ tag
-  let xCSS = 'color:rgb(203, 63, 80);font-size:20px;'
-  let yCSS = 'color:rgb(119, 215, 103);font-size:20px;'
-  let zCSS = 'color:rgb(37, 105, 195);font-size:20px;'
+  let xCSS = 'color:rgb(203, 63, 80);font-size:15px;'
+  let yCSS = 'color:rgb(119, 215, 103);font-size:15px;'
+  let zCSS = 'color:rgb(37, 105, 195);font-size:15px;'
   // XYZ tag at the start of a message
   let xyzTag = '%c[%cX%cY%cZ%c] %s'
   // Sending the message to the log
