@@ -15,32 +15,35 @@ insert page content into layout
 define custom elements
 
 */
+let XYZfunc = {
 
-let layout
+  "console":{
+    // Custom logging function
+    log(text) {
+      // Log types
+      let log = 'color:#888;font-size:15px;'
+      let warn = 'color:#e00000;font-size:20px;background-color:red;'
+      // Styling the XYZ tag
+      let xCSS = 'color:rgb(203, 63, 80);font-size:15px;'
+      let yCSS = 'color:rgb(119, 215, 103);font-size:15px;'
+      let zCSS = 'color:rgb(37, 105, 195);font-size:15px;'
+      // XYZ tag at the start of a message
+      let xyzTag = '%c[%cX%cY%cZ%c] %s'
+      // Sending the message to the log
+      let type = log;
+      console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
+    }
 
-// Custom logging function
-function XYZConsole(text) {
-  // Log types
-  let log = 'color:#888;font-size:15px;'
-  let warn = 'color:#e00000;font-size:20px;background-color:red;'
-  // Styling the XYZ tag
-  let xCSS = 'color:rgb(203, 63, 80);font-size:15px;'
-  let yCSS = 'color:rgb(119, 215, 103);font-size:15px;'
-  let zCSS = 'color:rgb(37, 105, 195);font-size:15px;'
-  // XYZ tag at the start of a message
-  let xyzTag = '%c[%cX%cY%cZ%c] %s'
-  // Sending the message to the log
-  let type = log;
-  console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
+  }
+
 }
 
+let layout
 let XYZ
 fetch('/XYZ_Config.json')
   .then(response => response.json())
   .then(data => XYZ = data)
-  .then(() => console.log(XYZ))
   .catch(console.error);
-
 
 // function setXYZVariables() {
 //     for (var key in XYZ) {
