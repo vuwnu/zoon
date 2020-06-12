@@ -198,15 +198,6 @@ function loadPage(url, output) {
 //   document.getElementById("js-param").innerHTML = 'Welcome to my website, ' + param[1] + '!';
 // }
 
-// function XYZLoadIn() {
-//   var xyzmain = document.querySelector('main');
-//   xyzmain.style.display = "none";
-//   setTimeout(() => {
-//     xyzmain.style.display = "flex";
-//   }, 500);
-// }
-
-
 
 // ===================================
 // ========== INITIALISATION =========
