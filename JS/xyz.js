@@ -33,16 +33,13 @@ let XYZfunc = {
       let type = log;
       console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
     }
-
   }
-
 }
 
 let layout
-let XYZ
 fetch('/XYZ_Config.json')
   .then(response => response.json())
-  .then(data => XYZ = data)
+  .then(data => XYZdata = data)
   .catch(console.error);
 
 // function setXYZVariables() {
