@@ -214,15 +214,22 @@ function loadPage(url, output) {
 // Actions to take once DOM has loaded
 // These take place after the main content of the page has been loaded in
 window.addEventListener('DOMContentLoaded', (event) => {
-  XYZLoadLayout('/assets/html/layouts/');
+
   setTimeout(() => {
+    defineElements(); //Function to define all custom elements
+    Object.assign(page.page, p);
+    Object.assign(XYZdata, page);
     setSiteTheme();
     setTitle();
   }, 50);
 
   setTimeout(() => {
-    setContent();
-    defineElements(); //Function to define all custom elements
-    XYZConsole(`XYZ.JS has loaded for ${XYZ.default.siteName}`);
+    XYZLoadLayout('/assets/html/layouts/');
   }, 100);
+
+  setTimeout(() => {
+    setContent();
+    XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.site.name}`);
+  }, 200);
+
 });
