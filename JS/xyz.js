@@ -102,9 +102,9 @@ function defineElements() {
 
 // Set Page Title
 function setTitle() {
-  if (pageName !== undefined) {
-    document.title = XYZ.default.siteName + ' | ' + pageName;
-    XYZConsole('Title set');
+  if (XYZdata.page.name !== undefined) {
+    document.title = XYZdata.site.name + ' | ' + XYZdata.page.name;
+    XYZ.cnsl.log('Title set');
   } else {
     return;
   }
