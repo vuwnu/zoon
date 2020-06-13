@@ -71,10 +71,9 @@ class XYZTime extends HTMLElement {
 // XYZ Variable
 class XYZVariable extends HTMLElement {
   connectedCallback() {
-    let varScope = 'XYZ.' + this.getAttribute('scope')
-    let variable = varScope[this.innerHTML]
-    this.innerHTML = variable || "";
-    console.log(this.innerHTML);
+    let scope = this.getAttribute('scope')
+    let variable = this.getAttribute('var')
+    this.innerHTML = XYZdata[scope][variable] || "";
   }
 }
 // XYZ Navbar
