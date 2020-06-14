@@ -1,6 +1,5 @@
-// XYZ.js
-
 /*
+
 - XYZ SETUP STAGE
 
 declare variables
@@ -33,28 +32,102 @@ let XYZ = {
       // Sending the message to the log
       let type = log;
       console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
+    },
+    help() {
+      XYZ.cnsl.log(`this is a help command :)`)
     }
+
+  },
+
+  init: {
+
+    loadXYZdata() {
+      fetch('/XYZ_Config.json')
+        .then(response => response.json())
+        .then(data => XYZdata = data)
+        .catch(console.error);
+    },
+
+    setContent() {
+      var newParent = document.querySelector('main');
+      var oldParent = document.getElementById('XYZContent');
+
+      while (oldParent.childNodes.length > 0) {
+        newParent.appendChild(oldParent.childNodes[0]);
+      }
+      oldParent.remove();
+    },
+
+    XYZLoadLayout(url) {
+      let layout = XYZdata.layout;
+      let xyzBody = document.querySelector('body')
+      let xyzHead = document.querySelector('head')
+
+      // Inserts HEAD file
+      fetch('/assets/html/head.html')
+        .catch((err) => {
+          XYZ.cnsl.log('Error fetching head')
+        })
+        .then(response => response.text())
+        .then(text => {
+          xyzHead.insertAdjacentHTML('beforeend', text)
+        })
+
+      // Inserts Layout file
+      if (layout === undefined) {
+        currentLayout = "default"
+        fetch(url + 'default.html')
+          .catch((err) => {
+            XYZ.cnsl.log('Error fetching layout')
+          })
+          .then(response => response.text())
+          .then(text => {
+            xyzBody.insertAdjacentHTML('beforeend', text)
+          })
+        XYZ.cnsl.log('Layout = default');
+      } else {
+        currentLayout = layout
+        fetch(url + layout + '.html')
+          .catch((err) => {
+            XYZ.cnsl.log('Error fetching layout')
+          })
+          .then(response => response.text())
+          .then(text => {
+            xyzBody.insertAdjacentHTML('beforeend', text)
+          })
+        XYZ.cnsl.log('Layout = ' + layout);
+      }
+      XYZ.cnsl.log('Page succesfully built');
+    },
+
+    setSiteTheme() {
+      var element = document.querySelector('html');
+      if (XYZdata.theme === undefined) {
+        element.classList.add(`default-theme`);
+      } else {
+        element.classList.add(`${XYZdata.siteTheme}`)
+      }
+    },
+
+    mergeData() {
+      Object.assign(XYZdata, p);
+      delete p;
+    },
+
+    setTitle() {
+      if (XYZdata.pageName !== undefined) {
+        document.title = XYZdata.siteName + ' | ' + XYZdata.pageName;
+        XYZ.cnsl.log('Title set');
+      } else {
+        return;
+      }
+    }
+
   }
+
 }
 
-let layout
-fetch('/XYZ_Config.json')
-  .then(response => response.json())
-  .then(data => XYZdata = data)
-  .catch(console.error);
-
-// function setXYZVariables() {
-//     for (var key in XYZ) {
-//         window[key] = XYZ[key];
-//     }
-//     XYZConsole('config file parsed')
-// }
-// setXYZVariables();
-
-// ===================================
-// ========= CUSTOM ELEMENTS =========
-// ===================================
-// XYZ Time
+//// CUSTOM ELEMENTS
 class XYZTime extends HTMLElement {
   connectedCallback() {
     let date = new Date(this.getAttribute('datetime') || Date.now());
