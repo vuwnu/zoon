@@ -142,15 +142,12 @@ class XYZTime extends HTMLElement {
     }).format(date);
   }
 }
-// XYZ Variable
 class XYZVariable extends HTMLElement {
   connectedCallback() {
-    let scope = this.getAttribute('scope')
     let variable = this.getAttribute('var')
-    this.innerHTML = XYZdata[scope][variable] || "";
+    this.innerHTML = XYZdata[variable] || "";
   }
 }
-// XYZ Navbar
 class XYZNavbar extends HTMLElement {
   connectedCallback() {
     // Sets active page in navbar
