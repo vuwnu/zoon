@@ -15,9 +15,10 @@ insert page content into layout
 define custom elements
 
 */
-let XYZfunc = {
 
-  "console":{
+let XYZ = {
+
+  cnsl: {
     // Custom logging function
     log(text) {
       // Log types
