@@ -187,32 +187,26 @@ function loadPage(url, output) {
 // //Iterate the search parameters.
 // for (const param of params) {
 //   console.log(param);
-//   document.getElementById("js-param").innerHTML = 'Welcome to my website, ' + param[1] + '!';
 // }
 
-
-// ===================================
-// ========== INITIALISATION =========
-// ===================================
-// Actions to take once DOM has loaded
-// These take place after the main content of the page has been loaded in
+//// INITIALISATION
+XYZ.init.loadXYZdata();
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
     defineElements(); //Function to define all custom elements
-    Object.assign(page.page, p);
-    Object.assign(XYZdata, page);
-    setSiteTheme();
-    setTitle();
+    XYZ.init.mergeData(); //Combines page data into XYZdata object
+    XYZ.init.setSiteTheme();
+    XYZ.init.setTitle();
   }, 50);
 
   setTimeout(() => {
-    XYZLoadLayout('/assets/html/layouts/');
+    XYZ.init.XYZLoadLayout('/assets/html/layouts/');
   }, 100);
 
   setTimeout(() => {
-    setContent();
-    XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.site.name}`);
+    XYZ.init.setContent();
+    XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.siteName}`);
   }, 200);
 
 });
