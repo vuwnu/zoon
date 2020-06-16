@@ -1,0 +1,7 @@
+{
+  "siteName": "XYZ",
+  "description": "web framework",
+  "config": "/",
+  "files": "assets",
+  "language": "Javascript"
+}
