@@ -33,6 +33,7 @@ let XYZ = {
       let type = log;
       console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
     },
+
     help() {
       XYZ.cnsl.log(`this is a help command :)`)
     }
@@ -42,7 +43,7 @@ let XYZ = {
   init: {
 
     loadXYZdata() {
-      fetch('/XYZ_Config.json')
+      fetch('/XYZdata.json')
         .then(response => response.json())
         .then(data => XYZdata = data)
         .catch(console.error);
