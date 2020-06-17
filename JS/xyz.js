@@ -18,7 +18,7 @@ define custom elements
 let XYZ = {
 
   cnsl: {
-    // Custom logging function
+
     log(text) {
       // Log types
       let log = 'color:#888;font-size:15px;'
@@ -106,7 +106,7 @@ let XYZ = {
       if (XYZdata.theme === undefined) {
         element.classList.add(`default-theme`);
       } else {
-        element.classList.add(`${XYZdata.siteTheme}`)
+        element.classList.add(`${XYZdata.theme}`)
       }
     },
 
