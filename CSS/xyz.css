@@ -96,7 +96,6 @@ html {
   display: flex;
   align-content: center;
   align-items: center;
-  padding: 5px 0;
   order: 1;
 }
 .xyz header.row {
@@ -191,7 +190,6 @@ html {
   width: 100%;
   background: var(--background-color);
   align-content: center;
-  padding: 29px 0;
   text-align: center;
   order: 5;
 }
