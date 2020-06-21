@@ -51,7 +51,7 @@ let XYZ = {
 
     setContent() {
       var newParent = document.querySelector('main');
-      var oldParent = document.getElementById('XYZContent');
+      var oldParent = document.querySelector('#XYZContent');
 
       while (oldParent.childNodes.length > 0) {
         newParent.appendChild(oldParent.childNodes[0]);
@@ -127,6 +127,7 @@ let XYZ = {
   }
 
 }
+XYZ.init.loadXYZdata();
 
 //// CUSTOM ELEMENTS
 class XYZTime extends HTMLElement {
@@ -191,7 +192,6 @@ function loadPage(url, output) {
 // }
 
 //// INITIALISATION
-XYZ.init.loadXYZdata();
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
