@@ -163,12 +163,18 @@ class XYZNavbar extends HTMLElement {
     }
   }
 }
-
+class XYZLogo extends HTMLElement {
+  connectedCallback() {
+    let xyzlogo = `<a href="https://xyz.vayn.work"><span>X</span><span>Y</span><span>Z</span></a>`
+    this.innerHTML = xyzlogo;
+  }
+}
 // Defining all custom elements
 function defineElements() {
   customElements.define("xyz-time", XYZTime); // Time Element
   customElements.define("xyz-v", XYZVariable); // Variable Element
   customElements.define("xyz-nav", XYZNavbar); // Navbar Element
+  customElements.define("xyz-logo", XYZLogo); // Logo Element
 }
 
 // Text loader
