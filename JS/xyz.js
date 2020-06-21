@@ -199,15 +199,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     XYZ.init.mergeData(); //Combines page data into XYZdata object
     XYZ.init.setSiteTheme();
     XYZ.init.setTitle();
-  }, 50);
+  }, 100);
 
   setTimeout(() => {
     XYZ.init.XYZLoadLayout('/assets/html/layouts/');
-  }, 100);
+  }, 150);
 
   setTimeout(() => {
     XYZ.init.setContent();
     XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.siteName}`);
-  }, 200);
+  }, 400);
 
 });
