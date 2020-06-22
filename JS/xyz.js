@@ -169,6 +169,7 @@ class XYZLogo extends HTMLElement {
     this.innerHTML = xyzlogo;
   }
 }
+
 // Defining all custom elements
 function defineElements() {
   customElements.define("xyz-time", XYZTime); // Time Element

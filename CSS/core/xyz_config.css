@@ -11,6 +11,8 @@
   --background-border-color: #1d1d1d;
   --border-bg-color: #2e2e2e;
 
+  --background: transparent;
+
   /** Border **/
   --border-type: solid;
   --border-thickness: 0px;
