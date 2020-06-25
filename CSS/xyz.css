@@ -36,16 +36,6 @@ html {
   flex-flow: column;
   margin: auto;
 
-  /* Borders */
-  border-left: 10px solid var(--background-border-color);
-  border-right: 10px solid var(--background-border-color);
-}
-@media screen and (max-width: 500px) {
-  .xyz {
-    border-left: 5px solid var(--background-border-color);
-    border-right: 5px solid var(--background-border-color);
-    padding: 1px;
-  }
 }
 .xyz.center {
   justify-content: center;
