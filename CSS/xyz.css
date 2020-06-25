@@ -339,6 +339,13 @@ input.xyz {
 }
 
 #XYZContent {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--background-color);
   order: 3;
 }
 
