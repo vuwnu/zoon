@@ -193,6 +193,10 @@ page {
 }
 .xyz footer .social a {
   margin: 10px;
+  transition: color .2s;
+}
+.xyz footer .social a:hover {
+  color: white;
 }
 
 /* Aside */
