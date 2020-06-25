@@ -169,6 +169,16 @@ class XYZLogo extends HTMLElement {
     this.innerHTML = xyzlogo;
   }
 }
+class XYZInclude extends HTMLElement {
+  connectedCallback() {
+    let source = this.getAttribute('src')
+    fetch('/assets/html/includes/' + source)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+  }
+}
 
 // Defining all custom elements
 function defineElements() {
