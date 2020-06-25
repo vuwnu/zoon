@@ -99,10 +99,7 @@ page {
   justify-content: space-between;
 }
 
-  /**************/
- /*** NAVBAR ***/
-/**************/
-
+/* Navbar */
 /* Class for showing current page */
 .navbar.b a.currentPage {
   background-color: #555;
@@ -345,12 +342,12 @@ input.xyz {
   order: 3;
 }
 
-/* xyz-logo a {
-  transition: color .2s;
+xyz-logo a span {
+  transition: color .4s;
 }
-xyz-logo a:hover {
-
-} */
+xyz-logo a:hover span {
+  color: white;
+}
 xyz-logo span:nth-of-type(1) {
   color: red;
 }
@@ -370,4 +367,4 @@ xyz-logo span:nth-of-type(3) {
   .xyz footer {
     padding: 20px 0;
   }
-}
+} */
