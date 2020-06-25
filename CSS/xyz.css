@@ -36,7 +36,11 @@ html {
   flex-flow: column;
   margin: auto;
 
+  /* Page Alignment */
+  justify-content: var(--y-axis-page-align);
+  align-items: var(--x-axis-page-align);
 }
+
 .xyz.center {
   justify-content: center;
 }
