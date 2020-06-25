@@ -89,22 +89,9 @@ page {
   background: var(--scrollbar-handle);
 }
 
-/* Scrollbar Fix */
-html {
-  padding-left: calc(100vw - 100%);
-}
-@media screen and (max-width: 1300px) {
-  html {
-    padding-left: 0;
-  }
-}
-
-  /**************/
- /*** HEADER ***/
-/**************/
-
+/* Page structure elements */
+/* Header */
 .xyz header {
-  background: var(--background-color);
   display: flex;
   align-content: center;
   align-items: center;
@@ -179,7 +166,6 @@ html {
 .navbar a:active {
   background-color: #333;
 }
-
 
 /* Main */
 .xyz main {
