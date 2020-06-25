@@ -186,11 +186,12 @@ function defineElements() {
   customElements.define("xyz-v", XYZVariable); // Variable Element
   customElements.define("xyz-nav", XYZNavbar); // Navbar Element
   customElements.define("xyz-logo", XYZLogo); // Logo Element
+  customElements.define("xyz-include", XYZInclude); // Include Element
 }
 
 // Text loader
 function loadPage(url, output) {
-  fetch(url)
+  fetch("/assets/html/includes/" + url)
     .then(response => response.text())
     .then(text => {
       document.querySelector(output).innerHTML = text
