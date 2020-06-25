@@ -170,15 +170,13 @@ page {
   flex-flow: column wrap
 }
 
-
-
 /* Footer */
 .xyz footer {
-  width: 100%;
-  background: var(--background-color);
   align-content: center;
   text-align: center;
   order: 5;
+  display: flex;
+  flex-flow: column;
 }
 .xyz footer p {
   margin: auto;
