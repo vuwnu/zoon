@@ -39,13 +39,6 @@ html {
   align-items: var(--x-axis-page-align);
 }
 
-.xyz.center {
-  justify-content: center;
-}
-.space-between {
-  justify-content: space-between;
-}
-
 page {
   display: flex;
   flex-flow: column;
