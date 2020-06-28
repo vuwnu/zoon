@@ -211,6 +211,11 @@ page {
 /* Links */
 a {
   text-decoration: none;
+  color: cornflowerblue;
+  transition: color .2s;
+}
+a:hover {
+  color: white;
 }
 
 /* Button */
