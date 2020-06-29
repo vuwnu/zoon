@@ -15,39 +15,6 @@
  /*** Base Styling ***/
 /********************/
 
-html {
-  background: black;
-  width: 100%;
-  height: 100%;
-}
-.xyz {
-  line-height: normal;
-  min-height: 100vh;
-
-  /* Apply Base Font */
-  font-family: var(--primary-font);
-  color: var(--primary-color, black);
-  background: var(--background, white);
-
-  /* Flex */
-  display: flex;
-  flex-flow: column;
-  margin: auto;
-
-  /* Page Alignment */
-  justify-content: var(--y-axis-page-align);
-  align-items: var(--x-axis-page-align);
-}
-
-page {
-  display: flex;
-  flex-flow: column;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: var(--max-width);
-  background: var(--background-color);
-}
-
   /* SELECTION */
 
 ::selection {
@@ -236,9 +203,6 @@ a:hover {
   font-size: 1em;
   margin: 0;
 }
-
-/* Main */
-
 
 /* Flex Layout */
 .block-group {
