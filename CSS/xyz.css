@@ -48,18 +48,14 @@ page {
   background: var(--background-color);
 }
 
-  /*****************/
- /*** SELECTION ***/
-/*****************/
+  /* SELECTION */
 
 ::selection {
   background: lightblue;
   color: white;
 }
 
-  /*****************/
- /*** SCROLLBAR ***/
-/*****************/
+  /* SCROLLBAR */
 
 /* Width */
 ::-webkit-scrollbar {
