@@ -1,0 +1,68 @@
+/* SEMANTIC TAGS */
+
+
+/* Header */
+header {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  order: 1;
+}
+header.row {
+  flex-flow: row;
+}
+header.column {
+  flex-flow: column;
+}
+header.space-between {
+  justify-content: space-between;
+}
+
+
+/* Main */
+main {
+  order: 3;
+  display: flex;
+  flex-flow: column wrap;
+}
+main.row {
+  flex-flow: row wrap
+}
+
+main.column {
+  flex-flow: column wrap
+}
+
+
+/* Footer */
+footer {
+  align-content: center;
+  text-align: center;
+  order: 5;
+  display: flex;
+  flex-flow: column;
+}
+footer p {
+  margin: auto;
+}
+footer div {
+  margin: auto;
+}
+/* Social Links */
+footer .social {
+  margin: 10px;
+  font-size: 200%;
+}
+footer .social a {
+  margin: 10px;
+  transition: color .2s;
+}
+footer .social a:hover {
+  color: white;
+}
+
+
+/* Aside */
+aside {
+  order: 4;
+}

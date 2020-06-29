@@ -71,22 +71,7 @@ page {
 }
 
 /* Page structure elements */
-/* Header */
-.xyz header {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  order: 1;
-}
-.xyz header.row {
-  flex-flow: row;
-}
-.xyz header.column {
-  flex-flow: column;
-}
-.xyz header.space-between {
-  justify-content: space-between;
-}
+
 
 /* Navbar */
 /* Class for showing current page */
@@ -145,51 +130,7 @@ page {
   background-color: #333;
 }
 
-/* Main */
-.xyz main {
-  order: 3;
-  display: flex;
-  flex-flow: column wrap;
-}
-.xyz main.row {
-  flex-flow: row wrap
-}
 
-.xyz main.column {
-  flex-flow: column wrap
-}
-
-/* Footer */
-.xyz footer {
-  align-content: center;
-  text-align: center;
-  order: 5;
-  display: flex;
-  flex-flow: column;
-}
-.xyz footer p {
-  margin: auto;
-}
-.xyz footer div {
-  margin: auto;
-}
-/* Social Links */
-.xyz footer .social {
-  margin: 10px;
-  font-size: 200%;
-}
-.xyz footer .social a {
-  margin: 10px;
-  transition: color .2s;
-}
-.xyz footer .social a:hover {
-  color: white;
-}
-
-/* Aside */
-.xyz aside {
-  order: 4;
-}
 
 /*** Border ***/
 .border {
