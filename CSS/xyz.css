@@ -4,9 +4,9 @@
 /***************/
 
 /* Core */
-@import 'xyz_config.css';
+@import 'xyz_vars.css';
 @import 'xyz_table.css';
-@import 'xyz_hover.css';
+@import 'xyz_tags.css';
 @import 'xyz_objs.css';
 /* Modules */
 @import 'modules/xyz_fun.css';
