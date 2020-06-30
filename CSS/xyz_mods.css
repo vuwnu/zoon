@@ -1,0 +1,16 @@
+/* Flex Layout */
+.block-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.row {
+  flex-flow: row wrap
+}
+
+.column {
+  flex-flow: column wrap
+}
