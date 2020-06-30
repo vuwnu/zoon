@@ -1,13 +1,13 @@
 @charset 'UTF-8';
-  /***************/
- /*** Imports ***/
-/***************/
+
+  /* IMPORTS */
 
 /* Core */
 @import 'xyz_vars.css';
-@import 'xyz_table.css';
+@import 'xyz_mods.css';
 @import 'xyz_tags.css';
 @import 'xyz_objs.css';
+
 /* Modules */
 @import 'modules/xyz_fun.css';
 
@@ -34,8 +34,6 @@
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-handle);
 }
-
-/* Page structure elements */
 
 
 /* Navbar */
