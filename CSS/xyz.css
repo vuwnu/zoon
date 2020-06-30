@@ -103,19 +103,6 @@
   border: var(--border-thickness) var(--border-type) var(--border-color);
   background: var(--border-bg-color);
   border-radius: var(--border-radius);
-  /* -moz-box-shadow: inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000; */
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: cornflowerblue;
-  transition: color .2s;
-}
-a:hover {
-  color: white;
 }
 
 /* Button */
