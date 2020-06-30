@@ -76,7 +76,6 @@ main {
 main.row {
   flex-flow: row wrap
 }
-
 main.column {
   flex-flow: column wrap
 }
@@ -90,12 +89,7 @@ footer {
   display: flex;
   flex-flow: column;
 }
-footer p {
-  margin: auto;
-}
-footer div {
-  margin: auto;
-}
+
 /* Social Links */
 footer .social {
   margin: 10px;
