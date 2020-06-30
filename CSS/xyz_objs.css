@@ -23,10 +23,10 @@
 }
 
 /** Object Modifiers **/
-.obj.bg {
+.bg {
   background: var(--border-bg-color);
 }
-.obj.bdr {
+.bdr {
   border: var(--border-thickness) var(--border-type) var(--border-color);
   border-radius: var(--border-radius);
 }
