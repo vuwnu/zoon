@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 /* Links */
 a {
   text-decoration: none;
@@ -75,6 +76,30 @@ header.column {
 header.space-between {
   justify-content: space-between;
 }
+
+/* Section */
+section {
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+
+  /* Flex */
+  display: flex;
+  flex-flow: column;
+  flex: 1 1;
+}
+section.title {
+  background: 0;
+}
+/* Image Styling */
+section img {
+  margin: 0 auto;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+
 
 
 /* Main */
