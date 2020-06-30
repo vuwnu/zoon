@@ -26,6 +26,10 @@
   --scrollbar-track: #111;
   --scrollbar-handle: grey;
 
+  /* Selection */
+  --selection-background: lightblue;
+  --selection-color: white;
+  
 /* Sizes */
   /* Page Width */
   --max-width: 1300px;
