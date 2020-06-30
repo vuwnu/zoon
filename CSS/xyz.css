@@ -211,28 +211,29 @@ input.xyz {
 }
 
 xyz-logo a span {
-  transition: color .4s;
+  transition: background .4s;
 }
 xyz-logo a:hover span {
-  color: white;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 xyz-logo span:nth-of-type(1) {
-  color: red;
+  background: -webkit-linear-gradient(270deg, rgb(148, 0, 0) 0%, rgb(217, 65, 65) 50%, rgb(148, 0, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 xyz-logo span:nth-of-type(2) {
-  color: green;
+  background: -webkit-linear-gradient(270deg, rgb(0, 148, 0) 0%, rgb(104, 217, 65) 50%, rgb(0, 148, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 xyz-logo span:nth-of-type(3) {
-  color: rgb(29, 89, 205);
+  background: -webkit-linear-gradient(270deg, rgb(0, 0, 148) 0%, rgb(65, 85, 217) 50%, rgb(0, 0, 148) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-/********** Media Queries **********/
-/*
-@media screen and (max-width: 500px) {
-  .xyz header {
-    padding: 5px 0;
-  }
-  .xyz footer {
-    padding: 20px 0;
-  }
-} */
