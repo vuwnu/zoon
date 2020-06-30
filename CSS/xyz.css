@@ -11,16 +11,14 @@
 /* Modules */
 @import 'modules/xyz_fun.css';
 
-  /********************/
- /*** Base Styling ***/
-/********************/
 
   /* SELECTION */
 
 ::selection {
-  background: lightblue;
-  color: white;
+  background: var(--selection-background, lightblue);
+  color: var(--selection-color, white);
 }
+
 
   /* SCROLLBAR */
 
