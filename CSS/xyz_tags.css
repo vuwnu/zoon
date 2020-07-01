@@ -31,7 +31,6 @@ body {
 page {
   display: flex;
   flex-flow: column;
-  box-sizing: border-box;
   width: 100%;
   max-width: var(--max-width);
   background: var(--background-color);
