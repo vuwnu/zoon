@@ -2,6 +2,7 @@
 
 :root {
 
+  --margin: 5px;
   --y-axis-page-align: flex-start;
   --x-axis-page-align: center;
   /** Colors **/
@@ -29,7 +30,7 @@
   /* Selection */
   --selection-background: lightblue;
   --selection-color: white;
-  
+
 /* Sizes */
   /* Page Width */
   --max-width: 1300px;
