@@ -78,9 +78,7 @@ section {
   flex-flow: column;
   flex: 1 1;
 }
-section.title {
-  background: 0;
-}
+
 /* Image Styling */
 section img {
   margin: 0 auto;
@@ -98,13 +96,6 @@ main {
   display: flex;
   flex-flow: column wrap;
 }
-main.row {
-  flex-flow: row wrap
-}
-main.column {
-  flex-flow: column wrap
-}
-
 
 /* Footer */
 footer {
@@ -182,6 +173,3 @@ table th {
 select.xyz {
   height: 40px;
 }
-/**********************
- *  Responsive Table  *
- **********************/
