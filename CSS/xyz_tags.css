@@ -66,15 +66,6 @@ header {
   align-items: center;
   order: 1;
 }
-header.row {
-  flex-flow: row;
-}
-header.column {
-  flex-flow: column;
-}
-header.space-between {
-  justify-content: space-between;
-}
 
 /* Section */
 section {
