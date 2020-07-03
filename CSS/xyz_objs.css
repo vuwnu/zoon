@@ -2,7 +2,7 @@
 
 /* Objects */
 .obj {
-  margin: 5px;
+  margin: var(--margin);
   padding: 20px;
   text-align: center;
   /* flex */
@@ -99,7 +99,7 @@
 .navbox .nav a {
   flex: 1 1 50px;
   padding: 5px 5px;
-  margin: 5px;
+  margin: var(--margin);
   user-select: none;
   transition: background-color .1s;
   text-decoration: none;
