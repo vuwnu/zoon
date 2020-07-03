@@ -9,7 +9,7 @@
 @import 'xyz_objs.css';
 
 /* Modules */
-@import 'modules/xyz_fun.css';
+
 
 
   /* SELECTION */
@@ -57,7 +57,7 @@
   text-align: center;
   order: 2;
   background: #333;
-  margin: 5px;
+  margin: var(--margin);
 }
 /* Navbar link styling */
 .navbar.a a {
@@ -72,7 +72,7 @@
 .navbar.b a {
   flex: 1 0 50px;
   color: white;
-  margin: 5px;
+  margin: var(--margin);
   padding: 5px 0;
 
   border: var(--border-thickness) var(--border-type) var(--border-color);
@@ -97,7 +97,7 @@
 
 /*** Border ***/
 .border {
-  margin: 5px;
+  margin: var(--margin);
   padding: 20px;
   text-align: center;
   border: var(--border-thickness) var(--border-type) var(--border-color);
@@ -110,7 +110,7 @@
   color: var(--tertiary-color);
   background: var(--colorGradient4);
   display: inline-block;
-  margin: 5px;
+  margin: var(--margin);
   padding: 5px;
   flex: 1 1;
 }
