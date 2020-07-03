@@ -69,7 +69,7 @@ header {
 
 /* Section */
 section {
-  margin: 5px;
+  margin: var(--margin);
   padding: 10px;
   text-align: center;
 
@@ -82,8 +82,6 @@ section {
 /* Image Styling */
 section img {
   margin: 0 auto;
-  max-width:230px;
-  max-height:95px;
   width: auto;
   height: auto;
 }
