@@ -220,11 +220,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }, 100);
 
   setTimeout(() => {
-    XYZ.init.XYZLoadLayout('/assets/html/layouts/');
+    if (XYZdata.layout !== 0) {
+      XYZ.init.XYZLoadLayout('/assets/html/layouts/');
+    } else {
+      return;
+    }
   }, 150);
 
   setTimeout(() => {
-    XYZ.init.setContent();
+    if (XYZdata.layout !== 0) {
+      XYZ.init.setContent();
+    } else {
+      return;
+    }
     XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.siteName}`);
   }, 400);
 
