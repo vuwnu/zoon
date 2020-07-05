@@ -1,20 +1,3 @@
-/*
-
-- XYZ SETUP STAGE
-
-declare variables
-setup XYZConsole
-load XYZConfig.json
-setup custom elements
-
-- PAGE BUILD STAGE
-
-set title
-insert page content into layout
-define custom elements
-
-*/
-
 let XYZ = {
 
   cnsl: {
@@ -98,6 +81,8 @@ let XYZ = {
           })
         XYZ.cnsl.log('Layout = ' + layout);
       }
+
+
       XYZ.cnsl.log('Page succesfully built');
     },
 
