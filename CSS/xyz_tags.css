@@ -65,6 +65,34 @@ header {
   align-content: center;
   align-items: center;
   order: 1;
+  width:100%;
+  max-width: var(--max-width);
+  background: var(--background-color);
+}
+/* Main */
+main {
+  order: 3;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: var(--max-width);
+  background: var(--background-color);
+}
+/* Aside */
+aside {
+  order: 4;
+  max-width: var(--max-width);
+  background: var(--background-color);
+}
+/* Footer */
+footer {
+  align-content: center;
+  text-align: center;
+  order: 5;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--background-color);
 }
 
 /* Section */
