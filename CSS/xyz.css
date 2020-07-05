@@ -168,22 +168,25 @@
 
 .button-list {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  padding: 0;
   align-items: center;
-}
-.button-list a {
-  flex: 1 0 100px;
-  margin: 10px 0;
-  padding: 5px 0;
-  font-size: 1em;
+  padding: 0;
   list-style-type: none;
+  font-size: 2em;
+}
+.button-list li {
+  flex: 1 1;
+  margin: 10px 0;
+  padding: 30px;
+  font-size: 1em;
+  width: 100%;
   transition: color ease-in-out .2s;
+  display: flex;
+  background: #333;
+  justify-content: center;
 }
 .button-list a:hover {
   color: white;
-  filter: brightness(500%);
 }
 .button-list a p {
   font-size: 1em;
