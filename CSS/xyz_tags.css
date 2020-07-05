@@ -114,24 +114,6 @@ section img {
   height: auto;
 }
 
-
-
-/* Main */
-main {
-  order: 3;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-/* Footer */
-footer {
-  align-content: center;
-  text-align: center;
-  order: 5;
-  display: flex;
-  flex-flow: column;
-}
-
 /* Social Links */
 footer .social {
   margin: 10px;
@@ -146,10 +128,6 @@ footer .social a:hover {
 }
 
 
-/* Aside */
-aside {
-  order: 4;
-}
 
 /***********
  *  Table  *
