@@ -74,6 +74,7 @@ main {
   order: 3;
   display: flex;
   flex-flow: column wrap;
+  width: 100%;
   max-width: var(--max-width);
   background: var(--background-color);
 }
