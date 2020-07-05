@@ -50,6 +50,9 @@
   justify-content: space-evenly;
   text-align: center;
   order: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--background-color);
 }
 .navbar.a {
   display: flex;
