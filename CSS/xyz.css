@@ -182,7 +182,6 @@
   width: 100%;
   transition: color ease-in-out .2s;
   display: flex;
-  background: #333;
   justify-content: center;
 }
 .button-list a:hover {
