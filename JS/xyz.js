@@ -150,7 +150,7 @@ class XYZNavbar extends HTMLElement {
 }
 class XYZLogo extends HTMLElement {
   connectedCallback() {
-    let xyzlogo = `<a href="https://xyz.vayn.work"><span>X</span><span>Y</span><span>Z</span></a>`
+    let xyzlogo = `<a href="https://xyz.vuw.nu"><span>X</span><span>Y</span><span>Z</span></a>`
     this.innerHTML = xyzlogo;
   }
 }
