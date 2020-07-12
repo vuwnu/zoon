@@ -200,6 +200,8 @@ function defineElements() {
   customElements.define("xyz-nav", XYZNavbar); // Navbar Element
   customElements.define("xyz-logo", XYZLogo); // Logo Element
   customElements.define("xyz-include", XYZInclude); // Include Element
+  customElements.define("xyz-query", XYZQuery); // Include Element
+  customElements.define("xyz-insert", XYZInsert); // Include Element
 }
 
 // Text loader
@@ -213,6 +215,8 @@ function loadPage(url, output) {
       document.querySelector(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
     });
 }
+
+
 
 // //SearchParams Test
 // const params = new URLSearchParams(window.location.search);
