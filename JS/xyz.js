@@ -164,6 +164,23 @@ class XYZInclude extends HTMLElement {
       });
   }
 }
+class XYZQuery extends HTMLElement {
+  connectedCallback() {
+    const source = this.getAttribute('src')
+    const key = this.getAttribute('key')
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get(key)
+    if (value === null) {
+      return;
+    } else {
+    fetch(source + value)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+    }
+  }
+}
 
 // Defining all custom elements
 function defineElements() {
