@@ -243,14 +243,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     } else {
       return;
     }
+    for (const [key, value] of Object.entries(XYZdata)) {
+      console.log(`${key}: ${value}`);
+    }
   }, 150);
 
   setTimeout(() => {
-    if (XYZdata.layout !== 0) {
-      XYZ.init.setContent();
-    } else {
-      return;
-    }
     XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.siteName}`);
   }, 400);
 
