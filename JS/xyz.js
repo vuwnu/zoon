@@ -181,7 +181,18 @@ class XYZQuery extends HTMLElement {
     }
   }
 }
+class XYZInsert extends HTMLElement {
+  connectedCallback() {
+    const output = document.querySelector('xyz-insert');
+    const inputID = this.getAttribute('input');
+    const input = document.querySelector(inputID);
 
+    while (input.childNodes.length > 0) {
+      output.appendChild(input.childNodes[0]);
+    }
+    input.remove();
+  }
+}
 // Defining all custom elements
 function defineElements() {
   customElements.define("xyz-time", XYZTime); // Time Element
