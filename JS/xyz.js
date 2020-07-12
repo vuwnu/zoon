@@ -157,7 +157,8 @@ class XYZLogo extends HTMLElement {
 class XYZInclude extends HTMLElement {
   connectedCallback() {
     let source = this.getAttribute('src')
-    fetch('/assets/html/includes/' + source)
+
+    fetch(source)
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
