@@ -242,21 +242,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     XYZ.init.mergeData(); //Combines page data into XYZdata object
     XYZ.init.setSiteTheme();
     XYZ.init.setTitle();
-  }, 100);
-
-  setTimeout(() => {
     if (XYZdata.layout !== 0) {
       XYZ.init.XYZLoadLayout('/assets/html/layouts/');
     } else {
       return;
     }
-    for (const [key, value] of Object.entries(XYZdata)) {
-      console.log(`${key}: ${value}`);
-    }
-  }, 150);
-
-  setTimeout(() => {
-    XYZ.cnsl.log(`XYZ.JS has loaded for ${XYZdata.siteName}`);
-  }, 400);
+    XYZ.cnsl.log(`XYZ has loaded for ${XYZdata.siteName}`);
+  }, 100);
 
 });
