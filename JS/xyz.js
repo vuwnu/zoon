@@ -19,6 +19,12 @@ let XYZ = {
 
     help() {
       XYZ.cnsl.log(`this is a help command :)`)
+    },
+
+    XYZdata() {
+      for (const [key, value] of Object.entries(XYZdata)) {
+        console.log(`${key}: ${value}`);
+      }
     }
 
   },
@@ -226,6 +232,7 @@ function loadPage(url, output) {
 // for (const param of params) {
 //   console.log(param);
 // }
+
 
 //// INITIALISATION
 window.addEventListener('DOMContentLoaded', (event) => {
