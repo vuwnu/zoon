@@ -118,6 +118,10 @@ let XYZ = {
   }
 
 }
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 XYZ.init.loadXYZdata();
 
 //// CUSTOM ELEMENTS
