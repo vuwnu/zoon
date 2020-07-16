@@ -38,16 +38,6 @@ let XYZ = {
         .catch(console.error);
     },
 
-    setContent() {
-      var newParent = document.querySelector('main');
-      var oldParent = document.querySelector('#XYZContent');
-
-      while (oldParent.childNodes.length > 0) {
-        newParent.appendChild(oldParent.childNodes[0]);
-      }
-      oldParent.remove();
-    },
-
     XYZLoadLayout(url) {
       let layout = XYZdata.layout;
       let xyzBody = $('body')
