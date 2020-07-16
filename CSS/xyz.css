@@ -8,17 +8,12 @@
 @import 'xyz_tags.css';
 @import 'xyz_objs.css';
 
-/* Modules */
-
-
-
   /* SELECTION */
 
 ::selection {
   background: var(--selection-background, lightblue);
   color: var(--selection-color, white);
 }
-
 
   /* SCROLLBAR */
 
@@ -242,6 +237,12 @@ xyz-logo span:nth-of-type(3) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+xyz-query {
+  display: inherit;
+  flex-flow: inherit;
+}
+
 
 .marquee {
   background-color: black;
