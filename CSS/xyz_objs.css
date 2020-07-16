@@ -60,19 +60,19 @@
   max-width: 600px
 }
 /* Flex Weights */
-.obj.fl-20 {
+.fl-20 {
   flex: 1 1 20%;
 }
-.obj.fl-30 {
+.fl-30 {
   flex: 1 1 30%;
 }
-.obj.fl-40 {
+.fl-40 {
   flex: 1 1 400px;
 }
-.obj.fl-50 {
+.fl-50 {
   flex: 1 1 50%;
 }
-.obj.fl-60 {
+.fl-60 {
   flex: 1 1 60%;
 }
 
