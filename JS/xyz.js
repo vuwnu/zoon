@@ -23,7 +23,7 @@ let XYZ = {
 
     XYZdata() {
       for (const [key, value] of Object.entries(XYZdata)) {
-        console.log(`${key}: ${value}`);
+        XYZ.cnsl.log(`${key}: ${value}`);
       }
     }
 
