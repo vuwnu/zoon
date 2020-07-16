@@ -50,8 +50,8 @@ let XYZ = {
 
     XYZLoadLayout(url) {
       let layout = XYZdata.layout;
-      let xyzBody = document.querySelector('body')
-      let xyzHead = document.querySelector('head')
+      let xyzBody = $('body')
+      let xyzHead = $('head')
 
       // Inserts HEAD file
       fetch('/assets/html/head.html')
@@ -93,7 +93,7 @@ let XYZ = {
     },
 
     setSiteTheme() {
-      var element = document.querySelector('html');
+      var element = $('html');
       if (XYZdata.theme === undefined) {
         element.classList.add(`default-theme`);
       } else {
@@ -150,7 +150,7 @@ class XYZNavbar extends HTMLElement {
     // Sets active page in navbar
     let current_location = location.pathname;
     if (current_location === "/") return;
-    let nav_items = document.querySelector("xyz-nav").getElementsByTagName("a");
+    let nav_items = this.getElementsByTagName("a");
     for (let i = 0, len = nav_items.length; i < len; i++) {
       if (nav_items[i].getAttribute("href").indexOf(current_location) !== -1) {
         nav_items[i].className = "currentPage";
@@ -194,9 +194,9 @@ class XYZQuery extends HTMLElement {
 }
 class XYZInsert extends HTMLElement {
   connectedCallback() {
-    const output = document.querySelector('xyz-insert');
+    const output = $('xyz-insert');
     const inputID = this.getAttribute('input');
-    const input = document.querySelector(inputID);
+    const input = $(inputID);
 
     while (input.childNodes.length > 0) {
       output.appendChild(input.childNodes[0]);
@@ -220,10 +220,10 @@ function loadPage(url, output) {
   fetch("/assets/html/includes/" + url)
     .then(response => response.text())
     .then(text => {
-      document.querySelector(output).innerHTML = text
+      $(output).innerHTML = text
     })
     .catch((err) => {
-      document.querySelector(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
+      $(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
     });
 }
 
