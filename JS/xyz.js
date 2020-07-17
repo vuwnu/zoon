@@ -40,8 +40,8 @@ let XYZ = {
 
     XYZLoadLayout(url) {
       let layout = XYZdata.layout;
-      let xyzBody = $('body')
-      let xyzHead = $('head')
+      let xyzBody = $q('body')
+      let xyzHead = $q('head')
 
       // Inserts HEAD file
       fetch('/assets/html/head.html')
@@ -83,7 +83,7 @@ let XYZ = {
     },
 
     setSiteTheme() {
-      var element = $('html');
+      var element = $q('html');
       if (XYZdata.theme === undefined) {
         element.classList.add(`default-theme`);
       } else {
@@ -109,8 +109,11 @@ let XYZ = {
 
 }
 
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+// Functions
+const $q = document.querySelector.bind(document);
+const $qa = (css, parent = document) =>
+  Array.from(parent.querySelectorAll(css));
+// const $a = getAttribute(document);
 
 XYZ.init.loadXYZdata();
 
@@ -184,9 +187,9 @@ class XYZQuery extends HTMLElement {
 }
 class XYZInsert extends HTMLElement {
   connectedCallback() {
-    const output = $('xyz-insert');
+    const output = $q('xyz-insert');
     const inputID = this.getAttribute('input');
-    const input = $(inputID);
+    const input = $q(inputID);
 
     while (input.childNodes.length > 0) {
       output.appendChild(input.childNodes[0]);
@@ -210,10 +213,10 @@ function loadPage(url, output) {
   fetch("/assets/html/includes/" + url)
     .then(response => response.text())
     .then(text => {
-      $(output).innerHTML = text
+      $q(output).innerHTML = text
     })
     .catch((err) => {
-      $(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
+      $q(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
     });
 }
 
