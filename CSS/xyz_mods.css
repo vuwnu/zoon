@@ -19,3 +19,11 @@
 .space-between {
   justify-content: space-between;
 }
+
+/* Hide */
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
