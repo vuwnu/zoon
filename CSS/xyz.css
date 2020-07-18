@@ -199,17 +199,6 @@ input.xyz {
   margin: auto;
 }
 
-#XYZContent {
-  display: flex;
-  flex-flow: column;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  max-width: var(--max-width);
-  background: var(--background-color);
-  order: 3;
-}
-
 xyz-logo a span {
   transition: background .4s;
 }
