@@ -13,6 +13,7 @@
 ::selection {
   background: var(--selection-background, lightblue);
   color: var(--selection-color, white);
+  text-shadow: none;
 }
 
   /* SCROLLBAR */
