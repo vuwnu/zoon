@@ -196,10 +196,6 @@ input.xyz {
   margin: 0 auto;
 }
 
-.center {
-  margin: auto;
-}
-
 xyz-logo a span {
   transition: background .4s;
 }
