@@ -150,7 +150,7 @@ class zoonNavbar extends HTMLElement {
 }
 class zoonLogo extends HTMLElement {
   connectedCallback() {
-    let zoonlogo = `<a href="https://zoon.vuw.nu"><span>X</span><span>Y</span><span>Z</span></a>`
+    let zoonlogo = `<a href="https://zoon.vuw.nu">zoon</a>`
     this.innerHTML = zoonlogo;
   }
 }
