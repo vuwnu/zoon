@@ -62,22 +62,8 @@ header {
   font-size: 4em;
   text-align: center;
   margin: 0 20px;
-  font-weight: 800;
-}
-.x {
-  background: -webkit-linear-gradient(270deg, rgb(148, 0, 0) 0%, rgb(217, 65, 65) 50%, rgb(148, 0, 0) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.y {
-  background: -webkit-linear-gradient(270deg, rgb(0, 148, 0) 0%, rgb(104, 217, 65) 50%, rgb(0, 148, 0) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.z {
-  background: -webkit-linear-gradient(270deg, rgb(0, 0, 148) 0%, rgb(65, 85, 217) 50%, rgb(0, 0, 148) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: 'Anonymous Pro', monospace;
 }
 .js {
   background: -webkit-linear-gradient(270deg, rgb(145, 148, 0) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
