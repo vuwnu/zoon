@@ -1,6 +1,7 @@
 <p align="center">
 <img src="zoon_logo.png" width="250">
 </p>
+<p align="center">zoon is a framework for creating websites, built with JS, CSS and HTML</p>
 
 ***
 
