@@ -139,7 +139,7 @@ footer .social a:hover {
 /***********
  *  Table  *
  ***********/
-table.xyz {
+table.zoon {
  margin: auto;
  padding: 0;
  table-layout: auto;
@@ -181,7 +181,7 @@ table th {
   font-size: .85em;
 }
 
-select.xyz {
+select.zoon {
   height: 40px;
 }
 

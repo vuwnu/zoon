@@ -1,4 +1,4 @@
-let XYZ = {
+let zoon = {
 
   cnsl: {
 
@@ -6,24 +6,24 @@ let XYZ = {
       // Log types
       let log = 'color:#888;font-size:15px;'
       let warn = 'color:#e00000;font-size:20px;background-color:red;'
-      // Styling the XYZ tag
+      // Styling the zoon tag
       let xCSS = 'color:rgb(203, 63, 80);font-size:15px;'
       let yCSS = 'color:rgb(119, 215, 103);font-size:15px;'
       let zCSS = 'color:rgb(37, 105, 195);font-size:15px;'
-      // XYZ tag at the start of a message
-      let xyzTag = '%c[%cX%cY%cZ%c] %s'
+      // zoon tag at the start of a message
+      let zoonTag = '%c[%cX%cY%cZ%c] %s'
       // Sending the message to the log
       let type = log;
-      console.log(xyzTag, type, xCSS, yCSS, zCSS, type, text);
+      console.log(zoonTag, type, xCSS, yCSS, zCSS, type, text);
     },
 
     help() {
-      XYZ.cnsl.log(`this is a help command :)`)
+      zoon.cnsl.log(`this is a help command :)`)
     },
 
-    XYZdata() {
-      for (const [key, value] of Object.entries(XYZdata)) {
-        XYZ.cnsl.log(`${key}: ${value}`);
+    zdata() {
+      for (const [key, value] of Object.entries(zdata)) {
+        zoon.cnsl.log(`${key}: ${value}`);
       }
     }
 
@@ -31,26 +31,26 @@ let XYZ = {
 
   init: {
 
-    loadXYZdata() {
-      fetch('/XYZdata.json')
+    loadzdata() {
+      fetch('/zdata.json')
         .then(response => response.json())
-        .then(data => XYZdata = data)
+        .then(data => zdata = data)
         .catch(console.error);
     },
 
-    XYZLoadLayout(url) {
-      let layout = XYZdata.layout;
-      let xyzBody = $q('body')
-      let xyzHead = $q('head')
+    zoonLoadLayout(url) {
+      let layout = zdata.layout;
+      let zoonBody = $q('body')
+      let zoonHead = $q('head')
 
       // Inserts HEAD file
       fetch('/assets/html/head.html')
         .catch((err) => {
-          XYZ.cnsl.log('Error fetching head')
+          zoon.cnsl.log('Error fetching head')
         })
         .then(response => response.text())
         .then(text => {
-          xyzHead.insertAdjacentHTML('beforeend', text)
+          zoonHead.insertAdjacentHTML('beforeend', text)
         })
 
       // Inserts Layout file
@@ -58,48 +58,48 @@ let XYZ = {
         currentLayout = "default"
         fetch(url + 'default.html')
           .catch((err) => {
-            XYZ.cnsl.log('Error fetching layout')
+            zoon.cnsl.log('Error fetching layout')
           })
           .then(response => response.text())
           .then(text => {
-            xyzBody.insertAdjacentHTML('beforeend', text)
+            zoonBody.insertAdjacentHTML('beforeend', text)
           })
-        XYZ.cnsl.log('Layout = default');
+        zoon.cnsl.log('Layout = default');
       } else {
         currentLayout = layout
         fetch(url + layout + '.html')
           .catch((err) => {
-            XYZ.cnsl.log('Error fetching layout')
+            zoon.cnsl.log('Error fetching layout')
           })
           .then(response => response.text())
           .then(text => {
-            xyzBody.insertAdjacentHTML('beforeend', text)
+            zoonBody.insertAdjacentHTML('beforeend', text)
           })
-        XYZ.cnsl.log('Layout = ' + layout);
+        zoon.cnsl.log('Layout = ' + layout);
       }
 
 
-      XYZ.cnsl.log('Page succesfully built');
+      zoon.cnsl.log('Page succesfully built');
     },
 
     setSiteTheme() {
       var element = $q('html');
-      if (XYZdata.theme === undefined) {
+      if (zdata.theme === undefined) {
         element.classList.add(`default-theme`);
       } else {
-        element.classList.add(`${XYZdata.theme}`)
+        element.classList.add(`${zdata.theme}`)
       }
     },
 
     mergeData() {
-      Object.assign(XYZdata, p);
+      Object.assign(zdata, p);
       delete p;
     },
 
     setTitle() {
-      if (XYZdata.pageName !== undefined) {
-        document.title = XYZdata.siteName + ' | ' + XYZdata.pageName;
-        XYZ.cnsl.log('Title set');
+      if (zdata.pageName !== undefined) {
+        document.title = zdata.siteName + ' | ' + zdata.pageName;
+        zoon.cnsl.log('Title set');
       } else {
         return;
       }
@@ -115,10 +115,10 @@ const $qa = (css, parent = document) =>
   Array.from(parent.querySelectorAll(css));
 // const $a = getAttribute(document);
 
-XYZ.init.loadXYZdata();
+zoon.init.loadzdata();
 
 //// CUSTOM ELEMENTS
-class XYZTime extends HTMLElement {
+class zoonTime extends HTMLElement {
   connectedCallback() {
     let date = new Date(this.getAttribute('datetime') || Date.now());
     this.innerHTML = new Intl.DateTimeFormat("default", {
@@ -132,13 +132,13 @@ class XYZTime extends HTMLElement {
     }).format(date);
   }
 }
-class XYZVariable extends HTMLElement {
+class zoonVariable extends HTMLElement {
   connectedCallback() {
     let variable = this.getAttribute('var')
-    this.innerHTML = XYZdata[variable] || "";
+    this.innerHTML = zdata[variable] || "";
   }
 }
-class XYZNavbar extends HTMLElement {
+class zoonNavbar extends HTMLElement {
   connectedCallback() {
     // Sets active page in navbar
     let current_location = location.pathname;
@@ -151,13 +151,13 @@ class XYZNavbar extends HTMLElement {
     }
   }
 }
-class XYZLogo extends HTMLElement {
+class zoonLogo extends HTMLElement {
   connectedCallback() {
-    let xyzlogo = `<a href="https://xyz.vuw.nu"><span>X</span><span>Y</span><span>Z</span></a>`
-    this.innerHTML = xyzlogo;
+    let zoonlogo = `<a href="https://zoon.vuw.nu"><span>X</span><span>Y</span><span>Z</span></a>`
+    this.innerHTML = zoonlogo;
   }
 }
-class XYZInclude extends HTMLElement {
+class zoonInclude extends HTMLElement {
   connectedCallback() {
     let source = this.getAttribute('src')
 
@@ -168,7 +168,7 @@ class XYZInclude extends HTMLElement {
       });
   }
 }
-class XYZQuery extends HTMLElement {
+class zoonQuery extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src')
     const key = this.getAttribute('key')
@@ -185,9 +185,9 @@ class XYZQuery extends HTMLElement {
     }
   }
 }
-class XYZInsert extends HTMLElement {
+class zoonInsert extends HTMLElement {
   connectedCallback() {
-    const output = $q('xyz-insert');
+    const output = $q('zoon-insert');
     const inputID = this.getAttribute('input');
     const input = $q(inputID);
 
@@ -199,13 +199,13 @@ class XYZInsert extends HTMLElement {
 }
 // Defining all custom elements
 function defineElements() {
-  customElements.define("xyz-time", XYZTime); // Time Element
-  customElements.define("xyz-v", XYZVariable); // Variable Element
-  customElements.define("xyz-nav", XYZNavbar); // Navbar Element
-  customElements.define("xyz-logo", XYZLogo); // Logo Element
-  customElements.define("xyz-include", XYZInclude); // Include Element
-  customElements.define("xyz-query", XYZQuery); // Include Element
-  customElements.define("xyz-insert", XYZInsert); // Include Element
+  customElements.define("zoon-time", zoonTime); // Time Element
+  customElements.define("zoon-v", zoonVariable); // Variable Element
+  customElements.define("zoon-nav", zoonNavbar); // Navbar Element
+  customElements.define("zoon-logo", zoonLogo); // Logo Element
+  customElements.define("zoon-include", zoonInclude); // Include Element
+  customElements.define("zoon-query", zoonQuery); // Include Element
+  customElements.define("zoon-insert", zoonInsert); // Include Element
 }
 
 // Text loader
@@ -236,15 +236,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
     defineElements(); //Function to define all custom elements
-    XYZ.init.mergeData(); //Combines page data into XYZdata object
-    XYZ.init.setSiteTheme();
-    XYZ.init.setTitle();
-    if (XYZdata.layout !== 0) {
-      XYZ.init.XYZLoadLayout('/assets/html/layouts/');
+    zoon.init.mergeData(); //Combines page data into zdata object
+    zoon.init.setSiteTheme();
+    zoon.init.setTitle();
+    if (zdata.layout !== 0) {
+      zoon.init.zoonLoadLayout('/assets/html/layouts/');
     } else {
       return;
     }
-    XYZ.cnsl.log(`XYZ has loaded for ${XYZdata.siteName}`);
+    zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
   }, 100);
 
 });
