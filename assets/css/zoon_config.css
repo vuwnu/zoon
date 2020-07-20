@@ -90,16 +90,16 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* XYZ */
-.xyz-theme {
+/* zoon */
+.zoon-theme {
   color: grey;
   background: #161515;
 }
-.xyz-theme .btn {
+.zoon-theme .btn {
   color: dimgrey;
   background: #0b0b0b;
 }
-.xyz-theme img {
+.zoon-theme img {
   object-fit: cover;
   height: 70px;
 }
