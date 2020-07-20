@@ -123,6 +123,8 @@ footer .social {
   flex-flow: row wrap;
   font-size: 200%;
   justify-content: space-evenly;
+  background: #151515;
+  border: solid 5px #222222;
 }
 footer .social a {
   margin: 10px;
