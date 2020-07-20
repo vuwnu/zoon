@@ -18,15 +18,12 @@
 
   /* SCROLLBAR */
 
-/* Width */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-handle);
 }
@@ -196,32 +193,12 @@ input.zoon {
   margin: 0 auto;
 }
 
-zoon-logo a span {
-  transition: background .4s;
+zoon-logo a {
+  color: #d141ff;
+  transition: color .4s;
 }
 zoon-logo a:hover span {
-  background: white;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-zoon-logo span:nth-of-type(1) {
-  background: -webkit-linear-gradient(270deg, rgb(148, 0, 0) 0%, rgb(217, 65, 65) 50%, rgb(148, 0, 0) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-zoon-logo span:nth-of-type(2) {
-  background: -webkit-linear-gradient(270deg, rgb(0, 148, 0) 0%, rgb(104, 217, 65) 50%, rgb(0, 148, 0) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-zoon-logo span:nth-of-type(3) {
-  background: -webkit-linear-gradient(270deg, rgb(0, 0, 148) 0%, rgb(65, 85, 217) 50%, rgb(0, 0, 148) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 
 zoon-query {
