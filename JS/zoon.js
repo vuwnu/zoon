@@ -3,18 +3,15 @@ let zoon = {
   cnsl: {
 
     log(text) {
+      const font_size = 'font-size:15px;'
       // Log types
-      let log = 'color:#888;font-size:15px;'
-      let warn = 'color:#e00000;font-size:20px;background-color:red;'
+      const log = 'color:#888;' + font_size
       // Styling the zoon tag
-      let xCSS = 'color:rgb(203, 63, 80);font-size:15px;'
-      let yCSS = 'color:rgb(119, 215, 103);font-size:15px;'
-      let zCSS = 'color:rgb(37, 105, 195);font-size:15px;'
+      const tag_color = 'color:rgb(108, 57, 145);font-size:20px;'
       // zoon tag at the start of a message
-      let zoonTag = '%c[%cX%cY%cZ%c] %s'
+      const zoonTag = '%c[zoon]%c %s'
       // Sending the message to the log
-      let type = log;
-      console.log(zoonTag, type, xCSS, yCSS, zCSS, type, text);
+      console.log(zoonTag, tag_color, log, text);
     },
 
     help() {
