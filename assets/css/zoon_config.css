@@ -59,11 +59,10 @@ header {
   margin: 0 20px;
 }
 .logo {
-  font-size: 4em;
-  text-align: center;
-  margin: 0 20px;
-  font-weight: 700;
+  font-size: 5em;
+  margin: auto;
   font-family: 'Anonymous Pro', monospace;
+  color: #ab4cef;
 }
 .js {
   background: -webkit-linear-gradient(270deg, rgb(145, 148, 0) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
