@@ -7,7 +7,7 @@ let zoon = {
       // Log types
       const log = 'color:#888;' + font_size
       // Styling the zoon tag
-      const tag_color = 'color:rgb(108, 57, 145);font-size:20px;'
+      const tag_color = 'color:#ab4cef;font-size:15px;'
       // zoon tag at the start of a message
       const zoonTag = '%c[zoon]%c %s'
       // Sending the message to the log
