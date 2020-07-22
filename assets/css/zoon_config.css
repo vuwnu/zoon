@@ -4,7 +4,7 @@
   /** Theme Colors **/
   /* These are the main colors used for stlying elements across the app */
   --primary-color: #bbb;
-  --secondary-color: darkgrey;
+  --secondary-color: #222;
   --tertiary-color: lime;
   --background-color: transparent;
   --background-border-color: #1d1d1d;
@@ -39,7 +39,7 @@
   flex: 1 1 10%;
   overflow: scroll;
   height: 300px;
-  background: #222;
+  background: var(--secondary-color);
   overflow-x: auto;
 }
 
