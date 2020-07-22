@@ -42,6 +42,9 @@
   background: var(--secondary-color);
   overflow-x: auto;
 }
+section {
+  background: var(--secondary-color);
+}
 
 header {
   margin: 0 20px;
