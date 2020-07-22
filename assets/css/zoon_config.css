@@ -6,9 +6,11 @@
   --primary-color: #bbb;
   --secondary-color: darkgrey;
   --tertiary-color: lime;
-  --background-color: #222;
+  --background-color: transparent;
   --background-border-color: #1d1d1d;
   --border-bg-color: #222;
+
+  --background: #151515;
 
   /** Border **/
   --border-type: solid;
@@ -21,28 +23,14 @@
   --scrollbar-track: #111;
   --scrollbar-handle: grey;
 
-  /***********
-   *  Sizes  *
-   ***********/
   --max-width: 1000px;
 
-  /***********
-   *  Fonts  *
-   ***********/
   --primary-font: 'Open Sans', sans-serif;
   --secondary-font: 'Open Sans', sans-serif;
   --header-font: 'Open Sans', sans-serif;
   --font-size: var(--responsive-font-size);
 
-  /************
-   *  Images  *
-   ************/
 }
-
-/***************
- *  Font-Face  *
- ***************/
-
 
 /************
  *  Custom  *
@@ -51,7 +39,7 @@
   flex: 1 1 10%;
   overflow: scroll;
   height: 300px;
-  background: #333;
+  background: #222;
   overflow-x: auto;
 }
 
