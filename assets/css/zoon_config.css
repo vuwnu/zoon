@@ -39,7 +39,6 @@
   flex: 1 1 10%;
   overflow: scroll;
   height: 300px;
-  background: var(--secondary-color);
   overflow-x: auto;
 }
 section {
@@ -78,9 +77,4 @@ header {
 .zoon-theme img {
   object-fit: cover;
   height: 70px;
-}
-
-
-html {
-  background: #111;
 }
