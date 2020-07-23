@@ -41,6 +41,18 @@
   height: 300px;
   overflow-x: auto;
 }
+.docsContents a:before {
+  color: #b9b9b9;
+  content: '> ';
+  padding-left: 10px;
+}
+.docsContents h3 {
+    padding-top: 10px;
+}
+.docsContents h3:nth-of-type(1) {
+    padding-top: 0;
+}
+
 section {
   background: var(--secondary-color);
 }
