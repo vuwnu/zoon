@@ -23,6 +23,17 @@
   justify-content: center;
 }
 
+/* Text Align */
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+.tac {
+  text-align: center;
+}
+
 /* Hide */
 .hidden {
   display: none !important;
