@@ -195,13 +195,13 @@ class zoonInsert extends HTMLElement {
 }
 // Defining all custom elements
 function defineElements() {
-  customElements.define("zoon-time", zoonTime); // Time Element
-  customElements.define("zoon-v", zoonVariable); // Variable Element
-  customElements.define("zoon-nav", zoonNavbar); // Navbar Element
-  customElements.define("zoon-logo", zoonLogo); // Logo Element
-  customElements.define("zoon-include", zoonInclude); // Include Element
-  customElements.define("zoon-query", zoonQuery); // Include Element
-  customElements.define("zoon-insert", zoonInsert); // Include Element
+  customElements.define("zoon-time", zoonTime);
+  customElements.define("zoon-nav", zoonNavbar);
+  customElements.define("zoon-logo", zoonLogo);
+  customElements.define("zoon-query", zoonQuery);
+  customElements.define("zoon-insert", zoonInsert);
+  customElements.define("html-include", zoonInclude);
+  customElements.define("var-include", zoonVariable);
 }
 
 // Text loader
