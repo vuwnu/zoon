@@ -193,6 +193,17 @@ class zoonInsert extends HTMLElement {
     input.remove();
   }
 }
+class zoonTable extends HTMLElement {
+  connectedCallback() {
+    let source = this.getAttribute('src');
+
+    fetch(source)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+  }
+}
 // Defining all custom elements
 function defineElements() {
   customElements.define("zoon-time", zoonTime);
