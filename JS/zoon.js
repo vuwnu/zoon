@@ -155,7 +155,7 @@ class zoonLogo extends HTMLElement {
 }
 class zoonInclude extends HTMLElement {
   connectedCallback() {
-    let source = this.getAttribute('src')
+    const source = this.getAttribute('src')
 
     fetch(source)
       .then(response => response.text())
