@@ -105,6 +105,20 @@ let zoon = {
   }
 
 }
+let z = {
+
+  pull_json(src) {
+    let json_data
+    fetch(src)
+      .then(response => response.json())
+      .then(data => json_data = data)
+      .catch(console.error);
+    zoon.cnsl.log(json_data)
+    return json_data;
+  }
+
+}
+
 
 // Functions
 const $q = document.querySelector.bind(document);
