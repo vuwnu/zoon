@@ -50,16 +50,61 @@
     opacity: 1;
   }
 }
-
-
-/* Animation Selectors */
-
-[anim='slide-in-top'] {
-	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
-	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+@keyframes slide-in-back {
+  0% {
+    -webkit-transform: scale(.8);
+            transform: scale(.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(1);
+            transform: translateY(1);
+    opacity: 1;
+  }
 }
 
-[anim='slide-in-bottom'] {
-	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
-	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+@keyframes rotate-right-360 {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
+
+:root {
+  --anim-name: none;
+  --anim-duration: 1s;
+  --anim-timing-function: ease;
+  --anim-delay: 0.1s;
+  --anim-iteration-count: 1;
+}
+[anim] {
+  animation: var(--anim-name)
+             var(--anim-duration)
+             var(--anim-timing-function)
+             var(--anim-delay)
+             var(--anim-iteration-count);
+}
+
+/* Durations */
+[anim~="dur:.5s"] { --anim-duration: .5s; }
+[anim~="dur:1s"]  { --anim-duration: 1s; }
+[anim~="dur:2s"]  { --anim-duration: 2s; }
+[anim~="dur:3s"]  { --anim-duration: 3s; }
+[anim~="dur:4s"]  { --anim-duration: 4s; }
+
+/* Delays */
+[anim~="del:.5s"] { --anim-delay: .5s; }
+[anim~="del:1s"]  { --anim-delay: 1s; }
+[anim~="del:2s"]  { --anim-delay: 2s; }
+[anim~="del:3s"]  { --anim-delay: 3s; }
+[anim~="del:4s"]  { --anim-delay: 4s; }
+
+/* Timing */
+[anim~='linear'] { --anim-timing-function: linear; }
+
+/* Iteration Count */
+[anim~='infinite'] { --anim-iteration-count: infinite; }
+
+/* Names */
+[anim^='rotate-right-360'] { --anim-name: rotate-right-360 both; }
+[anim^='slide-in-back'] {	--anim-name: slide-in-back both; }
+[anim^='slide-in-top'] { --anim-name: slide-in-top both; }
+[anim^='slide-in-bottom'] { --anim-name: slide-in-bottom both; }
