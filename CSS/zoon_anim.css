@@ -101,6 +101,9 @@
 [anim~='linear'] { --anim-timing-function: linear; }
 
 /* Iteration Count */
+[anim~='play_1'] { --anim-iteration-count: 1; }
+[anim~='play_2'] { --anim-iteration-count: 2; }
+[anim~='play_3'] { --anim-iteration-count: 3; }
 [anim~='infinite'] { --anim-iteration-count: infinite; }
 
 /* Names */
