@@ -139,9 +139,10 @@ pre {
   background: rgba(0,0,0,.2);
 }
 
-/***********
- *  Table  *
- ***********/
+option {
+  background: var(--border-bg-color)
+}
+
 table.zoon {
  margin: auto;
  padding: 0;
