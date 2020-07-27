@@ -115,6 +115,12 @@ let z = {
       .catch(console.error);
     zoon.cnsl.log(json_data)
     return json_data;
+  },
+
+  update(id) {
+    let entity = $q('#pageSelect').value;
+    $q(id).setAttribute('src', '/assets/html/includes/' + entity);
+    $q(id).connectedCallback();
   }
 
 }
