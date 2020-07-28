@@ -63,14 +63,14 @@ lg — for screens =< 1200px (big screens) */
 
 /* Navbar */
 /* Class for showing current page */
-.navbar.b a.currentPage {
+zoon-nav.b a.currentPage {
   background-color: #555;
 }
-.navbar.a a.currentPage {
+zoon-nav.a a.currentPage {
   background-color: #555;
 }
 /* Main navbar styling */
-.navbar {
+zoon-nav {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -79,7 +79,7 @@ lg — for screens =< 1200px (big screens) */
   max-width: var(--max-width);
   background: var(--background-color);
 }
-.navbar.a {
+zoon-nav.a {
   display: flex;
   justify-content: flex-start;
   text-align: center;
@@ -88,7 +88,7 @@ lg — for screens =< 1200px (big screens) */
   margin: var(--margin);
 }
 /* Navbar link styling */
-.navbar.a a {
+zoon-nav.a a {
   flex: 1 0 50px;
   color: white;
   padding: 5px 0;
@@ -97,7 +97,7 @@ lg — for screens =< 1200px (big screens) */
   background: #333;
   border-radius: var(--border-radius);
 }
-.navbar.b a {
+zoon-nav.b a {
   flex: 1 0 50px;
   color: white;
   margin: var(--margin);
@@ -108,16 +108,16 @@ lg — for screens =< 1200px (big screens) */
   border-radius: var(--border-radius);
 }
 
-.navbar a {
+zoon-nav a {
   flex: 1 0 50px;
   color: white;
   margin: 0 2px;
   transition: background-color .1s;
 }
-.navbar a:hover {
+zoon-nav a:hover {
   background-color: #444;
 }
-.navbar a:active {
+zoon-nav a:active {
   background-color: #333;
 }
 
@@ -236,7 +236,6 @@ zoon-query {
   display: inherit;
   flex-flow: inherit;
 }
-
 
 .marquee {
   background-color: black;
