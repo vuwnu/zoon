@@ -80,13 +80,14 @@
 [anim~='linear'] { --anim-timing-function: linear; }
 
 /* Iteration Count */
-[anim~='play_1'] { --anim-iteration-count: 1; }
-[anim~='play_2'] { --anim-iteration-count: 2; }
-[anim~='play_3'] { --anim-iteration-count: 3; }
+[anim~='play:1'] { --anim-iteration-count: 1; }
+[anim~='play:2'] { --anim-iteration-count: 2; }
+[anim~='play:3'] { --anim-iteration-count: 3; }
 [anim~='infinite'] { --anim-iteration-count: infinite; }
 
 /* Names */
 [anim^='rotate-right-360'] { --anim-name: rotate-right-360 both; }
+[anim^='rotate-left-360'] { --anim-name: rotate-left-360 both; }
 [anim^='slide-in-back'] {	--anim-name: slide-in-back both; }
 [anim^='slide-in-top'] { --anim-name: slide-in-top both; }
 [anim^='slide-in-bottom'] { --anim-name: slide-in-bottom both; }
