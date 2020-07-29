@@ -53,6 +53,9 @@
 .ml\:20 {margin-left:20px}
 .mr\:20 {margin-right:20px}
 
+/* Width */
+.w\:100\% {width: 100%;}
+
 /* Max-width */
 .mw\:300 {max-width: 300px}
 .mw\:400 {max-width: 400px}
