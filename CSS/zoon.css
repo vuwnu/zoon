@@ -33,7 +33,6 @@ lg — for screens =< 1200px (big screens) */
     display: none;
   }
 }
-
 @media (max-width: 600px) {
   .hide\:600px {
     display: none;
