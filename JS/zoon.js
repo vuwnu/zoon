@@ -125,7 +125,6 @@ let z = {
 
 }
 
-
 // Functions
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) =>
@@ -222,6 +221,11 @@ class zoonTable extends HTMLElement {
       .then(text => {
         this.innerHTML = text
       });
+  }
+}
+class zoonData extends HTMLElement {
+  connectedCallback() {
+    
   }
 }
 // Defining all custom elements
