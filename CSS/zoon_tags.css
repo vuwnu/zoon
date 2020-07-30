@@ -97,11 +97,7 @@ footer {
   max-width: var(--max-width);
   background: var(--background-color);
 }
-.knowmore section {
-  border: 5px solid grey;
-  background: black;
-  border-radius: 15px;
-}
+
 /* Section */
 section {
   margin: var(--margin);
