@@ -200,6 +200,7 @@ class zoonQuery extends HTMLElement {
     }
   }
 }
+
 class zoonInsert extends HTMLElement {
   connectedCallback() {
     const output = $q('zoon-insert');
@@ -212,6 +213,7 @@ class zoonInsert extends HTMLElement {
     input.remove();
   }
 }
+
 class zoonTable extends HTMLElement {
   connectedCallback() {
     let source = this.getAttribute('src');
@@ -225,9 +227,11 @@ class zoonTable extends HTMLElement {
 }
 class zoonData extends HTMLElement {
   connectedCallback() {
-    
+    let self = this;
+    self.remove();
   }
 }
+
 // Defining all custom elements
 function defineElements() {
   customElements.define("zoon-time", zoonTime);
@@ -236,7 +240,8 @@ function defineElements() {
   customElements.define("zoon-query", zoonQuery);
   customElements.define("zoon-insert", zoonInsert);
   customElements.define("html-include", zoonInclude);
-  customElements.define("var-include", zoonVariable);
+  customElements.define("z-data", zoonData);
+  customElements.define("var-inc", zoonVariable);
 }
 
 // Text loader
