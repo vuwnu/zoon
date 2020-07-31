@@ -271,8 +271,8 @@ function loadPage(url, output) {
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
-    defineElements(); //Function to define all custom elements
     zoon.init.mergeData(); //Combines page data into zdata object
+    defineElements(); //Function to define all custom elements
     zoon.init.setSiteTheme();
     zoon.init.setTitle();
     if (zdata.layout !== 0) {
