@@ -215,14 +215,6 @@ zoon-nav a:active {
   margin: 0;
 }
 
-/************
- *  Inputs  *
- ************/
-
-input.zoon {
-  margin: 0 auto;
-}
-
 zoon-logo a {
   color: #d141ff;
   transition: color .4s;
@@ -234,4 +226,8 @@ zoon-logo a:hover span {
 zoon-query {
   display: inherit;
   flex-flow: inherit;
+}
+
+z-data {
+  display: none;
 }
