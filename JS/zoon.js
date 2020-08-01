@@ -231,6 +231,11 @@ class zoonData extends HTMLElement {
     self.remove();
   }
 }
+class zoonCard extends HTMLElement {
+  connectedCallback() {
+
+  }
+}
 
 // Defining all custom elements
 function defineElements() {
