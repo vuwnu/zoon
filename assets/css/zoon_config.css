@@ -1,8 +1,7 @@
 @charset 'UTF-8';
 
 :root {
-  /** Theme Colors **/
-  /* These are the main colors used for stlying elements across the app */
+
   --primary-color: #bbb;
   --secondary-color: #222;
   --tertiary-color: lime;
@@ -17,7 +16,6 @@
   --border-radius: 0px;
   --border-color: #333;
 
-  /* Scrollbar */
   --scrollbar-width: 5px;
   --scrollbar-track: #111;
   --scrollbar-handle: grey;
@@ -31,9 +29,6 @@
 
 }
 
-/************
- *  Custom  *
- ************/
 .docsContents {
   flex: 1 1 160px;
   overflow: scroll;
@@ -64,28 +59,4 @@ header {
   margin: auto;
   font-family: 'Anonymous Pro', monospace;
   color: #ab4cef;
-}
-.js {
-  background: -webkit-linear-gradient(270deg, rgb(145, 148, 0) 0%, rgb(252, 255, 93) 50%, rgb(145, 148, 0) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.css {
-  background: -webkit-linear-gradient(270deg, rgb(105, 0, 148) 0%, rgb(155, 65, 217) 50%, rgb(105, 0, 148) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* zoon */
-.zoon-theme {
-  color: grey;
-  background: #161515;
-}
-.zoon-theme .btn {
-  color: dimgrey;
-  background: #0b0b0b;
-}
-.zoon-theme img {
-  object-fit: cover;
-  height: 70px;
 }
