@@ -233,7 +233,15 @@ class zoonData extends HTMLElement {
 }
 class zoonCard extends HTMLElement {
   connectedCallback() {
-
+    this.attachShadow({mode: 'open'});
+    this.shadowRoot.innerHTML = `
+      <div>Name:
+        <slot name="username"></slot>
+      </div>
+      <div>Birthday:
+        <slot name="birthday"></slot>
+      </div>
+    `;
   }
 }
 
@@ -247,6 +255,7 @@ function defineElements() {
   customElements.define("html-include", zoonInclude);
   customElements.define("z-data", zoonData);
   customElements.define("var-inc", zoonVariable);
+  customElements.define("z-card", zoonCard);
 }
 
 // Text loader
