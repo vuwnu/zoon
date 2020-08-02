@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 
   /* Apply Base Font */
-  font-family: var(--primary-font);
+  font-family: var(--font-primary);
   color: var(--primary-color, black);
   background: var(--background, white);
 
@@ -31,7 +31,7 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--header-font);
+  font-family: var(--font-header);
   margin: .2em 0 .2em 0;
 }
 h1 {
@@ -160,7 +160,7 @@ table.zoon {
 
 thead {
   text-align: left;
-  font-family: var(--header-font);
+  font-family: var(--font-header);
   filter: brightness(80%);
 }
 
