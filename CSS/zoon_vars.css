@@ -31,14 +31,14 @@
   --selection-background: lightblue;
   --selection-color: white;
 
-/* Sizes */
+  /* Sizes */
   /* Page Width */
   --max-width: 1300px;
 
-/* Fonts */
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Open Sans', sans-serif;
-  --header-font: 'Open Sans', sans-serif;
+  /* Fonts */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-header: 'Open Sans', sans-serif;
   --font-size: var(--responsive-font-size);
 
 }
