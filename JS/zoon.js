@@ -172,6 +172,7 @@ class zoonLogo extends HTMLElement {
     this.innerHTML = `<a href="https://zoon.vuw.nu">[zoon]</a>`;
   }
 }
+
 class zoonInclude extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src')
@@ -182,7 +183,11 @@ class zoonInclude extends HTMLElement {
         this.innerHTML = text
       });
   }
+  static get observedAttributes() {
+  return ['src'];
+  }
 }
+
 class zoonQuery extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src')
@@ -233,15 +238,10 @@ class zoonData extends HTMLElement {
 }
 class zoonCard extends HTMLElement {
   connectedCallback() {
-    this.attachShadow({mode: 'open'});
-    this.shadowRoot.innerHTML = `
-      <div>Name:
-        <slot name="username"></slot>
-      </div>
-      <div>Birthday:
-        <slot name="birthday"></slot>
-      </div>
-    `;
+    let source = this.getAttribute('src');
+    let tmpl = $q('#' + source);
+
+    this.attachShadow({mode: 'open'}).append(tmpl.content.cloneNode(true));
   }
 }
 
@@ -255,7 +255,7 @@ function defineElements() {
   customElements.define("html-include", zoonInclude);
   customElements.define("z-data", zoonData);
   customElements.define("var-inc", zoonVariable);
-  customElements.define("z-card", zoonCard);
+  customElements.define("z-template", zoonCard);
 }
 
 // Text loader
