@@ -231,3 +231,15 @@ zoon-query {
 z-data {
   display: none;
 }
+
+/* Layouts */
+.use-layout main {
+  align-self: flex-start;
+}
+.single-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: "header" "main" "footer";
+  place-items: center;
+}
