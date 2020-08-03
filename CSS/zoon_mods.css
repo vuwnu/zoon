@@ -50,3 +50,11 @@ header .logo {
 .invisible {
   visibility: hidden;
 }
+
+/* Filters */
+.ph {
+  filter: brightness(40%);
+}
+.blur {
+  filter: blur(20%);
+}
