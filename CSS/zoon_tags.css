@@ -54,6 +54,7 @@ a:hover {
 
 /* Header */
 header {
+  grid-area: header;
   display: flex;
   align-content: center;
   align-items: center;
@@ -64,6 +65,7 @@ header {
 }
 /* Main */
 main {
+  grid-area: main;
   order: 3;
   display: flex;
   flex-flow: column wrap;
@@ -79,6 +81,7 @@ aside {
 }
 /* Footer */
 footer {
+  grid-area: footer;
   align-content: center;
   text-align: center;
   order: 5;
