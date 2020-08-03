@@ -52,15 +52,6 @@ a:hover {
 
 /* SEMANTIC TAGS */
 
-page {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  max-width: var(--max-width);
-  background: var(--background-color);
-}
-
-
 /* Header */
 header {
   display: flex;
