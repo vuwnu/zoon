@@ -25,6 +25,13 @@
   justify-content: center;
 }
 
+/* Logo */
+header .logo {
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
+
 /* Text Align */
 .tal {
   text-align: left;
