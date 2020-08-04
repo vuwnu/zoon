@@ -259,7 +259,7 @@ function defineElements() {
 }
 
 // Text loader
-function loadPage(url, output) {
+function setHTML(url, output) {
   fetch("/assets/html/includes/" + url)
     .then(response => response.text())
     .then(text => {
