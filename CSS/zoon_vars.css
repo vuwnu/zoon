@@ -14,7 +14,7 @@
   --background-border-color: #1d1d1d;
   --border-bg-color: #2e2e2e;
 
-  --background: transparent;
+  --background: #222;
 
   /** Border **/
   --border-type: solid;
