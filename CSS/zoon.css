@@ -232,6 +232,19 @@ z-data {
   display: none;
 }
 
+/* Default */
+
+.default {
+  --body-padding:10px;
+}
+.default section {
+  background: #333;
+}
+.default header {
+  min-height:200px;
+}
+
+
 /* Layouts */
 .use-layout main {
   align-self: flex-start;
