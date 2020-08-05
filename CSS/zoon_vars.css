@@ -6,13 +6,14 @@
   --y-axis-page-align: flex-start;
   --x-axis-page-align: center;
   --align-text: left;
+
   /** Colors **/
-  /* These are the main colors used for stlying elements across the app */
   --color-accent-1: green;
   --color-accent-2: lime;
   --color-accent-3: limegreen;
   --color-accent-4: limegreen;
 
+  --color-text: #dddddd;
   --color-main-1: #222;
   --color-main-2: darkgrey;
   --color-main-3: lime;
