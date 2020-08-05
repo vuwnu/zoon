@@ -16,7 +16,7 @@ body {
 
   /* Apply Base Font */
   font-family: var(--font-primary);
-  color: var(--primary-color, black);
+  color: var(--color-text);
   background: var(--background, white);
 
   /* Flex */
