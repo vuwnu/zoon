@@ -27,6 +27,7 @@ body {
   /* Page Alignment */
   justify-content: var(--y-axis-page-align);
   align-items: var(--x-axis-page-align);
+  text-align: var(--align-text);
 }
 
 
@@ -92,7 +93,6 @@ footer {
 section {
   margin: var(--margin);
   padding: 10px;
-  text-align: center;
 
   /* Flex */
   display: flex;
