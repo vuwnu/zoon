@@ -22,9 +22,9 @@
 
   --max-width: 1000px;
 
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Open Sans', sans-serif;
-  --header-font: 'Open Sans', sans-serif;
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-header: 'Open Sans', sans-serif;
   --font-size: var(--responsive-font-size);
 
 }
