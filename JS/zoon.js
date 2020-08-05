@@ -79,12 +79,19 @@ let zoon = {
       zoon.cnsl.log('Page succesfully built');
     },
 
-    setSiteTheme() {
-      var element = $q('html');
+    setThemeAndLayout() {
+      const element = $q('html');
+
       if (zdata.theme === undefined) {
-        element.classList.add(`default-theme`);
+        element.classList.add(`default`);
       } else {
         element.classList.add(`${zdata.theme}`)
+      }
+
+      if (zdata.layout === undefined) {
+        element.classList.add(`default`);
+      } else {
+        element.classList.add(`${zdata.layout}`)
       }
     },
 
@@ -122,7 +129,6 @@ let z = {
     $q(id).setAttribute('src', '/assets/html/includes/' + entity);
     $q(id).connectedCallback();
   }
-
 }
 
 // Functions
