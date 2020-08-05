@@ -5,16 +5,22 @@
   --margin: 5px;
   --y-axis-page-align: flex-start;
   --x-axis-page-align: center;
+  --align-text: left;
   /** Colors **/
   /* These are the main colors used for stlying elements across the app */
-  --primary-color: #bbb;
-  --secondary-color: darkgrey;
-  --tertiary-color: lime;
-  --background-color: #222;
-  --background-border-color: #1d1d1d;
-  --border-bg-color: #2e2e2e;
+  --color-accent-1: green;
+  --color-accent-2: lime;
+  --color-accent-3: limegreen;
+  --color-accent-4: limegreen;
 
-  --background: #222;
+  --color-main-1: #222;
+  --color-main-2: darkgrey;
+  --color-main-3: lime;
+  --background-color: transparent;
+  --background-border-color: #1d1d1d;
+  --border-bg-color: #222;
+
+  --background: #111;
 
   /** Border **/
   --border-type: solid;
