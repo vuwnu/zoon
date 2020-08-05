@@ -47,13 +47,6 @@
     padding-top: 0;
 }
 
-section {
-  background: var(--secondary-color);
-}
-
-header {
-  margin: 0 20px;
-}
 .logo {
   font-size: 5em;
   margin: auto;
