@@ -3,5 +3,6 @@
   "description": "web framework",
   "config": "/",
   "files": "assets",
-  "language": "Javascript"
+  "language": "Javascript",
+  "theme": "default"
 }
