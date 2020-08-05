@@ -238,12 +238,20 @@ z-data {
   --body-padding:10px;
 }
 .default section {
-  background: #333;
+  background: var(--color-main-1);
 }
 .default header {
-  min-height:200px;
+  text-align: center;
 }
-
+.default main {
+  background: #2c2c2c;
+  border: 2px rgba(1,1,1,0.1) solid;
+  padding: 10px;
+  margin: 5px;
+}
+.default body {
+  padding: 0 10px
+}
 
 /* Layouts */
 .use-layout main {
