@@ -79,7 +79,7 @@ let zoon = {
       zoon.cnsl.log('Page succesfully built');
     },
 
-    setThemeAndLayout() {
+    setTheme() {
       const element = $q('html');
 
       if (zdata.theme === undefined) {
@@ -88,7 +88,12 @@ let zoon = {
         element.classList.add(`${zdata.theme}`)
       }
 
-      if (zdata.layout === undefined) {
+    },
+
+    setLayout() {
+      const element = $q('body');
+
+      if (zdata.layout != undefined) {
         element.classList.add(`default`);
       } else {
         element.classList.add(`${zdata.layout}`)
@@ -293,7 +298,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   setTimeout(() => {
     zoon.init.mergeData(); //Combines page data into zdata object
     defineElements(); //Function to define all custom elements
-    zoon.init.setSiteTheme();
+    zoon.init.setTheme();
+    zoon.init.setLayout();
     zoon.init.setTitle();
     if (zdata.layout !== 0) {
       zoon.init.zoonLoadLayout('/assets/html/layouts/');
