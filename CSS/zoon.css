@@ -245,13 +245,23 @@ z-data {
 }
 .default main {
   background: #2c2c2c;
-  border: 2px rgba(1,1,1,0.1) solid;
+  border: 5px rgba(1,1,1,0.1) solid;
   padding: 10px;
   margin: 5px;
+
+  border-top: 0;
+  margin-top: 0;
 }
 .default body {
   padding: 0 10px
 }
+.default zoon-nav {
+  background: #2c2c2c;
+  border: 5px rgba(1,1,1,0.1) solid;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.default zoon-nav {}
 
 /* Layouts */
 .use-layout main {
