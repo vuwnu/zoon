@@ -2,13 +2,22 @@
 
 :root {
 
+  --color-accent-1: cornflowerblue;
+  --color-accent-2: rgba(171, 76, 239, 0.5);
+  --color-accent-3: limegreen;
+  --color-accent-4: limegreen;
+
+  --color-text: #dddddd;
+  --color-main-1: #222;
+  --color-main-2: darkgrey;
+  --color-main-3: lime;
+
   --primary-color: #bbb;
   --secondary-color: #222;
   --tertiary-color: lime;
   --background-color: transparent;
   --background-border-color: #1d1d1d;
   --border-bg-color: #222;
-
   --background: #503266;
 
   --border-type: solid;
