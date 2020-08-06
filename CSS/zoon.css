@@ -133,8 +133,8 @@ zoon-nav a:active {
 
 /* Button */
 .btn {
-  color: var(--tertiary-color);
-  background: var(--colorGradient4);
+  color: var(--color-accent-1);
+  background: var(--color-main-2);
   display: inline-block;
   margin: var(--margin);
   padding: 5px;
