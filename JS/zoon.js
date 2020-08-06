@@ -1,7 +1,26 @@
+let z = {
+
+  pull_json(src) {
+    let json_data
+    fetch(src)
+    .then(response => response.json())
+    .then(data => json_data = data)
+    .catch(console.error);
+    zoon.cnsl.log(json_data)
+    return json_data;
+  },
+
+  update(id) {
+    let entity = $q('#pageSelect').value;
+    $q(id).setAttribute('src', '/assets/html/includes/' + entity);
+    $q(id).connectedCallback();
+  }
+}
+
 let zoon = {
 
   cnsl: {
-
+    
     log(text) {
       const font_size = 'font-size:15px;'
       // Log types
@@ -30,9 +49,9 @@ let zoon = {
 
     loadzdata() {
       fetch('/zdata.json')
-        .then(response => response.json())
-        .then(data => zdata = data)
-        .catch(console.error);
+      .then(response => response.json())
+      .then(data => zdata = data)
+      .catch(console.error);
     },
 
     zoonLoadLayout(url) {
@@ -42,36 +61,36 @@ let zoon = {
 
       // Inserts HEAD file
       fetch('/assets/html/head.html')
-        .catch((err) => {
-          zoon.cnsl.log('Error fetching head')
-        })
-        .then(response => response.text())
-        .then(text => {
-          zoonHead.insertAdjacentHTML('beforeend', text)
-        })
+      .catch((err) => {
+        zoon.cnsl.log('Error fetching head')
+      })
+      .then(response => response.text())
+      .then(text => {
+        zoonHead.insertAdjacentHTML('beforeend', text)
+      })
 
       // Inserts Layout file
       if (layout === undefined) {
         currentLayout = "default"
         fetch(url + 'default.html')
-          .catch((err) => {
-            zoon.cnsl.log('Error fetching layout')
-          })
-          .then(response => response.text())
-          .then(text => {
-            zoonBody.insertAdjacentHTML('beforeend', text)
-          })
+        .catch((err) => {
+          zoon.cnsl.log('Error fetching layout')
+        })
+        .then(response => response.text())
+        .then(text => {
+          zoonBody.insertAdjacentHTML('beforeend', text)
+        })
         zoon.cnsl.log('Layout = default');
       } else {
         currentLayout = layout
         fetch(url + layout + '.html')
-          .catch((err) => {
-            zoon.cnsl.log('Error fetching layout')
-          })
-          .then(response => response.text())
-          .then(text => {
-            zoonBody.insertAdjacentHTML('beforeend', text)
-          })
+        .catch((err) => {
+          zoon.cnsl.log('Error fetching layout')
+        })
+        .then(response => response.text())
+        .then(text => {
+          zoonBody.insertAdjacentHTML('beforeend', text)
+        })
         zoon.cnsl.log('Layout = ' + layout);
       }
 
@@ -94,6 +113,7 @@ let zoon = {
 
       if (zdata.design != undefined) {
         element.classList.add(`${zdata.design}`);
+        element.classList.add(`use-layout`);
       }
     },
 
@@ -113,30 +133,10 @@ let zoon = {
   }
 }
 
-let z = {
-
-  pull_json(src) {
-    let json_data
-    fetch(src)
-      .then(response => response.json())
-      .then(data => json_data = data)
-      .catch(console.error);
-    zoon.cnsl.log(json_data)
-    return json_data;
-  },
-
-  update(id) {
-    let entity = $q('#pageSelect').value;
-    $q(id).setAttribute('src', '/assets/html/includes/' + entity);
-    $q(id).connectedCallback();
-  }
-}
-
 // Functions
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) =>
   Array.from(parent.querySelectorAll(css));
-// const $a = getAttribute(document);
 
 zoon.init.loadzdata();
 
