@@ -282,16 +282,6 @@ function setHTML(url, output) {
 }
 
 
-
-// //SearchParams Test
-// const params = new URLSearchParams(window.location.search);
-//
-// //Iterate the search parameters.
-// for (const param of params) {
-//   console.log(param);
-// }
-
-
 //// INITIALISATION
 window.addEventListener('DOMContentLoaded', (event) => {
 
