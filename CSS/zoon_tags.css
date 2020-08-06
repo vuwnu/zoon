@@ -33,18 +33,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-header);
-  margin: .2em 0 .2em 0;
 }
 h1 {
   font-size: 2em;
 }
 
-
-
 /* Links */
 a {
   text-decoration: none;
-  color: cornflowerblue;
+  color: var(--color-accent-1);
   transition: color .2s;
 }
 a:hover {
