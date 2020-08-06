@@ -4,5 +4,6 @@
   "config": "/",
   "files": "assets",
   "language": "Javascript",
-  "theme": "default"
+  "theme": "default",
+  "design": "single-column"
 }
