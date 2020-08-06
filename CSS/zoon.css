@@ -270,7 +270,14 @@ z-data {
 .single-column {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: min-content min-content 1fr min-content;
+  grid-template-areas: "header" "zoon-nav" "main" "footer";
+  place-items: center;
+}
+.center {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content 1fr min-content min-content;
+  grid-template-areas: "header" "zoon-nav" "main" "aside" "footer";
   place-items: center;
 }
