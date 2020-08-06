@@ -75,7 +75,6 @@ let zoon = {
         zoon.cnsl.log('Layout = ' + layout);
       }
 
-
       zoon.cnsl.log('Page succesfully built');
     },
 
@@ -90,19 +89,12 @@ let zoon = {
 
     },
 
-    setLayout() {
+    setDesign() {
       const element = $q('body');
 
-      if (zdata.layout != undefined) {
-        element.classList.add(`default`);
-      } else {
-        element.classList.add(`${zdata.layout}`)
+      if (zdata.design != undefined) {
+        element.classList.add(`${zdata.design}`);
       }
-    },
-
-    mergeData() {
-      Object.assign(zdata, p);
-      delete p;
     },
 
     setTitle() {
@@ -112,11 +104,15 @@ let zoon = {
       } else {
         return;
       }
+    },
+
+    mergeData() {
+      Object.assign(zdata, p);
+      delete p;
     }
-
   }
-
 }
+
 let z = {
 
   pull_json(src) {
@@ -289,7 +285,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     zoon.init.mergeData(); //Combines page data into zdata object
     defineElements(); //Function to define all custom elements
     zoon.init.setTheme();
-    zoon.init.setLayout();
+    zoon.init.setDesign();
     zoon.init.setTitle();
     if (zdata.layout !== 0) {
       zoon.init.zoonLoadLayout('/assets/html/layouts/');
