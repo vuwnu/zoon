@@ -38,6 +38,7 @@ h1 {
   font-size: 2em;
 }
 
+
 /* Links */
 a {
   text-decoration: none;
@@ -89,7 +90,7 @@ footer {
 /* Section */
 section {
   margin: var(--margin);
-  padding: 10px;
+  padding: 1em;
 
   /* Flex */
   display: flex;
