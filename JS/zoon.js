@@ -1,5 +1,21 @@
 let z = {
 
+  get: {
+    script(src) {
+      // creates a <script> tag and append it to the page
+      // this causes the script with given src to start loading and run when complete
+      let script = document.createElement('script');
+      script.src = src;
+      document.head.append(script);
+    },
+    json(src, name) {
+      fetch(src + name + '.json')
+      .then(response => response.json())
+      .then(data => zdata = data)
+      .catch(console.error);
+    },
+  },
+
   pull_json(src) {
     let json_data
     fetch(src)
