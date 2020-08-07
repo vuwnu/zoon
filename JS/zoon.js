@@ -52,6 +52,17 @@ let z = {
     return json_data;
   },
 
+  pageBuild() {
+    z.set.theme();
+    z.set.design();
+    z.set.title();
+    if (zdata.layout !== 0) {
+      zoon.init.zoonLoadLayout('/assets/html/layouts/');
+    } else {
+      return;
+    }
+  },
+
   update(id) {
     let entity = $q('#pageSelect').value;
     $q(id).setAttribute('src', '/assets/html/includes/' + entity);
