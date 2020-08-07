@@ -267,15 +267,15 @@ class ZoonCard extends HTMLElement {
 
 // Defining all custom elements
 function defineElements() {
-  customElements.define("zoon-time", zoonTime);
-  customElements.define("zoon-nav", zoonNavbar);
-  customElements.define("zoon-logo", zoonLogo);
-  customElements.define("zoon-query", zoonQuery);
-  customElements.define("zoon-insert", zoonInsert);
-  customElements.define("html-include", zoonInclude);
-  customElements.define("z-data", zoonData);
-  customElements.define("var-inc", zoonVariable);
-  customElements.define("z-template", zoonCard);
+  customElements.define("zoon-time", ZoonTime);
+  customElements.define("zoon-nav", ZoonNavbar);
+  customElements.define("zoon-logo", ZoonLogo);
+  customElements.define("zoon-query", ZoonQuery);
+  customElements.define("zoon-insert", ZoonInsert);
+  customElements.define("html-include", ZoonInclude);
+  customElements.define("z-data", ZoonData);
+  customElements.define("var-inc", ZoonVariable);
+  customElements.define("z-template", ZoonCard);
 }
 
 // Text loader
