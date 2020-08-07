@@ -303,14 +303,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   setTimeout(() => {
     zoon.init.mergeData(); //Combines page data into zdata object
     defineElements(); //Function to define all custom elements
-    z.set.theme();
-    z.set.design();
-    z.set.title();
-    if (zdata.layout !== 0) {
-      zoon.init.zoonLoadLayout('/assets/html/layouts/');
-    } else {
-      return;
-    }
+    z.pageBuild();
     zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
   }, 100);
 
