@@ -152,12 +152,31 @@ let zoon = {
 
 // Functions
 const $q = document.querySelector.bind(document);
-const $qa = (css, parent = document) =>
-  Array.from(parent.querySelectorAll(css));
+const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
 z.set.json('/', 'zdata');
 
+
+
 //// CUSTOM ELEMENTS
+class ZoonData extends HTMLElement {
+  connectedCallback() {
+    let self = this;
+    let str = this.innerHTML;
+
+    str = str.replace(/(\n)+/g, '", "');
+    str = str.replace(/( = )+/g, '":"');
+    str = str.slice(0, -3);
+    str = str.slice(2);
+    str = `{${str}}`
+
+    let finalString = JSON.parse(str);
+    Object.assign(zdata, finalString)
+    console.log(finalString);
+    self.remove();
+  }
+}
+
 class ZoonTime extends HTMLElement {
   connectedCallback() {
     let date = new Date(this.getAttribute('datetime') || Date.now());
@@ -255,19 +274,6 @@ class ZoonTable extends HTMLElement {
   }
 }
 
-class ZoonData extends HTMLElement {
-  connectedCallback() {
-    let self = this;
-    let str = this.innerHTML;
-
-    str = str.replace(/(\n)+/g, '", "');
-    str = str.replace(/( = )+/g, '":"');
-    str = str.slice(0, -2);
-    str = `{${str}}`
-    console.log(str);
-    // self.remove();
-  }
-}
 
 class ZoonCard extends HTMLElement {
   connectedCallback() {
@@ -280,13 +286,13 @@ class ZoonCard extends HTMLElement {
 
 // Defining all custom elements
 function defineElements() {
+  customElements.define("z-data", ZoonData);
   customElements.define("zoon-time", ZoonTime);
   customElements.define("zoon-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("zoon-query", ZoonQuery);
   customElements.define("zoon-insert", ZoonInsert);
   customElements.define("html-include", ZoonInclude);
-  customElements.define("z-data", ZoonData);
   customElements.define("var-inc", ZoonVariable);
   customElements.define("z-template", ZoonCard);
 }
