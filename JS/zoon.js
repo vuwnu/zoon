@@ -149,10 +149,10 @@ const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) =>
   Array.from(parent.querySelectorAll(css));
 
-zoon.init.loadzdata();
+z.get.json('/', 'zdata');
 
 //// CUSTOM ELEMENTS
-class zoonTime extends HTMLElement {
+class ZoonTime extends HTMLElement {
   connectedCallback() {
     let date = new Date(this.getAttribute('datetime') || Date.now());
     this.innerHTML = new Intl.DateTimeFormat("default", {
@@ -166,13 +166,13 @@ class zoonTime extends HTMLElement {
     }).format(date);
   }
 }
-class zoonVariable extends HTMLElement {
+class ZoonVariable extends HTMLElement {
   connectedCallback() {
     let variable = this.getAttribute('var')
     this.innerHTML = zdata[variable] || "";
   }
 }
-class zoonNavbar extends HTMLElement {
+class ZoonNavbar extends HTMLElement {
   connectedCallback() {
     // Sets active page in navbar
     let current_location = location.pathname;
@@ -185,13 +185,13 @@ class zoonNavbar extends HTMLElement {
     }
   }
 }
-class zoonLogo extends HTMLElement {
+class ZoonLogo extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<a href="https://zoon.vuw.nu">[zoon]</a>`;
   }
 }
 
-class zoonInclude extends HTMLElement {
+class ZoonInclude extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src')
 
@@ -202,11 +202,11 @@ class zoonInclude extends HTMLElement {
       });
   }
   static get observedAttributes() {
-  return ['src'];
+    return ['src'];
   }
 }
 
-class zoonQuery extends HTMLElement {
+class ZoonQuery extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src')
     const key = this.getAttribute('key')
@@ -224,7 +224,7 @@ class zoonQuery extends HTMLElement {
   }
 }
 
-class zoonInsert extends HTMLElement {
+class ZoonInsert extends HTMLElement {
   connectedCallback() {
     const output = $q('zoon-insert');
     const inputID = this.getAttribute('input');
@@ -237,7 +237,7 @@ class zoonInsert extends HTMLElement {
   }
 }
 
-class zoonTable extends HTMLElement {
+class ZoonTable extends HTMLElement {
   connectedCallback() {
     let source = this.getAttribute('src');
 
@@ -248,13 +248,15 @@ class zoonTable extends HTMLElement {
       });
   }
 }
-class zoonData extends HTMLElement {
+
+class ZoonData extends HTMLElement {
   connectedCallback() {
     let self = this;
     self.remove();
   }
 }
-class zoonCard extends HTMLElement {
+
+class ZoonCard extends HTMLElement {
   connectedCallback() {
     let source = this.getAttribute('src');
     let tmpl = $q('#' + source);
