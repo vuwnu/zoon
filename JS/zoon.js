@@ -36,7 +36,7 @@ let z = {
 let zoon = {
 
   cnsl: {
-    
+
     log(text) {
       const font_size = 'font-size:15px;'
       // Log types
@@ -63,12 +63,7 @@ let zoon = {
 
   init: {
 
-    loadzdata() {
-      fetch('/zdata.json')
-      .then(response => response.json())
-      .then(data => zdata = data)
-      .catch(console.error);
-    },
+
 
     zoonLoadLayout(url) {
       let layout = zdata.layout;
