@@ -258,7 +258,14 @@ class ZoonTable extends HTMLElement {
 class ZoonData extends HTMLElement {
   connectedCallback() {
     let self = this;
-    self.remove();
+    let str = this.innerHTML;
+
+    str = str.replace(/(\n)+/g, '", "');
+    str = str.replace(/( = )+/g, '":"');
+    str = str.slice(0, -2);
+    str = `{${str}}`
+    console.log(str);
+    // self.remove();
   }
 }
 
