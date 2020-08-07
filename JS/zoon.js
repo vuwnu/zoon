@@ -314,7 +314,6 @@ function setHTML(url, output) {
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
-    zoon.init.mergeData(); //Combines page data into zdata object
     defineElements(); //Function to define all custom elements
     z.pageBuild();
     zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
