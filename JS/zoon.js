@@ -1,6 +1,6 @@
 let z = {
 
-  get: {
+  set: {
     script(src) {
       // creates a <script> tag and append it to the page
       // this causes the script with given src to start loading and run when complete
@@ -13,6 +13,32 @@ let z = {
       .then(response => response.json())
       .then(data => zdata = data)
       .catch(console.error);
+    },
+    theme() {
+      const element = $q('html');
+
+      if (zdata.theme === undefined) {
+        element.classList.add(`default`);
+      } else {
+        element.classList.add(`${zdata.theme}`)
+      }
+
+    },
+    design() {
+      const element = $q('body');
+
+      if (zdata.design != undefined) {
+        element.classList.add(`use-layout`);
+        element.classList.add(`${zdata.design}`);
+      }
+    },
+    title() {
+      if (zdata.pageName !== undefined) {
+        document.title = zdata.siteName + ' | ' + zdata.pageName;
+        zoon.cnsl.log('Title set');
+      } else {
+        return;
+      }
     },
   },
 
@@ -63,8 +89,6 @@ let zoon = {
 
   init: {
 
-
-
     zoonLoadLayout(url) {
       let layout = zdata.layout;
       let zoonBody = $q('body')
@@ -108,35 +132,6 @@ let zoon = {
       zoon.cnsl.log('Page succesfully built');
     },
 
-    setTheme() {
-      const element = $q('html');
-
-      if (zdata.theme === undefined) {
-        element.classList.add(`default`);
-      } else {
-        element.classList.add(`${zdata.theme}`)
-      }
-
-    },
-
-    setDesign() {
-      const element = $q('body');
-
-      if (zdata.design != undefined) {
-        element.classList.add(`${zdata.design}`);
-        element.classList.add(`use-layout`);
-      }
-    },
-
-    setTitle() {
-      if (zdata.pageName !== undefined) {
-        document.title = zdata.siteName + ' | ' + zdata.pageName;
-        zoon.cnsl.log('Title set');
-      } else {
-        return;
-      }
-    },
-
     mergeData() {
       Object.assign(zdata, p);
       delete p;
@@ -149,7 +144,7 @@ const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) =>
   Array.from(parent.querySelectorAll(css));
 
-z.get.json('/', 'zdata');
+z.set.json('/', 'zdata');
 
 //// CUSTOM ELEMENTS
 class ZoonTime extends HTMLElement {
