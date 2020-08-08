@@ -189,11 +189,6 @@ let zoon = {
 
       zoon.cnsl.log('Page succesfully built');
     },
-
-    mergeData() {
-      Object.assign(zdata, p);
-      delete p;
-    }
   }
 }
 
@@ -202,8 +197,6 @@ const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
 z.set.json('/', 'zdata');
-
-
 
 //// CUSTOM ELEMENTS
 class ZoonData extends HTMLElement {
@@ -238,12 +231,14 @@ class ZoonTime extends HTMLElement {
     }).format(date);
   }
 }
+
 class ZoonVariable extends HTMLElement {
   connectedCallback() {
     let variable = this.getAttribute('var')
     this.innerHTML = zdata[variable] || "";
   }
 }
+
 class ZoonNavbar extends HTMLElement {
   connectedCallback() {
     // Sets active page in navbar
@@ -257,6 +252,7 @@ class ZoonNavbar extends HTMLElement {
     }
   }
 }
+
 class ZoonLogo extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<a href="https://zoon.vuw.nu">[zoon]</a>`;
@@ -320,7 +316,6 @@ class ZoonTable extends HTMLElement {
       });
   }
 }
-
 
 class ZoonCard extends HTMLElement {
   connectedCallback() {
