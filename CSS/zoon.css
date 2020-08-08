@@ -259,6 +259,11 @@ z-data {
   border-bottom: 0;
   margin-bottom: 0;
 }
+.default zoon-nav a {
+  background: var(--color-main-1);
+  padding: 5px;
+  margin: var(--margin)
+}
 
 /* Layouts */
 .use-layout main {
