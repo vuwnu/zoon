@@ -108,6 +108,7 @@ let z = {
     } else {
       return;
     }
+    zoon.cnsl.log('Page succesfully built');
   },
 
   update(id) {
@@ -142,53 +143,6 @@ let zoon = {
         zoon.cnsl.log(`${key}: ${value}`);
       }
     }
-
-  },
-
-  init: {
-
-    zoonLoadLayout(url) {
-      let layout = zdata.layout;
-      let zoonBody = $q('body')
-      let zoonHead = $q('head')
-
-      // Inserts HEAD file
-      fetch('/assets/html/head.html')
-      .catch((err) => {
-        zoon.cnsl.log('Error fetching head')
-      })
-      .then(response => response.text())
-      .then(text => {
-        zoonHead.insertAdjacentHTML('beforeend', text)
-      })
-
-      // Inserts Layout file
-      if (layout === undefined) {
-        currentLayout = "default"
-        fetch(url + 'default.html')
-        .catch((err) => {
-          zoon.cnsl.log('Error fetching layout')
-        })
-        .then(response => response.text())
-        .then(text => {
-          zoonBody.insertAdjacentHTML('beforeend', text)
-        })
-        zoon.cnsl.log('Layout = default');
-      } else {
-        currentLayout = layout
-        fetch(url + layout + '.html')
-        .catch((err) => {
-          zoon.cnsl.log('Error fetching layout')
-        })
-        .then(response => response.text())
-        .then(text => {
-          zoonBody.insertAdjacentHTML('beforeend', text)
-        })
-        zoon.cnsl.log('Layout = ' + layout);
-      }
-
-      zoon.cnsl.log('Page succesfully built');
-    },
   }
 }
 
