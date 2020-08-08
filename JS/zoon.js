@@ -102,8 +102,9 @@ let z = {
     z.set.theme();
     z.set.design();
     z.set.title();
-    if (zdata.layout !== 0) {
-      zoon.init.zoonLoadLayout('/assets/html/layouts/');
+    if (zdata.layout !== "0") {
+      z.set.layout('/assets/html/layouts/');
+      z.set.head();
     } else {
       return;
     }
@@ -360,7 +361,7 @@ function setHTML(url, output) {
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
-    defineElements(); //Function to define all custom elements
+    defineElements();
     z.pageBuild();
     zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
   }, 100);
