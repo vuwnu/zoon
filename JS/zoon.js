@@ -17,6 +17,8 @@ let z = {
 
       if (zdata.theme === undefined) {
         element.classList.add(`default`);
+      } else if (zdata.theme === "none") {
+        return;
       } else {
         element.classList.add(`${zdata.theme}`)
       }
