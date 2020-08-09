@@ -22,7 +22,6 @@ let z = {
       } else {
         element.classList.add(`${zdata.theme}`)
       }
-
     },
     design() {
       const element = $q('body');
@@ -34,7 +33,7 @@ let z = {
     },
     title() {
       if (zdata.pageName !== undefined) {
-        document.title = zdata.siteName + ' | ' + zdata.pageName;
+        document.title = `${zdata.pageName} - ${zdata.siteName}`;
         zoon.cnsl.log('Title set');
       } else {
         return;
