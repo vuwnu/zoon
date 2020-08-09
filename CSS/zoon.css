@@ -279,7 +279,7 @@ z-data {
 .use-layout.center {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content 1fr min-content min-content;
-  grid-template-areas: "header" "zoon-nav" "main" "aside" "footer";
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-areas: "" ;
   place-items: center;
 }
