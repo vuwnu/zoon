@@ -228,6 +228,9 @@ class ZoonInclude extends HTMLElement {
         this.innerHTML = text
       });
   }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.setContent();
+  }
   static get observedAttributes() {
     return ['src'];
   }
