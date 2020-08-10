@@ -217,6 +217,9 @@ class ZoonLogo extends HTMLElement {
 
 class ZoonInclude extends HTMLElement {
   connectedCallback() {
+    this.setContent();
+  }
+  setContent(){
     const source = this.getAttribute('src')
 
     fetch(source)
