@@ -52,7 +52,6 @@ a:hover {
 
 /* SEMANTIC TAGS */
 
-/* Header */
 header {
   grid-area: header;
   display: flex;
@@ -62,7 +61,12 @@ header {
   width:100%;
   max-width: var(--max-width);
 }
-/* Main */
+nav {
+  grid-area: nav;
+  order: 2;
+  width: 100%;
+  max-width: var(--max-width);
+}
 main {
   grid-area: main;
   order: 3;
