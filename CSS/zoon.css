@@ -62,7 +62,7 @@ lg — for screens =< 1200px (big screens) */
 
 /* Navbar */
 /* Class for showing current page */
-zoon-nav a.current-page {
+.current-page {
   background-color: #555 !important;
 }
 /* Main navbar styling */
