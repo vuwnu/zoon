@@ -32,6 +32,16 @@ header .logo {
   width: 100%;
 }
 
+/* Lightswitch */
+.lightswitch-on {
+  background: white;
+  color: black;
+}
+.lightswitch-off {
+  background: #222;
+  color: white;
+}
+
 /* Text Align */
 .tal {
   text-align: left;
