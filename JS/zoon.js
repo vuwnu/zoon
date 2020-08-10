@@ -290,6 +290,20 @@ class ZoonCard extends HTMLElement {
 
 class ZoonLightswitch extends HTMLElement {
   connectedCallback() {
+    this.toggle();
+  }
+  toggle() {
+    const target = this.getAttribute('target')
+
+    this.addEventListener('click', function() {
+      if (target.classList.contains(`dark-mode`)) {
+        
+        target.classList.add(`light-mode`);
+      } else {
+        target.classList.add(`${zdata.theme}`)
+      }
+    }, false);
+
   }
 }
 
