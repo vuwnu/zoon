@@ -288,6 +288,11 @@ class ZoonCard extends HTMLElement {
   }
 }
 
+class ZoonLightswitch extends HTMLElement {
+  connectedCallback() {
+  }
+}
+
 // Defining all custom elements
 function defineElements() {
   customElements.define("z-data", ZoonData);
@@ -299,6 +304,7 @@ function defineElements() {
   customElements.define("html-include", ZoonInclude);
   customElements.define("var-inc", ZoonVariable);
   customElements.define("z-template", ZoonCard);
+  customElements.define("z-lightswitch", ZoonLightswitch);
 }
 
 // Text loader
