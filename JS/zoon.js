@@ -290,20 +290,20 @@ class ZoonCard extends HTMLElement {
 
 class ZoonLightswitch extends HTMLElement {
   connectedCallback() {
-    this.toggle();
+    this.addEventListener('click', function() {
+      this.toggle();
+    }, false);
   }
   toggle() {
-    const target = this.getAttribute('target')
+    const target = $q('#' + this.getAttribute('target'));
 
-    this.addEventListener('click', function() {
-      if (target.classList.contains(`dark-mode`)) {
-
-        target.classList.add(`light-mode`);
-      } else {
-        target.classList.add(`${zdata.theme}`)
-      }
-    }, false);
-
+    if (target.classList.contains(`lightswitch-off`)) {
+      target.classList.remove(`lightswitch-off`);
+      target.classList.add(`lightswitch-on`);
+    } else {
+      target.classList.remove(`lightswitch-on`);
+      target.classList.add(`lightswitch-off`);
+    }
   }
 }
 
