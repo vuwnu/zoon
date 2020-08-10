@@ -296,7 +296,7 @@ class ZoonLightswitch extends HTMLElement {
 // Defining all custom elements
 function defineElements() {
   customElements.define("z-data", ZoonData);
-  customElements.define("zoon-time", ZoonTime);
+  customElements.define("z-time", ZoonTime);
   customElements.define("zoon-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("zoon-query", ZoonQuery);
