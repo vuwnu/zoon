@@ -283,3 +283,11 @@ z-data {
   grid-template-areas: "" ;
   place-items: center;
 }
+.use-layout.side-nav {
+  display: grid;
+  grid-template-areas: "header header"
+                       "nav  main"
+                       "nav  footer";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+}
