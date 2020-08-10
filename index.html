@@ -1,79 +1,27 @@
 <!DOCTYPE html>
-<script src="https://static.vuwnu.com/zoon/JS/zoon.js"></script>
-<link rel="stylesheet" href="https://static.vuwnu.com/zoon/CSS/zoon.css">
-<link rel="stylesheet" href="/assets/css/zoon_config.css">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>[zoon]</title>
+  <meta name="description" content="zoon is a serverless client-side framework for building web projects">
+
+  <link rel="icon" href="favicon.png" sizes="192x192" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap" rel="stylesheet">
+
+  <script src="https://static.vuwnu.com/zoon/JS/zoon.js"></script>
+
+  <link rel="stylesheet" href="https://static.vuwnu.com/zoon/CSS/zoon.css">
+
+  <link rel="stylesheet" href="/assets/css/zoon_config.css">
+
+</head>
 
 <body class="zoon">
 
   <main>
-    <div class="row flg:300">
-      <section>
-        <h3 class="tac">Intro</h3>
-        <p>zoon aims to be super simple to setup and get started with. All you need to do to start using it is add a link to the main style sheet in the head of your HTML file. This will instantly give you access to all of the different classes and stylings that zoon provides.</p>
-      </section>
-
-      <section>
-        <h3 class="tac">zoon_config.css</h3>
-        <p>If you would then like to customise your zoon setup you can add the zoon_config.css template file locally and make changes to customise how zoon looks. This file is designed to let you make big changes easily without having to edit large parts of your HTML. It makes use of CSS variables that will override the default variables that the theme comes with. It is highly recommended that you use this file alongside zoon to get the most out of it.</p>
-      </section>
-    </div>
-
-    <div>
-      <h1 class="tac">The Pillars</h1>
-      <div class="row flg:300">
-        <section>
-          <h3 class="tac">Responsiveness</h3>
-          <p>A site built with zoon should work across all devices and all browsers. Everything should have fallbacks available in case fonts or certain stylings are unavailable.</p>
-        </section>
-        <section>
-          <h3 class="tac">Contextuality</h3>
-          <p>Not every part of a style should need to be applied manually. zoon will apply certain stylings for you automatically based on the context of what you're writing.</p>
-        </section>
-        <section>
-          <h3 class="tac">Presentation</h3>
-          <p>Not only do I want zoon to function well, I want it to look good too. Using zoon it should be easy to build a site that works as well as it looks.</p>
-        </section>
-      </div>
-    </div>
-
-    <div>
-      <h1 class="tac">Style Rules</h1>
-      <div class="row flg:200">
-        <section>
-          <h3 class="tac">Fonts</h3>
-          <p>Any fonts you're using can be set through the config file and are then automatically applied based on context using the default html elements.</p>
-        </section>
-        <section>
-          <h3 class="tac">Colours</h3>
-          <p>Your color scheme is set inside of the config file and is then applied to various elements. This setup allows for easy changing of colour schemes without having the edit any classes</p>
-        </section>
-        <section>
-          <h3 class="tac">Borders</h3>
-          <p>Values for borders can be altered in the config file. These values are used for the borders across all of the styling classes</p>
-        </section>
-        <section>
-          <h3 class="tac">Flexbox</h3>
-          <p>zoon uses flexbox for properly sorting your content on the page. It allows content to be shown in a more interesting fashion and have a great level of responsiveness as it automatically changes to work with smaller viewports.</p>
-        </section>
-      </div>
-    </div>
-
-    <section>
-      <h1 class="tac">[zoon] Methodology</h1>
-      <p>zoon works by properly seperating each part of your app to make development as intuitive as possible.</p>
-    </section>
-<!--
-    <section>
-      <h1>To-Do list</h1>
-    </section>
-
-    <div >
-      <ul>
-        <li>1. URL Routing</li>
-        <li>2. Input Handling</li>
-        <li>3. Session Storage</li>
-      </ul>
-    </div> -->
+    <html-include src="/pages/home"></html-include>
   </main>
 
 </body>
