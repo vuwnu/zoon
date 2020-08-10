@@ -297,7 +297,7 @@ class ZoonLightswitch extends HTMLElement {
 
     this.addEventListener('click', function() {
       if (target.classList.contains(`dark-mode`)) {
-        
+
         target.classList.add(`light-mode`);
       } else {
         target.classList.add(`${zdata.theme}`)
@@ -314,9 +314,9 @@ function defineElements() {
   customElements.define("zoon-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("zoon-query", ZoonQuery);
-  customElements.define("zoon-insert", ZoonInsert);
+  customElements.define("z-insert", ZoonInsert);
   customElements.define("html-include", ZoonInclude);
-  customElements.define("var-inc", ZoonVariable);
+  customElements.define("z-var", ZoonVariable);
   customElements.define("z-template", ZoonCard);
   customElements.define("z-lightswitch", ZoonLightswitch);
 }
