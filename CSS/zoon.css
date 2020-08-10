@@ -69,11 +69,11 @@ zoon-nav.a a.currentPage {
   background-color: #555;
 }
 /* Main navbar styling */
+
 zoon-nav {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  order: 2;
   width: 100%;
   max-width: var(--max-width);
   background: var(--background-color);
@@ -273,7 +273,7 @@ z-data {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content 1fr min-content min-content;
-  grid-template-areas: "header" "zoon-nav" "main" "aside" "footer";
+  grid-template-areas: "header" "nav" "main" "aside" "footer";
   place-items: center;
 }
 .use-layout.center {
