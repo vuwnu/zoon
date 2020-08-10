@@ -256,7 +256,7 @@ class ZoonQuery extends HTMLElement {
 
 class ZoonInsert extends HTMLElement {
   connectedCallback() {
-    const output = $q('zoon-insert');
+    const output = $q('z-insert');
     const inputID = this.getAttribute('input');
     const input = $q(inputID);
 
