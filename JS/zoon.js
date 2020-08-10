@@ -110,8 +110,11 @@ let z = {
 
   update(id) {
     let entity = $q('#pageSelect').value;
+
     $q(id).setAttribute('src', '/assets/html/includes/' + entity);
-    $q(id).connectedCallback();
+  },
+  loadPage(page) {
+    $q('html-include').setAttribute('src', page);
   }
 }
 
