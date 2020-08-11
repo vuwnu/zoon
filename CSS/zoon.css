@@ -229,6 +229,17 @@ z-data {
   display: none;
 }
 
+z-lightswitch {
+  width: 50px;
+  height: 50px;
+  background: #aaaaaa;
+  align-self: center;
+  text-align: center;
+  line-height: 1.1em;
+  cursor: pointer;
+  font-size: 3em;
+}
+
 /* Default */
 
 .default {
