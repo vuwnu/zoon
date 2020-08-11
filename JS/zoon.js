@@ -146,6 +146,8 @@ let zoon = {
   }
 }
 
+let zdata
+
 // Functions
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
@@ -257,8 +259,7 @@ class ZoonQuery extends HTMLElement {
 class ZoonInsert extends HTMLElement {
   connectedCallback() {
     const output = $q('z-insert');
-    const inputID = this.getAttribute('input');
-    const input = $q(inputID);
+    const input = $q(this.getAttribute('input'));
 
     while (input.childNodes.length > 0) {
       output.appendChild(input.childNodes[0]);
@@ -297,7 +298,6 @@ class ZoonLightswitch extends HTMLElement {
     } else {
       target.classList.add(`lightswitch-on`);
     }
-
     this.addEventListener('click', function() {
       this.toggle();
     }, false);
