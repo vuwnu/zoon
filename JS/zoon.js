@@ -119,9 +119,9 @@ let z = {
 
     $q(id).setAttribute('src', '/assets/html/includes/' + entity);
   },
+  
   loadPage(page) {
     $q('html-include').setAttribute('src', page);
-    history.pushState("?page=1");
   }
 }
 
