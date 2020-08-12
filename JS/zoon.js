@@ -8,6 +8,9 @@ let z = {
     },
     json(src, name) {
       fetch(src + name + '.json')
+    },
+    json(src) {
+      fetch(src + '.json')
       .then(response => response.json())
       .then(data => zdata = data)
       .catch(console.error);
