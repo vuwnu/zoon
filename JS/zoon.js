@@ -121,6 +121,7 @@ let z = {
   },
   loadPage(page) {
     $q('html-include').setAttribute('src', page);
+    history.pushState("?page=1");
   }
 }
 
@@ -342,7 +343,6 @@ function setHTML(url, output) {
     });
 }
 
-
 z.set.json('zdata');
 
 function setup() {
@@ -353,9 +353,7 @@ function setup() {
 
 //// INITIALISATION
 window.addEventListener('DOMContentLoaded', (event) => {
-
   setTimeout(() => {
     setup();
   }, 100);
-
 });
