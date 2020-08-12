@@ -158,8 +158,6 @@ let zdata
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
-z.set.json('', 'zdata');
-
 //// CUSTOM ELEMENTS
 class ZoonData extends HTMLElement {
   connectedCallback() {
@@ -345,13 +343,19 @@ function setHTML(url, output) {
 }
 
 
+z.set.json('zdata');
+
+function setup() {
+  defineElements();
+  z.pageBuild();
+  zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
+}
+
 //// INITIALISATION
 window.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
-    defineElements();
-    z.pageBuild();
-    zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
+    setup();
   }, 100);
 
 });
