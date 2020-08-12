@@ -259,13 +259,13 @@ z-lightswitch {
 .default body {
   padding: 0 10px
 }
-.default zoon-nav {
+.default z-nav {
   background: #2c2c2c;
   border: 5px rgba(1,1,1,0.1) solid;
   margin-bottom: 10px;
 
 }
-.default zoon-nav a {
+.default z-nav a {
   background: var(--color-main-1);
   padding: 5px;
   margin: var(--margin)
