@@ -6,8 +6,11 @@ let z = {
       script.src = src;
       document.head.append(script);
     },
-    json(src, name) {
-      fetch(src + name + '.json')
+    css(src) {
+      let link = document.createElement('link');
+      link.href = src;
+      link.rel = "stylesheet";
+      document.head.append(link);
     },
     json(src) {
       fetch(src + '.json')
