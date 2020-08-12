@@ -152,7 +152,7 @@ let zdata
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
-z.set.json('/', 'zdata');
+z.set.json('', 'zdata');
 
 //// CUSTOM ELEMENTS
 class ZoonData extends HTMLElement {
@@ -316,7 +316,7 @@ class ZoonLightswitch extends HTMLElement {
 function defineElements() {
   customElements.define("z-data", ZoonData);
   customElements.define("z-time", ZoonTime);
-  customElements.define("zoon-nav", ZoonNavbar);
+  customElements.define("z-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("zoon-query", ZoonQuery);
   customElements.define("z-insert", ZoonInsert);
