@@ -109,6 +109,7 @@ z-nav a {
   color: white;
   margin: 0 2px;
   transition: background-color .1s;
+  cursor:pointer;
 }
 z-nav a:hover {
   background-color: #444;
