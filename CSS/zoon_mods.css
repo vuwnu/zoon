@@ -68,3 +68,6 @@ header .logo {
 .blur {
   filter: blur(20%);
 }
+.invert {
+  filter: invert();
+}
