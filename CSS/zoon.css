@@ -271,6 +271,9 @@ z-lightswitch {
   padding: 5px;
   margin: var(--margin)
 }
+.default z-nav a:hover {
+  background: var(--color-main-2);
+}
 
 /* Layouts */
 .use-layout main {
