@@ -67,7 +67,7 @@ lg — for screens =< 1200px (big screens) */
 }
 /* Main navbar styling */
 
-zoon-nav {
+z-nav {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -75,7 +75,7 @@ zoon-nav {
   max-width: var(--max-width);
   background: var(--background-color);
 }
-zoon-nav.a {
+z-nav.a {
   display: flex;
   justify-content: flex-start;
   text-align: center;
@@ -84,7 +84,7 @@ zoon-nav.a {
   margin: var(--margin);
 }
 /* Navbar link styling */
-zoon-nav.a a {
+z-nav.a a {
   flex: 1 0 50px;
   color: white;
   padding: 5px 0;
@@ -93,7 +93,7 @@ zoon-nav.a a {
   background: #333;
   border-radius: var(--border-radius);
 }
-zoon-nav.b a {
+z-nav.b a {
   flex: 1 0 50px;
   color: white;
   margin: var(--margin);
@@ -104,16 +104,16 @@ zoon-nav.b a {
   border-radius: var(--border-radius);
 }
 
-zoon-nav a {
+z-nav a {
   flex: 1 0 50px;
   color: white;
   margin: 0 2px;
   transition: background-color .1s;
 }
-zoon-nav a:hover {
+z-nav a:hover {
   background-color: #444;
 }
-zoon-nav a:active {
+z-nav a:active {
   background-color: #333;
 }
 
