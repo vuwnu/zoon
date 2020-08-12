@@ -119,16 +119,6 @@ z-nav a:active {
 }
 
 
-/*** Border ***/
-.border {
-  margin: var(--margin);
-  padding: 20px;
-  text-align: center;
-  border: var(--border-thickness) var(--border-type) var(--border-color);
-  background: var(--border-bg-color);
-  border-radius: var(--border-radius);
-}
-
 /* Button */
 .btn {
   color: var(--color-accent-1);
