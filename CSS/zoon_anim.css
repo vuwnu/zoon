@@ -64,11 +64,13 @@
 
 /* Timing */
 [anim~='linear'] { --anim-timing-function: linear; }
+[anim~='ease'] { --anim-timing-function: ease; }
 
 /* Iteration Count */
 [anim~='play:1'] { --anim-iteration-count: 1; }
 [anim~='play:2'] { --anim-iteration-count: 2; }
 [anim~='play:3'] { --anim-iteration-count: 3; }
+[anim~='play:4'] { --anim-iteration-count: 4; }
 [anim~='infinite'] { --anim-iteration-count: infinite; }
 
 /* Names */
