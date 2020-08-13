@@ -119,7 +119,7 @@ let z = {
 
     $q(id).setAttribute('src', '/assets/html/includes/' + entity);
   },
-  
+
   loadPage(page) {
     $q('html-include').setAttribute('src', page);
   }
@@ -314,6 +314,42 @@ class ZoonLightswitch extends HTMLElement {
     } else {
       target.classList.replace(`lightswitch-on`, `lightswitch-off`);
     }
+  }
+}
+
+class ZoonContent extends HTMLElement {
+  searchParams() {
+    const source = this.getAttribute('src')
+    const key = this.getAttribute('key')
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get(key)
+    if (value === null) {
+      return;
+    } else {
+    fetch(source + value)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+    }
+  }
+  connectedCallback() {
+    this.setContent();
+  }
+  setContent(){
+    const source = this.getAttribute('src')
+
+    fetch(source)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.setContent();
+  }
+  static get observedAttributes() {
+    return ['src'];
   }
 }
 
