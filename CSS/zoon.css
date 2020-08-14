@@ -216,6 +216,11 @@ zoon-query {
   flex-flow: inherit;
 }
 
+html-include {
+  display: inherit;
+  flex-flow: inherit;
+}
+
 z-data {
   display: none;
 }
