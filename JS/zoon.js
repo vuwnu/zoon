@@ -214,6 +214,14 @@ class ZoonNavbar extends HTMLElement {
       }
     }
   }
+  setupLinks() {
+    let nav_items = this.getElementsByTagName("a");
+    for (let i = 0, len = nav_items.length; i < len; i++) {
+      if (nav_items[i].getAttribute("href").indexOf(current_location) !== -1) {
+        nav_items[i].className = "current-page";
+      }
+    }
+  }
 }
 
 class ZoonLogo extends HTMLElement {
@@ -318,11 +326,21 @@ class ZoonLightswitch extends HTMLElement {
 }
 
 class ZoonContent extends HTMLElement {
+  connectedCallback() {
+    this.setContent();
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.setContent();
+  }
+  static get observedAttributes() {
+    return ['src'];
+  }
   searchParams() {
     const source = this.getAttribute('src')
     const key = this.getAttribute('key')
     const urlParams = new URLSearchParams(window.location.search);
     const value = urlParams.get(key)
+
     if (value === null) {
       return;
     } else {
@@ -333,9 +351,6 @@ class ZoonContent extends HTMLElement {
       });
     }
   }
-  connectedCallback() {
-    this.setContent();
-  }
   setContent(){
     const source = this.getAttribute('src')
 
@@ -344,12 +359,6 @@ class ZoonContent extends HTMLElement {
       .then(text => {
         this.innerHTML = text
       });
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    this.setContent();
-  }
-  static get observedAttributes() {
-    return ['src'];
   }
 }
 
