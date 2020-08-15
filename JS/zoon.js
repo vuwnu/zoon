@@ -230,7 +230,7 @@ class ZoonLogo extends HTMLElement {
   }
 }
 
-class ZoonInclude extends HTMLElement {
+class ZoonHTML extends HTMLElement {
   connectedCallback() {
     this.setContent();
   }
@@ -370,7 +370,7 @@ function defineElements() {
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("zoon-query", ZoonQuery);
   customElements.define("z-insert", ZoonInsert);
-  customElements.define("html-include", ZoonInclude);
+  customElements.define("z-html", ZoonHTML);
   customElements.define("z-var", ZoonVariable);
   customElements.define("z-template", ZoonCard);
   customElements.define("z-lightswitch", ZoonLightswitch);
