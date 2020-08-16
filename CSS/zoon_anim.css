@@ -85,6 +85,7 @@
 [anim^='slide-in-top'] { --anim-name: slide-in-top both; }
 [anim^='slide-in-bottom'] { --anim-name: slide-in-bottom both; }
 [anim^='marquee'] {--anim-name: marquee both;}
+[anim^='dance'] {--anim-name: dance both;}
 
 .marquee {
   background-color: black;
