@@ -106,7 +106,6 @@ let z = {
     z.set.title();
     if (zdata.layout !== "0") {
       z.set.layout('/assets/html/layouts/');
-      z.set.head();
     }
     zoon.cnsl.log('Page succesfully built');
   },
