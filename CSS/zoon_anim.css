@@ -1,5 +1,4 @@
 /* Animation Keyframes */
-
 /* Slide In */
 @-webkit-keyframes slide-in-bottom {
   from {transform:translateY(20px);opacity:0;}
@@ -33,6 +32,11 @@
   0%   { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
 }
+@keyframes dance {
+  0%   { transform: scaleY(-100%); }
+  100% { transform: scaleY(100%); }
+}
+
 :root {
   --anim-name: none;
   --anim-duration: 1s;
@@ -40,6 +44,7 @@
   --anim-delay: 0.1s;
   --anim-iteration-count: 1;
 }
+
 [anim] {
   animation: var(--anim-name)
              var(--anim-duration)
