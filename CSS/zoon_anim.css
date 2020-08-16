@@ -33,9 +33,13 @@
   100% { transform: translate(-100%, 0); }
 }
 @keyframes dance {
-  0%   { transform: scaleX(1);transform: translate(0, 0px); }
-  50%   { transform: scaleX(-1);transform: translate(0, 10px); }
-  100% { transform: scaleX(1);transform: translate(0, 0px); }
+  0%   { transform: scaleX(1) translate(0, 0px); }
+  1%   { transform: scaleX(-1) translate(0, 20px); }
+  40%   { transform: scaleX(-1) translate(0, 20px); }
+  41% { transform: scaleX(1) translate(0, 0px); }
+  80% { transform: scaleX(1) translate(0, 0px); }
+  81% { transform: scaleX(1) translate(0, 20px); }
+  100% { transform: scaleX(1) translate(0, 20px); }
 }
 
 :root {
