@@ -45,9 +45,6 @@ let z = {
         return;
       }
     },
-    zdata(key, value) {
-      zdata.key = value;
-    },
     head() {
       let zoonHead = $q('head')
 
