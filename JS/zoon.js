@@ -393,7 +393,7 @@ function setup() {
 }
 
 //// INITIALISATION
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
   setTimeout(() => {
     setup();
   }, 100);
