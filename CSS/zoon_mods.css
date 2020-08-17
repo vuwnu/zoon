@@ -27,6 +27,7 @@
 
 /* Logo */
 header .logo {
+  color: var(--color-logo);
   font-size: 3em;
   text-align: center;
   width: 100%;
