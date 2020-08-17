@@ -155,7 +155,7 @@ let zdata
 const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
-//// CUSTOM ELEMENTS
+// CUSTOM ELEMENTS
 class ZoonData extends HTMLElement {
   connectedCallback() {
     let self = this;
@@ -396,5 +396,5 @@ function setup() {
 window.addEventListener('load', (event) => {
   setTimeout(() => {
     setup();
-  }, 100);
+  }, 10);
 });
