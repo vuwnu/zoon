@@ -117,7 +117,7 @@ let z = {
   },
 
   loadPage(page) {
-    $q('html-include').setAttribute('src', page);
+    $q('z-html').setAttribute('src', page);
   }
 }
 
