@@ -63,6 +63,13 @@ header .logo {
   visibility: hidden;
 }
 
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* Filters */
 .ph {
   filter: brightness(40%);
