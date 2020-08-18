@@ -396,5 +396,5 @@ function setup() {
 window.addEventListener('load', (event) => {
   setTimeout(() => {
     setup();
-  }, 10);
+  }, 100);
 });
