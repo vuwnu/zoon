@@ -36,6 +36,7 @@
   --font-primary: 'Open Sans', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
   --font-header: 'Open Sans', sans-serif;
+  --font-logo: 'Anonymous Pro', monospace;
   --font-size: var(--responsive-font-size);
 
 }
