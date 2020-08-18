@@ -57,10 +57,3 @@
 .docsContents h3:nth-of-type(1) {
     padding-top: 0;
 } */
-
-.logo {
-  font-size: 5em;
-  margin: auto;
-  font-family: 'Anonymous Pro', monospace;
-  color: #ab4cef;
-}
