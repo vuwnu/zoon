@@ -18,7 +18,7 @@
   --color-main-1: #222;
   --color-main-2: darkgrey;
   --color-main-3: lime;
-  
+
   --background-color: transparent;
   --background-border-color: #1d1d1d;
   --border-bg-color: #222;
@@ -48,6 +48,7 @@
   --font-primary: 'Open Sans', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
   --font-header: 'Open Sans', sans-serif;
+  --font-logo: 'Open Sans', sans-serif;
   --font-size: var(--responsive-font-size);
 
 }
