@@ -46,7 +46,7 @@
   height: 300px;
   overflow-x: auto;
 }
-.docsContents a:before {
+/* .docsContents a:before {
   color: #b9b9b9;
   content: '> ';
   padding-left: 10px;
@@ -56,7 +56,7 @@
 }
 .docsContents h3:nth-of-type(1) {
     padding-top: 0;
-}
+} */
 
 .logo {
   font-size: 5em;
