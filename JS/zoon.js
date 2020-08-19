@@ -291,8 +291,7 @@ class ZoonTable extends HTMLElement {
 
 class ZoonCard extends HTMLElement {
   connectedCallback() {
-    let source = this.getAttribute('src');
-    let tmpl = $q('#' + source);
+    let tmpl = $q('#' + this.getAttribute('src'));
 
     this.attachShadow({mode: 'open'}).append(tmpl.content.cloneNode(true));
   }
