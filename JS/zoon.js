@@ -191,6 +191,9 @@ class ZoonTime extends HTMLElement {
 
 class ZoonVariable extends HTMLElement {
   connectedCallback() {
+    this.setContents();
+  }
+  setContents() {
     let variable = this.getAttribute('var')
     this.innerHTML = zdata[variable] || "";
   }
