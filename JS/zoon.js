@@ -367,9 +367,11 @@ function defineElements() {
   customElements.define("z-query", ZoonQuery);
   customElements.define("z-insert", ZoonInsert);
   customElements.define("z-html", ZoonHTML);
-  customElements.define("z-var", ZoonVariable);
   customElements.define("z-template", ZoonCard);
   customElements.define("z-lightswitch", ZoonLightswitch);
+  setTimeout(() => {
+    customElements.define("z-var", ZoonVariable);
+  }, 100);
 }
 
 // Text loader
