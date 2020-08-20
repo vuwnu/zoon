@@ -251,10 +251,10 @@ class ZoonHTML extends HTMLElement {
 
 class ZoonQuery extends HTMLElement {
   connectedCallback() {
-    const source = this.getAttribute('src')
-    const key = this.getAttribute('key')
+    const source = this.getAttribute('src');
     const urlParams = new URLSearchParams(window.location.search);
-    const value = urlParams.get(key)
+    const value = urlParams.get(this.getAttribute('key'));
+
     if (value === null) {
       return;
     } else {
