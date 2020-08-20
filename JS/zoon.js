@@ -387,7 +387,12 @@ function setHTML(url, output) {
     });
 }
 
-z.set.json('zdata');
+(function () {
+  fetch('zdata.json')
+  .then(response => response.json())
+  .then(data => zdata = data)
+  .catch(console.error);
+})();
 
 function setup() {
   defineElements();
