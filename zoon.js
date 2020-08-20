@@ -370,9 +370,11 @@ function defineElements() {
   customElements.define("z-html", ZoonHTML);
   customElements.define("z-template", ZoonCard);
   customElements.define("z-lightswitch", ZoonLightswitch);
+
   setTimeout(() => {
     customElements.define("z-var", ZoonVariable);
   }, 100);
+
 }
 
 // Text loader
@@ -395,6 +397,7 @@ function setHTML(url, output) {
 })();
 
 function setup() {
+  z.set.css('/zoon.css');
   defineElements();
   z.pageBuild();
   zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
