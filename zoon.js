@@ -321,6 +321,12 @@ class ZoonLightswitch extends HTMLElement {
       target.classList.replace(`lightswitch-on`, `lightswitch-off`);
     }
   }
+  turnOn() {
+
+  }
+  turnOff() {
+
+  }
 }
 
 class ZoonContent extends HTMLElement {
