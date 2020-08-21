@@ -398,7 +398,7 @@ function setHTML(url, output) {
 })();
 
 function setup() {
-  z.set.css('/zoon.css');
+  z.set.css('https://static.vuwnu.com/zoon/zoon.css');
   defineElements();
   z.pageBuild();
   zoon.cnsl.log(`zoon has loaded for ${zdata.siteName}`);
