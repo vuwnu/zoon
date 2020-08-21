@@ -253,7 +253,7 @@ class ZoonQuery extends HTMLElement {
   connectedCallback() {
     const source = this.getAttribute('src');
     const urlParams = new URLSearchParams(window.location.search);
-    const value = urlParams.get(this.getAttribute('key'));
+    const value = window.location.pathname;
 
     if (value === null) {
       return;
@@ -302,6 +302,7 @@ class ZoonCard extends HTMLElement {
 class ZoonLightswitch extends HTMLElement {
   connectedCallback() {
     const target = $q('#' + this.getAttribute('target'));
+    
     if (window.matchMedia &&
         window.matchMedia('(prefers-color-scheme: dark)').matches) {
       target.classList.add(`lightswitch-off`);
