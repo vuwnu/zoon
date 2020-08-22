@@ -17,6 +17,13 @@ z-html {
   flex-flow: inherit;
 }
 
+z-nav {
+  display: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  text-align: inherit;
+}
+
 z-data {
   display: none;
 }
@@ -30,55 +37,4 @@ z-lightswitch {
   line-height: 1.1em;
   cursor: pointer;
   font-size: 3em;
-}
-
-z-nav {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  max-width: var(--max-width);
-  background: var(--background-color);
-}
-z-nav.a {
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
-  order: 2;
-  background: #333;
-  margin: var(--margin);
-}
-/* Navbar link styling */
-z-nav.a a {
-  flex: 1 0 50px;
-  color: white;
-  padding: 5px 0;
-
-  border: var(--border-thickness) var(--border-type) var(--border-color);
-  background: #333;
-  border-radius: var(--border-radius);
-}
-z-nav.b a {
-  flex: 1 0 50px;
-  color: white;
-  margin: var(--margin);
-  padding: 5px 0;
-
-  border: var(--border-thickness) var(--border-type) var(--border-color);
-  background: var(--border-bg-color);
-  border-radius: var(--border-radius);
-}
-
-z-nav a {
-  flex: 1 0 50px;
-  color: white;
-  margin: 0 2px;
-  transition: background-color .1s;
-  cursor:pointer;
-}
-z-nav a:hover {
-  background-color: #444;
-}
-z-nav a:active {
-  background-color: #333;
 }
