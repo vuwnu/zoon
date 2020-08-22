@@ -331,7 +331,11 @@ class ZoonLightswitch extends HTMLElement {
 
 class ZoonContent extends HTMLElement {
   connectedCallback() {
-    this.setContent();
+    if (this.getAttribute('page')) {
+      this.setContent();
+    } else {
+      
+    }
   }
   attributeChangedCallback(name, oldValue, newValue) {
     this.setContent();
