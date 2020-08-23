@@ -388,18 +388,6 @@ function defineElements() {
 
 }
 
-// Text loader
-function setHTML(url, output) {
-  fetch("/assets/html/includes/" + url)
-    .then(response => response.text())
-    .then(text => {
-      $q(output).innerHTML = text
-    })
-    .catch((err) => {
-      $q(output).innerHTML = "Can’t access " + url + " response. Blocked by browser?"
-    });
-}
-
 // Single Page Apps for GitHub Pages
 // https://github.com/rafrex/spa-github-pages
 // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
