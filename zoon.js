@@ -316,16 +316,16 @@ class ZoonLightswitch extends HTMLElement {
   toggle() {
     const target = $q('#' + this.getAttribute('target'));
     if (target.classList.contains(`lightswitch-off`)) {
-      target.classList.replace(`lightswitch-off`, `lightswitch-on`);
+      this.turnOn();
     } else {
-      target.classList.replace(`lightswitch-on`, `lightswitch-off`);
+      this.turnOff();
     }
   }
   turnOn() {
-
+    target.classList.replace(`lightswitch-off`, `lightswitch-on`);
   }
   turnOff() {
-
+    target.classList.replace(`lightswitch-on`, `lightswitch-off`);
   }
 }
 
