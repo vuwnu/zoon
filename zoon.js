@@ -112,7 +112,6 @@ let z = {
 
   update(id, path) {
     let entity = $q('#pageSelect').value;
-
     $q(id).setAttribute('src', path + entity);
   },
 
@@ -333,11 +332,15 @@ class ZoonLightswitch extends HTMLElement {
 
 class ZoonContent extends HTMLElement {
   connectedCallback() {
+    this.setHTML();
     if (this.getAttribute('page')) {
       this.setContent();
     } else {
       
     }
+  }
+  setHTML() {
+    
   }
   attributeChangedCallback(name, oldValue, newValue) {
     this.setContent();
