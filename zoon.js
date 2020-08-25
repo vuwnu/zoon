@@ -110,10 +110,10 @@ let z = {
     zoon.cnsl.log('Page succesfully built');
   },
 
-  update(id) {
+  update(id, path) {
     let entity = $q('#pageSelect').value;
 
-    $q(id).setAttribute('src', '/assets/html/includes/' + entity);
+    $q(id).setAttribute('src', path + entity);
   },
 
   loadPage(page) {
