@@ -388,6 +388,7 @@ class ZoonContent extends HTMLElement {
 // Defining all custom elements
 function defineElements() {
   customElements.define("z-data", ZoonData);
+  customElements.define("z-object", ZoonObject);
   customElements.define("z-time", ZoonTime);
   customElements.define("z-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
