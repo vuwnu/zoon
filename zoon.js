@@ -340,7 +340,13 @@ class ZoonContent extends HTMLElement {
     }
   }
   setHTML() {
-    
+    const source = this.getAttribute('src')
+
+    fetch(source)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
   }
   attributeChangedCallback(name, oldValue, newValue) {
     this.setContent();
@@ -363,15 +369,6 @@ class ZoonContent extends HTMLElement {
         this.innerHTML = text
       });
     }
-  }
-  setContent(){
-    const source = this.getAttribute('src')
-
-    fetch(source)
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
   }
 }
 
