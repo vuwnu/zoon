@@ -330,6 +330,19 @@ class ZoonLightswitch extends HTMLElement {
   }
 }
 
+class ZoonObject extends HTMLElement {
+  connectedCallback() {
+    this.setupObject();
+  }
+  setupObject() {
+    let src = this.getAttribute('src');
+    fetch(src)
+      .then(response => response.json())
+      .then(data => this.getAttribute('object') = data)
+      .catch(console.error);
+  }
+}
+
 class ZoonContent extends HTMLElement {
   connectedCallback() {
     this.setHTML();
