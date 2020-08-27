@@ -250,14 +250,17 @@ class ZoonHTML extends HTMLElement {
 
 class ZoonQuery extends HTMLElement {
   connectedCallback() {
-    const source = this.getAttribute('src');
     const urlParams = new URLSearchParams(window.location.search);
-    const value = window.location.pathname;
+    const source = this.getAttribute('src');
+    const key = this.getAttribute('key');
+    
+    const pathValue = window.location.pathname;
+    const queryValue = searchParams.get(key);
 
-    if (value === null) {
+    if (queryValue === null) {
       return;
     } else {
-    fetch(source + value)
+    fetch(source + queryValue)
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
