@@ -255,7 +255,7 @@ class ZoonQuery extends HTMLElement {
     const key = this.getAttribute('key');
     
     const pathValue = window.location.pathname;
-    const queryValue = searchParams.get(key);
+    const queryValue = urlParams.get(key);
 
     if (queryValue === null) {
       return;
