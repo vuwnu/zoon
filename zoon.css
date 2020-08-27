@@ -22,6 +22,7 @@ z-nav {
   flex-flow: inherit;
   justify-content: inherit;
   text-align: inherit;
+  width: 100%;
 }
 
 z-data {
