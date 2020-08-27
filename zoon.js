@@ -229,12 +229,27 @@ class ZoonLogo extends HTMLElement {
 
 class ZoonHTML extends HTMLElement {
   connectedCallback() {
-    this.setContent();
+    if (this.hasAttribute('src')) {
+      this.setFromSource();
+    } else if (this.hasAttribute('key')) {
+      this.setFromURL();
+    }
   }
-  setContent(){
-    const source = this.getAttribute('src')
+  setFromSource() {
+    fetch(this.getAttribute('src'))
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+  }
+  setFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = this.getAttribute('src');
+    const key = this.getAttribute('key');
+    const pathValue = window.location.pathname;
+    const queryValue = urlParams.get(key);
 
-    fetch(source)
+    fetch(source + queryValue)
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
