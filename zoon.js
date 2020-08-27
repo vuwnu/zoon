@@ -451,7 +451,7 @@ function defineElements() {
 }(window.location));
 
 (function () {
-  z.set.css('https://static.vuwnu.com/zoon/zoon.css');
+  z.set.css('https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/zoon.css');
   fetch('/zdata.json')
   .then(response => response.json())
   .then(data => zdata = data)
