@@ -193,6 +193,7 @@ class ZoonVariable extends HTMLElement {
     this.setContents();
   }
   setContents() {
+    object = this.getAttribute('object');
     this.innerHTML = zdata[this.getAttribute('var')] || "";
   }
 }
