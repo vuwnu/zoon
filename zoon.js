@@ -382,7 +382,7 @@ function defineElements() {
   customElements.define("z-query", ZoonQuery);
   customElements.define("z-insert", ZoonInsert);
   customElements.define("z-html", ZoonHTML);
-  customElements.define("z-template", ZoonCard);
+  customElements.define("z-template", ZoonTemplate);
   customElements.define("z-lightswitch", ZoonLightswitch);
 
   setTimeout(() => {
