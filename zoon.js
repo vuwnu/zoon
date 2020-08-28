@@ -254,7 +254,11 @@ class ZoonHTML extends HTMLElement {
       });
   }
   attributeChangedCallback(name, oldValue, newValue) {
-    this.setContent();
+    if (this.hasAttribute('src')) {
+      this.setFromSource();
+    } else if (this.hasAttribute('key')) {
+      this.setFromURL();
+    }
   }
   static get observedAttributes() {
     return ['src'];
