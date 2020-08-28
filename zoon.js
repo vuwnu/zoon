@@ -363,48 +363,6 @@ class ZoonObject extends HTMLElement {
   }
 }
 
-class ZoonContent extends HTMLElement {
-  connectedCallback() {
-    this.setHTML();
-    if (this.getAttribute('page')) {
-      this.setContent();
-    } else {
-      
-    }
-  }
-  setHTML() {
-    const source = this.getAttribute('src')
-
-    fetch(source)
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    this.setContent();
-  }
-  static get observedAttributes() {
-    return ['src'];
-  }
-  searchParams() {
-    const source = this.getAttribute('src')
-    const key = this.getAttribute('key')
-    const urlParams = new URLSearchParams(window.location.search);
-    const value = urlParams.get(key)
-
-    if (value === null) {
-      return;
-    } else {
-    fetch(source + value)
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
-    }
-  }
-}
-
 // Defining all custom elements
 function defineElements() {
   customElements.define("z-data", ZoonData);
