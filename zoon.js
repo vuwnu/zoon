@@ -356,9 +356,10 @@ class ZoonObject extends HTMLElement {
   }
   setupObject() {
     let src = this.getAttribute('src');
+
     fetch(src)
       .then(response => response.json())
-      .then(data => this.getAttribute('object') = data)
+      .then(data => window[this.getAttribute('name')] = data)
       .catch(console.error);
   }
 }
