@@ -160,10 +160,7 @@ class ZoonData extends HTMLElement {
     let self = this;
     let str = this.innerHTML;
 
-    str = str.replace(/(\n)+/g, '", "');
-    str = str.replace(/( = )+/g, '":"');
-    str = str.slice(0, -3);
-    str = str.slice(2);
+    str = str.replace(/(\n)+/g, '", "').replace(/( = )+/g, '":"').slice(0, -3).slice(2);
     str = `{${str}}`
 
     let finalString = JSON.parse(str);
