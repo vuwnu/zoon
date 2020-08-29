@@ -269,12 +269,12 @@ class ZoonHTMLQuery extends HTMLElement {
   }
 }
 
-class ZoonQuery extends HTMLElement {
+class ZoonHTMLPath extends HTMLElement {
   connectedCallback() {
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
-    
+
     const pathValue = window.location.pathname;
     const queryValue = urlParams.get(key);
 
@@ -327,7 +327,7 @@ class ZoonCards extends HTMLElement {
     let tmpl = $q('#' + this.getAttribute('tmpl'));
     this.attachShadow({mode: 'open'}).append(tmpl.content.cloneNode(true));
     let jsonsrc = this.getAttribute('json')
-    
+
     fetch(jsonsrc)
       .then(response => response.json())
       .then(data => window[this.getAttribute('name')] = data)
