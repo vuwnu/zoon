@@ -320,9 +320,14 @@ class ZoonTemplate extends HTMLElement {
 
 class ZoonCards extends HTMLElement {
   connectedCallback() {
-    let tmpl = $q('#' + this.getAttribute('src'));
-
+    let tmpl = $q('#' + this.getAttribute('tmpl'));
     this.attachShadow({mode: 'open'}).append(tmpl.content.cloneNode(true));
+    let jsonsrc = this.getAttribute('json')
+    
+    fetch(jsonsrc)
+      .then(response => response.json())
+      .then(data => window[this.getAttribute('name')] = data)
+      .catch(console.error);
   }
 }
 
