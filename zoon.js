@@ -388,9 +388,12 @@ function defineElements() {
   customElements.define("z-time", ZoonTime);
   customElements.define("z-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
-  customElements.define("z-query", ZoonQuery);
   customElements.define("z-insert", ZoonInsert);
+
   customElements.define("z-html", ZoonHTML);
+  customElements.define("z-html-query", ZoonHTMLQuery);
+  customElements.define("z-html-path", ZoonHTMLPath);
+
   customElements.define("z-template", ZoonTemplate);
   customElements.define("z-cards", ZoonCards);
   customElements.define("z-lightswitch", ZoonLightswitch);
