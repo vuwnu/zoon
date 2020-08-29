@@ -248,27 +248,24 @@ class ZoonHTML extends HTMLElement {
   }
 }
 
+class ZoonHTMLQuery extends HTMLElement {
+  connectedCallback() {
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
+
     const pathValue = window.location.pathname;
     const queryValue = urlParams.get(key);
 
+    if (queryValue === null) {
+      return;
+    } else {
     fetch(source + queryValue)
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
       });
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (this.hasAttribute('src')) {
-      this.setFromSource();
-    } else if (this.hasAttribute('key')) {
-      this.setFromURL();
     }
-  }
-  static get observedAttributes() {
-    return ['src'];
   }
 }
 
