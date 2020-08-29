@@ -227,11 +227,7 @@ class ZoonLogo extends HTMLElement {
 
 class ZoonHTML extends HTMLElement {
   connectedCallback() {
-    if (this.hasAttribute('src')) {
-      this.setFromSource();
-    } else if (this.hasAttribute('key')) {
-      this.setFromURL();
-    }
+    this.setFromSource();
   }
   setFromSource() {
     fetch(this.getAttribute('src'))
@@ -240,7 +236,18 @@ class ZoonHTML extends HTMLElement {
         this.innerHTML = text
       });
   }
-  setFromURL() {
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (this.hasAttribute('src')) {
+      this.setFromSource();
+    } else if (this.hasAttribute('key')) {
+      this.setFromURL();
+    }
+  }
+  static get observedAttributes() {
+    return ['src'];
+  }
+}
+
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
