@@ -214,7 +214,7 @@ class ZoonClock extends HTMLElement {
     this.timerElem = this.firstElementChild;
   }
 
-  connectedCallback() { // (2)
+  connectedCallback() {
     if (!this.rendered) {
       this.render();
       this.rendered = true;
@@ -429,6 +429,18 @@ class ZoonObject extends HTMLElement {
       .then(response => response.json())
       .then(data => window[this.getAttribute('name')] = data)
       .catch(console.error);
+  }
+}
+
+class ZoonButton extends HTMLElement {
+  render() {
+
+  }
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
   }
 }
 
