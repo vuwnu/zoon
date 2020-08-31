@@ -355,6 +355,8 @@ class ZoonCards extends HTMLElement {
 
 class ZoonLightswitch extends HTMLElement {
   connectedCallback() {
+    const on = this.getAttribute('on')
+    const off = this.getAttribute('off')
     this.init();
     this.addEventListener('click', function() {
       this.toggle();
