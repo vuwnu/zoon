@@ -171,8 +171,10 @@ class ZoonData extends HTMLElement {
 }
 
 class ZoonTime extends HTMLElement {
-  connectedCallback() {
+
+  render() {
     let date = new Date(this.getAttribute('datetime') || Date.now());
+
     this.innerHTML = new Intl.DateTimeFormat("default", {
       year: this.getAttribute('year') || undefined,
       month: this.getAttribute('month') || undefined,
@@ -183,6 +185,22 @@ class ZoonTime extends HTMLElement {
       timeZoneName: this.getAttribute('time-zone-name') || undefined,
     }).format(date);
   }
+
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+  }
+
+  static get observedAttributes() {
+    return ['datetime', 'year', 'month', 'day', 'hour', 'minute', 'second', 'time-zone-name'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+
 }
 
 class ZoonVariable extends HTMLElement {
