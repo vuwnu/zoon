@@ -207,8 +207,8 @@ class ZoonClock extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <time-formatted hour="numeric" minute="numeric" second="numeric">
-    </time-formatted>
+    <z-time hour="numeric" minute="numeric" second="numeric">
+    </z-time>
     `;
 
     this.timerElem = this.firstElementChild;
