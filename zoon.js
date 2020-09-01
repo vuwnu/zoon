@@ -483,6 +483,7 @@ function defineElements() {
   customElements.define("z-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("z-insert", ZoonInsert);
+  customElements.define("z-frame", ZoonFrame);
 
   customElements.define("z-html", ZoonHTML);
   customElements.define("z-html-query", ZoonHTMLQuery);
