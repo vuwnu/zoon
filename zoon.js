@@ -172,28 +172,19 @@ class ZoonData extends HTMLElement {
 
 class ZoonFrame extends HTMLElement {
   render() {
-    let frame = this.getAttribute('frame');
+    let frame = this.getAttribute('frame') || 'default';
+    let url =  this.getAttribute('src') || '/assets/html/layouts/';
     let body = $q('body');
     let currentFrame;
 
-    if (frame === undefined) {
-      currentFrame = "default"
-      fetch(url + 'default.html')
-      .catch((err) => { zoon.cnsl.log('Error fetching layout') })
-      .then(response => response.text())
-      .then(text => {
-        body.insertAdjacentHTML('beforeend', text)
-      })
-      zoon.cnsl.log('Frame = default');
-    } else {
-      currentFrame = frame
-      fetch(url + layout + '.html')
-      .catch((err) => { zoon.cnsl.log('Error fetching layout') })
-      .then(response => response.text())
-      .then(text => {
-        body.insertAdjacentHTML('beforeend', text)
-      })
-      zoon.cnsl.log('Frame = ' + layout);
+    currentFrame = frame
+    fetch(url + frame + '.html')
+    .catch((err) => { zoon.cnsl.log('Error fetching layout') })
+    .then(response => response.text())
+    .then(text => {
+      body.insertAdjacentHTML('beforeend', text)
+    })
+    zoon.cnsl.log('Frame = ' + layout);
     }
   }
 
