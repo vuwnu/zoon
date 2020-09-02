@@ -183,8 +183,13 @@ class ZoonFrame extends HTMLElement {
 }
 
 class ZoonTitle extends HTMLElement {
+  run() {
+    let titleAttr = this.getAttribute('title')
+    document.title = titleAttr;
+    zoon.log(`title set as ${titleAttr}`);
+  }
   connectedCallback() {
-    
+    this.run();
   }
 }
 
