@@ -261,12 +261,15 @@ class ZoonClock extends HTMLElement {
 }
 
 class ZoonVariable extends HTMLElement {
-  connectedCallback() {
-    this.setContents();
-  }
-  setContents() {
-    object = this.getAttribute('object');
+  render() {
+    let object = this.getAttribute('object');
     this.innerHTML = zdata[this.getAttribute('var')] || "";
+  }
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
   }
 }
 
