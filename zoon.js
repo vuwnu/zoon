@@ -180,6 +180,11 @@ class ZoonFrame extends HTMLElement {
       this.rendered = true;
     }
   }
+
+  disconnectedCallback() {
+
+  }
+
 }
 
 class ZoonTitle extends HTMLElement {
