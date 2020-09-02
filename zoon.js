@@ -122,29 +122,16 @@ let z = {
 
 let zoon = {
 
-  cnsl: {
-
-    log(text) {
-      const font_size = 'font-size:15px;'
-      // Log types
-      const log = 'color:#888;' + font_size
-      // Styling the zoon tag
-      const tag_color = 'color:#ab4cef;font-size:15px;'
-      // zoon tag at the start of a message
-      const zoonTag = '%c[zoon]%c %s'
-      // Sending the message to the log
-      console.log(zoonTag, tag_color, log, text);
-    },
-
-    help() {
-      zoon.cnsl.log(`this is a help command :)`)
-    },
-
-    zdata() {
-      for (const [key, value] of Object.entries(zdata)) {
-        zoon.cnsl.log(`${key}: ${value}`);
-      }
-    }
+  log(text) {
+    const font_size = 'font-size:15px;'
+    // Log types
+    const log = 'color:#888;' + font_size
+    // Styling the zoon tag
+    const tag_color = 'color:#ab4cef;font-size:15px;'
+    // zoon tag at the start of a message
+    const zoonTag = '%c[zoon]%c %s'
+    // Sending the message to the log
+    console.log(zoonTag, tag_color, log, text);
   }
 }
 
