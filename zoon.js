@@ -185,7 +185,6 @@ class ZoonFrame extends HTMLElement {
       body.insertAdjacentHTML('beforeend', text)
     })
     zoon.cnsl.log('Frame = ' + layout);
-    }
   }
 
   connectedCallback() {
