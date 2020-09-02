@@ -476,6 +476,8 @@ class ZoonButton extends HTMLElement {
 
 // Defining all custom elements
 function defineElements() {
+  // Site handler elements
+  customElements.define("z-title", ZoonTitle);
   customElements.define("z-data", ZoonData);
   customElements.define("z-object", ZoonObject);
   customElements.define("z-time", ZoonTime);
