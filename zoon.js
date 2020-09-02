@@ -62,7 +62,7 @@ let z = {
       let currentLayout
       let layout = zdata.layout;
       let zoonBody = $q('body')
-      
+
       // Inserts Layout file
       if (layout === undefined) {
         currentLayout = "default"
@@ -179,6 +179,12 @@ class ZoonFrame extends HTMLElement {
       this.render();
       this.rendered = true;
     }
+  }
+}
+
+class ZoonTitle extends HTMLElement {
+  connectedCallback() {
+    
   }
 }
 
