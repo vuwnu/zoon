@@ -162,14 +162,15 @@ class ZoonFrame extends HTMLElement {
     let frame = this.getAttribute('frame') || 'default';
     let url =  this.getAttribute('src') || '/assets/html/layouts/';
     let body = $q('body');
-    let currentFrame;
+    let currentFrame, frameDOM;
 
     currentFrame = frame
     fetch(url + frame + '.html')
     .catch((err) => { zoon.log('Error fetching layout') })
     .then(response => response.text())
     .then(text => {
-      body.insertAdjacentHTML('beforeend', text)
+      frameDOM = text
+      body.insertAdjacentHTML('beforeend', frameDOM)
     })
     zoon.log('Frame = ' + frame);
   }
@@ -182,9 +183,8 @@ class ZoonFrame extends HTMLElement {
   }
 
   disconnectedCallback() {
-
+    frameDOM.remove();
   }
-
 }
 
 class ZoonTitle extends HTMLElement {
