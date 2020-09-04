@@ -171,7 +171,7 @@ class ZoonFrame extends HTMLElement {
       frameDOM = text
       body.insertAdjacentHTML('beforeend', frameDOM)
     })
-    zoon.log('Frame = ' + frame);
+    zoon.log('z-frame', '#de922f', `Frame = ${frame}`);
   }
 
   connectedCallback() {
