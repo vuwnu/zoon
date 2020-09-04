@@ -107,7 +107,7 @@ let z = {
     if (zdata.layout !== "0") {
       z.set.layout('/assets/html/layouts/');
     }
-    zoon.log('Page succesfully built');
+    zoon.log('','','Page succesfully built');
   },
 
   update(id, path) {
