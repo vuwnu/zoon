@@ -552,7 +552,7 @@ function defineElements() {
 function setup() {
   defineElements();
   z.pageBuild();
-  zoon.log(`zoon has loaded for ${zdata.siteName}`);
+  zoon.log('', '',`zoon has loaded for ${zdata.siteName}`);
 }
 
 //// INITIALISATION
