@@ -1,7 +1,7 @@
 <p align="center">
 <img src="zoon_logo.png" width="250">
 </p>
-<p align="center">zoon is a framework for creating websites, built with JS, CSS and HTML</p>
+<p align="center">zoon is a collection of custom web components. Built with the purpose of simplifying the creation of web apps and created with JS, CSS and HTML</p>
 
 ***
 
