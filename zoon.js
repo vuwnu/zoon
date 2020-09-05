@@ -101,8 +101,6 @@ let z = {
   },
 
   pageBuild() {
-    z.set.theme();
-    z.set.design();
     z.set.title();
     if (zdata.layout !== "0") {
       z.set.layout('/assets/html/layouts/');
