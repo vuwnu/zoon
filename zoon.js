@@ -542,14 +542,10 @@ function defineElements() {
   .catch(console.error);
 })();
 
-function setup() {
-  defineElements();
-  z.pageBuild();
-}
-
 //// INITIALISATION
 window.addEventListener('load', (event) => {
   setTimeout(() => {
-    setup();
+    defineElements();
+    z.pageBuild();
   }, 100);
 });
