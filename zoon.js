@@ -105,7 +105,6 @@ let z = {
     if (zdata.layout !== "0") {
       z.set.layout('/assets/html/layouts/');
     }
-    zoon.log('','','Page succesfully built');
   },
 
   update(id, path) {
@@ -546,7 +545,6 @@ function defineElements() {
 function setup() {
   defineElements();
   z.pageBuild();
-  zoon.log('', '',`zoon has loaded for ${zdata.siteName}`);
 }
 
 //// INITIALISATION
