@@ -155,12 +155,20 @@ class ZoonData extends HTMLElement {
 
 class ZoonFrame extends HTMLElement {
   render() {
-    let frame = this.getAttribute('frame') || 'default';
-    let url =  this.getAttribute('src') || '/assets/html/layouts/';
-    let body = $q('body');
-    let currentFrame, frameDOM;
-
+    let currentFrame, frame, url, body;
+    if (this.hasAttribute('frame')) {
+      frame = this.getAttribute('frame');
+    } else {
+      frame = 'default';
+    }
+    if (this.hasAttribute('src')) {
+      url =  this.getAttribute('src');
+    } else {
+      url = '/assets/html/layouts/';
+    }
+    body = $q('body');
     currentFrame = frame
+
     fetch(url + frame + '.html')
     .catch((err) => { zoon.log('Error fetching layout') })
     .then(response => response.text())
