@@ -154,16 +154,23 @@ class ZoonData extends HTMLElement {
 }
 
 class ZoonFrame extends HTMLElement {
-  render() {
-    let frameDOM, currentFrame, frame, url, body;
+  constructor() {
+    super();
+    this.setup();
+  }
 
+  setup() {
     if (!this.hasAttribute('frame')) {
-      frame = this.setAttribute('frame', 'default');
+      this.setAttribute('frame', 'default');
     }
 
     if (!this.hasAttribute('src')) {
-      url =  this.setAttribute('src', '/frames/');
+      this.setAttribute('src', '/frames/');
     }
+  }
+
+  render() {
+    let frameDOM, currentFrame, frame, url, body;
 
     body = $q('body');
     currentFrame = frame
@@ -172,9 +179,9 @@ class ZoonFrame extends HTMLElement {
     .catch((err) => { zoon.log('Error fetching layout') })
     .then(response => response.text())
     .then(text => {
-      frameDOM = text
-      body.insertAdjacentHTML('beforeend', frameDOM)
+      body.insertAdjacentHTML('beforeend', text)
     })
+
     zoon.log('z-frame', '#de922f', `Frame = ${frame}`);
   }
 
@@ -185,12 +192,13 @@ class ZoonFrame extends HTMLElement {
     }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    this.render();
-  }
-
   static get observedAttributes() {
     return ['src', 'frame'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+    zoon.log('z-frame', '#de922f', `frame changed to ${frame}`);
   }
 }
 
