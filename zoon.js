@@ -178,12 +178,12 @@ class ZoonFrame extends HTMLElement {
     }
   }
 
-  static get observedAttributes() {
-    return ['src', 'frame'];
-  }
-
   attributeChangedCallback(name, oldValue, newValue) {
     this.render();
+  }
+
+  static get observedAttributes() {
+    return ['src', 'frame'];
   }
 }
 
