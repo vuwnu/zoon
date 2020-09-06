@@ -155,7 +155,7 @@ class ZoonData extends HTMLElement {
 
 class ZoonFrame extends HTMLElement {
   render() {
-    let currentFrame, frame, url, body;
+    let frameDOM, currentFrame, frame, url, body;
     if (this.hasAttribute('frame')) {
       frame = this.getAttribute('frame');
     } else {
@@ -198,6 +198,7 @@ class ZoonFrame extends HTMLElement {
 class ZoonTitle extends HTMLElement {
   run() {
     let titleAttr = this.getAttribute('title')
+
     document.title = titleAttr;
     zoon.log('z-title', '#2f84de', `title set as ${titleAttr}`);
   }
