@@ -173,6 +173,7 @@ class ZoonFrame extends HTMLElement {
     let frameDOM, currentFrame, frame, url, body;
 
     body = $q('body');
+    frame = this.getAttribute('frame');
     currentFrame = frame
 
     fetch(this.getAttribute('src') + this.getAttribute('frame') + '.html')
@@ -182,7 +183,7 @@ class ZoonFrame extends HTMLElement {
       body.insertAdjacentHTML('beforeend', text)
     })
 
-    zoon.log('z-frame', '#de922f', `Frame = ${frame}`);
+    zoon.log('z-frame', '#de922f', `Frame set to ${frame}`);
   }
 
   connectedCallback() {
