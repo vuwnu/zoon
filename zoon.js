@@ -2,12 +2,12 @@ let z = {
 
   set: {
     script(src) {
-      let script = document.createElement('script');
+      const script = document.createElement('script');
       script.src = src;
       document.head.append(script);
     },
     css(src) {
-      let link = document.createElement('link');
+      const link = document.createElement('link');
       link.href = src;
       link.rel = "stylesheet";
       document.head.append(link);
