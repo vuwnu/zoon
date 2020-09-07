@@ -160,30 +160,28 @@ class ZoonFrame extends HTMLElement {
   }
 
   setup() {
-    if (!this.hasAttribute('frame')) {
+    if (!this.hasAttribute('frame'))
       this.setAttribute('frame', 'default');
-    }
-
-    if (!this.hasAttribute('src')) {
+    if (!this.hasAttribute('src'))
       this.setAttribute('src', '/frames/');
-    }
   }
 
   render() {
     let frameDOM, currentFrame, frame, url, body;
 
     body = $q('body');
-    frame = this.getAttribute('frame');
+    this.frame = this.getAttribute('frame');
     currentFrame = frame
 
     fetch(this.getAttribute('src') + this.getAttribute('frame') + '.html')
     .catch((err) => { zoon.log('Error fetching layout') })
     .then(response => response.text())
     .then(text => {
-      body.insertAdjacentHTML('beforeend', text)
+      this.text = text;
+      body.insertAdjacentHTML('beforeend', this.text);
     })
 
-    zoon.log('z-frame', '#de922f', `Frame set to ${frame}`);
+    zoon.log('z-frame', '#de922f', `Frame set to ${this.frame}`);
   }
 
   connectedCallback() {
@@ -197,9 +195,35 @@ class ZoonFrame extends HTMLElement {
     return ['src', 'frame'];
   }
 
+  // attributeChangedCallback(name, oldValue, newValue) {
+  //   if (newValue == oldValue) {
+  //     return;
+  //   } else {
+  //     this.render();
+  //   }
+  // }
+}
+
+class ZoonHTML extends HTMLElement {
+  connectedCallback() {
+    this.setFromSource();
+  }
+  setFromSource() {
+    fetch(this.getAttribute('src'))
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+  }
   attributeChangedCallback(name, oldValue, newValue) {
-    this.render();
-    zoon.log('z-frame', '#de922f', `frame changed to ${frame}`);
+    if (this.hasAttribute('src')) {
+      this.setFromSource();
+    } else if (this.hasAttribute('key')) {
+      this.setFromURL();
+    }
+  }
+  static get observedAttributes() {
+    return ['src'];
   }
 }
 
@@ -319,29 +343,6 @@ class ZoonNavbar extends HTMLElement {
 class ZoonLogo extends HTMLElement {
   connectedCallback() {
     this.innerHTML = '<a href="https://zoon.vuw.nu">zoon</a>';
-  }
-}
-
-class ZoonHTML extends HTMLElement {
-  connectedCallback() {
-    this.setFromSource();
-  }
-  setFromSource() {
-    fetch(this.getAttribute('src'))
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (this.hasAttribute('src')) {
-      this.setFromSource();
-    } else if (this.hasAttribute('key')) {
-      this.setFromURL();
-    }
-  }
-  static get observedAttributes() {
-    return ['src'];
   }
 }
 
