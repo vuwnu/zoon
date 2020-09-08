@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>zoon</title>
+  <title>Zoon</title>
   <meta name="description" content="zoon is a serverless client-side framework for building web projects">
   <link rel="icon" href="favicon.png" sizes="192x192" type="image/png">
   <meta name="theme-color" content="#a237c2">
@@ -22,16 +22,17 @@
   <script src="https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/zoon.js"></script>
   <link href="https://cdn.jsdelivr.net/gh/vuwnu/flair@master/flair.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/flair_vars.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <html class="default">
 
 <body class="use-layout single-column">
+  <z-sm>
+    <z-frame frame="default" src="/frames/"></z-frame>
+  </z-sm>
   <main>
-    <z-query src="/pages/" key="p">
-      <z-html src="/pages/home"></z-html>
-    </z-query>
+    <z-html src="/pages/home.html"></z-html>
   </main>
 </body>
 
