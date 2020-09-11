@@ -185,10 +185,15 @@ class ZoonHTML extends HTMLElement {
 
 class ZoonTitle extends HTMLElement {
   run() {
-    let titleAttr = this.getAttribute('title')
+    let main = this.getAttribute('title')
+    let prepend = this.getAttribute('prepend')
+    let append = this.getAttribute('append')
 
-    document.title = titleAttr;
-    zoon.log('z-title', '#2f84de', `title set as ${titleAttr}`);
+    let titleFull = `${prepend}${main}${append}`
+
+    document.title = titleFull;
+
+    zoon.log('z-title', '#2f84de', `title set as ${titleFull}`);
   }
   connectedCallback() {
     this.run();
