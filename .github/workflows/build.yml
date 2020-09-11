@@ -13,7 +13,7 @@ jobs:
       - name: Auto Minify
         uses: nizarmah/auto-minify@v1.9.1
         with:
-          directory: '.'
+          maxdepth: 1
           output: 'dist'
 
       # Auto-commit to repository
