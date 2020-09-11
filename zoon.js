@@ -34,19 +34,6 @@ let z = {
         return;
       }
     },
-    head() {
-      let zoonHead = $q('head')
-
-      // Inserts HEAD file
-      fetch('/assets/html/head.html')
-      .catch((err) => {
-        zoon.log('Error fetching head')
-      })
-      .then(response => response.text())
-      .then(text => {
-        zoonHead.insertAdjacentHTML('beforeend', text)
-      })
-    },
     layout(url) {
       let currentLayout
       let layout = zdata.layout;
