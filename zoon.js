@@ -12,14 +12,6 @@ let z = {
       link.rel = "stylesheet";
       document.head.append(link);
     },
-    title() {
-      if (zdata.pageName !== undefined) {
-        document.title = `${zdata.pageName} - ${zdata.siteName}`;
-        zoon.log('Title set');
-      } else {
-        return;
-      }
-    },
     layout(url) {
       let currentLayout
       let layout = zdata.layout;
