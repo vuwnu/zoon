@@ -1,7 +1,7 @@
 name: Auto Minify
 on:
   push:
-    branches: [ master ]
+    branches: master
 
 jobs:
   build:
@@ -9,8 +9,6 @@ jobs:
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.ref }}
 
       - name: Auto Minify
         uses: nizarmah/auto-minify@v1.9.1
