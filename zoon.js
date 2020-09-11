@@ -80,6 +80,7 @@ let z = {
 }
 
 let zoon = {
+
   log(element, color, text) {
     const font_size = 'font-size:15px;'
     // Styles
@@ -91,6 +92,7 @@ let zoon = {
     //
     console.log(zoonTag, tagSTYLE, elemSTYLE, logSTYLE, text);
   }
+
 }
 
 let zdata
@@ -379,10 +381,17 @@ class ZoonTable extends HTMLElement {
 }
 
 class ZoonTemplate extends HTMLElement {
-  connectedCallback() {
+  render() {
     let tmpl = $q('#' + this.getAttribute('src'));
 
     this.attachShadow({ mode: 'open' }).append(tmpl.content.cloneNode(true));
+  }
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+
   }
 }
 
@@ -463,6 +472,8 @@ class ZoonButton extends HTMLElement {
 function defineElements() {
   // Site handler elements
   customElements.define("z-title", ZoonTitle);
+  customElements.define("z-frame", ZoonFrame);
+
   customElements.define("z-data", ZoonData);
   customElements.define("z-object", ZoonObject);
   customElements.define("z-time", ZoonTime);
@@ -470,7 +481,6 @@ function defineElements() {
   customElements.define("z-nav", ZoonNavbar);
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("z-insert", ZoonInsert);
-  customElements.define("z-frame", ZoonFrame);
 
   customElements.define("z-html", ZoonHTML);
   customElements.define("z-html-query", ZoonHTMLQuery);
@@ -497,6 +507,7 @@ function defineElements() {
 // When the single page app is loaded further down in this file,
 // the correct url will be waiting in the browser's history for
 // the single page app to route accordingly.
+
 (function(l) {
   if (l.search) {
     var q = {};
