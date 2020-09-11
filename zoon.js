@@ -330,25 +330,29 @@ class ZoonHTMLQuery extends HTMLElement {
 
 class ZoonHTMLPath extends HTMLElement {
   render() {
-
-  }
-
-  connectedCallback() {
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
-
     const pathValue = window.location.pathname;
-    const queryValue = urlParams.get(key);
 
-    if (queryValue === null) {
-      return;
-    } else {
-    fetch(source + queryValue)
+    if (pathValue === '/') {
+      fetch(source + '/home.html')
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
       });
+    } else {
+      fetch(source + pathValue + '.html')
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+    }
+  }
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
     }
   }
 }
