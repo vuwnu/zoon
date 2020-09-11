@@ -18,14 +18,6 @@ let z = {
       .then(data => zdata = data)
       .catch(console.error);
     },
-    design() {
-      const element = $q('body');
-
-      if (zdata.design != undefined) {
-        element.classList.add(`use-layout`);
-        element.classList.add(`${zdata.design}`);
-      }
-    },
     title() {
       if (zdata.pageName !== undefined) {
         document.title = `${zdata.pageName} - ${zdata.siteName}`;
