@@ -1,5 +1,4 @@
-name: Minify Workflow
-
+name: Auto Minify
 on:
   push:
     branches: [ master ]
@@ -14,7 +13,7 @@ jobs:
           ref: ${{ github.ref }}
 
       - name: Auto Minify
-        uses: nizarmah/auto-minify@master
+        uses: nizarmah/auto-minify@v1.9.1
         with:
           directory: '.'
           output: 'dist'
