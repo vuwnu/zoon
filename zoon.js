@@ -12,12 +12,6 @@ let z = {
       link.rel = "stylesheet";
       document.head.append(link);
     },
-    json(src) {
-      fetch(src + '.json')
-      .then(response => response.json())
-      .then(data => zdata = data)
-      .catch(console.error);
-    },
     title() {
       if (zdata.pageName !== undefined) {
         document.title = `${zdata.pageName} - ${zdata.siteName}`;
