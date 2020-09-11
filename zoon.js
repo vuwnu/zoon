@@ -348,6 +348,8 @@ class ZoonHTMLPath extends HTMLElement {
         this.innerHTML = text
       });
     }
+    zoon.log('z-page', '#2fde45', `page is ${pathValue}`);
+
   }
   connectedCallback() {
     if (!this.rendered) {
