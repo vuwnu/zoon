@@ -12,36 +12,6 @@ let z = {
       link.rel = "stylesheet";
       document.head.append(link);
     },
-    layout(url) {
-      let currentLayout
-      let layout = zdata.layout;
-      let zoonBody = $q('body')
-
-      // Inserts Layout file
-      if (layout === undefined) {
-        currentLayout = "default"
-        fetch(url + 'default.html')
-        .catch((err) => {
-          zoon.log('Error fetching layout')
-        })
-        .then(response => response.text())
-        .then(text => {
-          zoonBody.insertAdjacentHTML('beforeend', text)
-        })
-        zoon.log('Layout = default');
-      } else {
-        currentLayout = layout
-        fetch(url + layout + '.html')
-        .catch((err) => {
-          zoon.log('Error fetching layout')
-        })
-        .then(response => response.text())
-        .then(text => {
-          zoonBody.insertAdjacentHTML('beforeend', text)
-        })
-        zoon.log('Layout = ' + layout);
-      }
-    },
   },
 
   pull_json(src) {
