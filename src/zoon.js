@@ -14,16 +14,6 @@ let z = {
     },
   },
 
-  pull_json(src) {
-    let json_data
-    fetch(src)
-    .then(response => response.json())
-    .then(data => json_data = data)
-    .catch(console.error);
-    zoon.log(json_data)
-    return json_data;
-  },
-
   update(id, path) {
     let entity = $q('#pageSelect').value;
     $q(id).setAttribute('src', path + entity);
