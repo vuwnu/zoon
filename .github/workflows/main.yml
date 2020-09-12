@@ -16,7 +16,7 @@ jobs:
       - name: Auto Minify
         uses: nizarmah/auto-minify@master
         with:
-          maxdepth: 1
+          directory: 'src'
           output: 'dist'
 
       # Runs a set of commands using the runners shell
