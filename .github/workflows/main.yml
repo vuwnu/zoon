@@ -25,4 +25,4 @@ jobs:
         with:
           repository: 'dist'
           commit_message: "Github Action: Auto Minified JS and CSS files"
-          branch: ${{ github.ref }}
+          branch: dist
