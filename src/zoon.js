@@ -318,6 +318,8 @@ class ZoonTable extends HTMLElement {
       .then(text => {
         this.innerHTML = text
       });
+
+    zoon.log('z-table', '#de2f7d', `Built table`);
   }
 }
 
