@@ -54,13 +54,6 @@ let z = {
     return json_data;
   },
 
-  pageBuild() {
-    z.set.title();
-    if (zdata.layout !== "0") {
-      z.set.layout('/assets/html/layouts/');
-    }
-  },
-
   update(id, path) {
     let entity = $q('#pageSelect').value;
     $q(id).setAttribute('src', path + entity);
@@ -333,7 +326,6 @@ class ZoonHTMLPath extends HTMLElement {
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
-    const pathValue = window.location.pathname;
 
     if (pathValue === '/') {
       fetch(source + '/home.html')
@@ -540,6 +532,5 @@ function defineElements() {
 window.addEventListener('load', (event) => {
   setTimeout(() => {
     defineElements();
-    z.pageBuild();
   }, 100);
 });
