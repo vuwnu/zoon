@@ -270,24 +270,23 @@ class ZoonHTMLQuery extends HTMLElement {
 class ZoonHTMLPath extends HTMLElement {
   render() {
     const urlParams = new URLSearchParams(window.location.search);
+    const pathValue = window.location.pathname;
     const source = this.getAttribute('src');
-    const key = this.getAttribute('key');
+    let fetchme
 
     if (pathValue === '/') {
-      fetch(source + '/home.html')
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
+      fetchme = source + '/home.html'
     } else {
-      fetch(source + pathValue + '.html')
-      .then(response => response.text())
-      .then(text => {
-        this.innerHTML = text
-      });
+      fetchme = source + pathValue + '.html'
     }
-    zoon.log('z-page', '#2fde45', `page is ${pathValue}`);
 
+    fetch(fetchme)
+    .then(response => response.text())
+    .then(text => {
+      this.innerHTML = text
+    });
+
+    zoon.log('z-page', '#2fde45', `page is ${pathValue}`);
   }
   connectedCallback() {
     if (!this.rendered) {
