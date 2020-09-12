@@ -467,7 +467,10 @@ function defineElements() {
 }(window.location));
 
 (function () {
-  z.set.css('https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/zoon.css');
+  const link = document.createElement('link');
+  link.href = 'https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/dist/zoon.min.css';
+  link.rel = "stylesheet";
+  document.head.append(link);
   fetch('/zdata.json')
   .then(response => response.json())
   .then(data => zdata = data)
