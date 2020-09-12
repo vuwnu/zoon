@@ -1,19 +1,5 @@
 let z = {
 
-  set: {
-    script(src) {
-      const script = document.createElement('script');
-      script.src = src;
-      document.head.append(script);
-    },
-    css(src) {
-      const link = document.createElement('link');
-      link.href = src;
-      link.rel = "stylesheet";
-      document.head.append(link);
-    },
-  },
-
   update(id, path) {
     let entity = $q('#pageSelect').value;
     $q(id).setAttribute('src', path + entity);
