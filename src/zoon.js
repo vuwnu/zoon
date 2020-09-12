@@ -388,12 +388,15 @@ class ZoonObject extends HTMLElement {
     this.setupObject();
   }
   setupObject() {
-    let src = this.getAttribute('src');
+    const objectName = this.getAttribute('name');
+    const src = this.getAttribute('src');
 
     fetch(src)
       .then(response => response.json())
       .then(data => window[this.getAttribute('name')] = data)
       .catch(console.error);
+
+    zoon.log('z-object', '#de2f7d', `Created an object called ${objectName}`);
   }
 }
 
