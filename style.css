@@ -22,11 +22,6 @@
   --border-bg-color: #222;
   --background: #503266;
 
-  --border-type: solid;
-  --border-thickness: 0px;
-  --border-radius: 0px;
-  --border-color: #333;
-
   --scrollbar-width: 5px;
   --scrollbar-track: #111;
   --scrollbar-handle: grey;
@@ -37,7 +32,7 @@
   --font-secondary: 'Open Sans', sans-serif;
   --font-header: 'Open Sans', sans-serif;
   --font-logo: 'Anonymous Pro', monospace;
-  --font-size: var(--responsive-font-size);
+  --font-size: 100%;
 
 }
 
