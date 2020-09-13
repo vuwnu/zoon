@@ -251,19 +251,20 @@ class ZoonHTMLQuery extends HTMLElement {
     const urlParams = new URLSearchParams(window.location.search);
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
-
-    const pathValue = window.location.pathname;
     const queryValue = urlParams.get(key);
 
-    if (queryValue === null) {
+    if (queryValue === null ) {
       return;
     } else {
-    fetch(source + queryValue)
+      fetchme = source + queryValue + '.html'
+      fetch(fetchme)
       .then(response => response.text())
       .then(text => {
         this.innerHTML = text
       });
     }
+
+    zoon.log('z-page', '#2fde45', `query is ${queryValue}`);
   }
 }
 
