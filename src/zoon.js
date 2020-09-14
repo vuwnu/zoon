@@ -424,7 +424,7 @@ class ZoonObject extends HTMLElement {
       .then(data => window[this.getAttribute('name')] = data)
       .catch(console.error);
 
-    zoon.log('z-object', '#de2f7d', `Created an object called ${objectName}`);
+    zoon.log('z-object', '#de2f7d', `Created an object with the name ${objectName}`);
   }
 }
 
