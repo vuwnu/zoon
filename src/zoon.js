@@ -311,7 +311,7 @@ class ZoonInsert extends HTMLElement {
 
 class ZoonTable extends HTMLElement {
   connectedCallback() {
-    let json = this.getAttribute('src');
+    let json = window[this.getAttribute('src')]
 
     let cols = Object.keys(json[0]);
 
