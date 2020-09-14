@@ -460,6 +460,7 @@ function defineElements() {
 
   customElements.define("z-template", ZoonTemplate);
   customElements.define("z-cards", ZoonCards);
+  customElements.define("z-table", ZoonTable);
   customElements.define("z-lightswitch", ZoonLightswitch);
 
   setTimeout(() => {
