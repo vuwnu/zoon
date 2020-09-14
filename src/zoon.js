@@ -430,7 +430,9 @@ class ZoonObject extends HTMLElement {
 
 class ZoonButton extends HTMLElement {
   render() {
-
+    this.addEventListener('click', function() {
+      this.toggle();
+    }, false);
   }
   connectedCallback() {
     if (!this.rendered) {
@@ -443,6 +445,7 @@ class ZoonButton extends HTMLElement {
 // Defining all custom elements
 function defineElements() {
   // Site handler elements
+  customElements.define("zoon-logo", ZoonLogo);
   customElements.define("z-title", ZoonTitle);
   customElements.define("z-frame", ZoonFrame);
 
@@ -451,7 +454,6 @@ function defineElements() {
   customElements.define("z-time", ZoonTime);
   customElements.define("z-clock", ZoonClock);
   customElements.define("z-nav", ZoonNavbar);
-  customElements.define("zoon-logo", ZoonLogo);
   customElements.define("z-insert", ZoonInsert);
 
   customElements.define("z-html", ZoonHTML);
