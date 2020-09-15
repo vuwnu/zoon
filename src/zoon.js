@@ -352,6 +352,12 @@ class ZoonTable extends HTMLElement {
       this.rendered = true;
     }
   }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+  static get observedAttributes() {
+    return ['src'];
+  }
 }
 
 class ZoonTemplate extends HTMLElement {
