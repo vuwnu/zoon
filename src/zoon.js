@@ -344,7 +344,7 @@ class ZoonTable extends HTMLElement {
     <table>`;
 
     this.innerHTML = table;
-    zoon.log('z-table', '#de2f7d', `Built table`);
+    zoon.log('z-table', '#2fc4de', `Built table`);
   }
   connectedCallback() {
     if (!this.rendered) {
