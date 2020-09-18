@@ -137,6 +137,12 @@ class ZoonTitle extends HTMLElement {
   connectedCallback() {
     this.run();
   }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.run();
+  }
+  static get observedAttributes() {
+    return ['title', 'prepend', 'append'];
+  }
 }
 
 class ZoonTime extends HTMLElement {
