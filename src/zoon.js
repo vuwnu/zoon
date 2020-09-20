@@ -258,6 +258,7 @@ class ZoonHTMLQuery extends HTMLElement {
     const source = this.getAttribute('src');
     const key = this.getAttribute('key');
     const queryValue = urlParams.get(key);
+    let fetchme;
 
     if (queryValue === null ) {
       return;
