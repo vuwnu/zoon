@@ -232,7 +232,7 @@ class ZoonNavbar extends HTMLElement {
     let nav_items = this.getElementsByTagName("a");
     for (let i = 0, len = nav_items.length; i < len; i++) {
       if (nav_items[i].getAttribute("href").indexOf(current_location) !== -1) {
-        nav_items[i].className = "current-page";
+        nav_items[i].classList.add("current-page");
       }
     }
   }
