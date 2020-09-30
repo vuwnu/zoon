@@ -465,19 +465,25 @@ class ZoonButton extends HTMLElement {
 
 class ZoonSpeech extends HTMLElement {
   activate() {
-    var msg = new SpeechSynthesisUtterance(this.text)
-    var voices = window.speechSynthesis.getVoices()
+    // Create a SpeechSynthesisUtterance using the string from the input attribute
+    let msg = new SpeechSynthesisUtterance(this.text)
+    // Get list of voices available
+    let voices = window.speechSynthesis.getVoices()
+    // Select voice
     msg.voice = voices[0]
+    // Run speech audio
     window.speechSynthesis.speak(msg)
   }
   connectedCallback() {
     this.text = this.getAttribute('input')
+    this.voice = this.getAttribute('voice')
   }
   attributeChangedCallback(name, oldValue, newValue) {
     this.text = this.getAttribute('input')
+    this.voice = this.getAttribute('voice')
   }
   static get observedAttributes() {
-    return ['input'];
+    return ['input', 'voice'];
   }
 }
 
