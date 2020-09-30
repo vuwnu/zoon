@@ -464,7 +464,7 @@ class ZoonButton extends HTMLElement {
 }
 
 class ZoonSpeech extends HTMLElement {
-  activate() {
+  run() {
     // Create a SpeechSynthesisUtterance using the string from the input attribute
     let msg = new SpeechSynthesisUtterance(this.text)
     // Get list of voices available
