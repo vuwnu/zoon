@@ -463,12 +463,31 @@ class ZoonButton extends HTMLElement {
   }
 }
 
+class ZoonSpeech extends HTMLElement {
+  activate() {
+    var msg = new SpeechSynthesisUtterance(this.text)
+    var voices = window.speechSynthesis.getVoices()
+    msg.voice = voices[0]
+    window.speechSynthesis.speak(msg)
+  }
+  connectedCallback() {
+    this.text = this.getAttribute('input')
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.text = this.getAttribute('input')
+  }
+  static get observedAttributes() {
+    return ['input'];
+  }
+}
+
 // Defining all custom elements
 function defineElements() {
   // Site handler elements
   customElements.define("zoon-logo", ZoonLogo);
   customElements.define("z-title", ZoonTitle);
   customElements.define("z-frame", ZoonFrame);
+  customElements.define("z-speech", ZoonSpeech);
 
   customElements.define("z-data", ZoonData);
   customElements.define("z-object", ZoonObject);
