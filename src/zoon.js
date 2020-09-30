@@ -470,20 +470,26 @@ class ZoonSpeech extends HTMLElement {
     // Get list of voices available
     let voices = window.speechSynthesis.getVoices()
     // Select voice
-    msg.voice = voices[0]
+    msg.voice = voices[0];
+    msg.pitch = this.pitch;
+    msg.rate = this.rate;
     // Run speech audio
     window.speechSynthesis.speak(msg)
   }
   connectedCallback() {
     this.text = this.getAttribute('input')
     this.voice = this.getAttribute('voice')
+    this.pitch = this.getAttribute('pitch')
+    this.rate = this.getAttribute('rate')
   }
   attributeChangedCallback(name, oldValue, newValue) {
     this.text = this.getAttribute('input')
     this.voice = this.getAttribute('voice')
+    this.pitch = this.getAttribute('pitch')
+    this.rate = this.getAttribute('rate')
   }
   static get observedAttributes() {
-    return ['input', 'voice'];
+    return ['input', 'voice', 'pitch', 'rate'];
   }
 }
 
