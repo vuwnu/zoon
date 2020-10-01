@@ -249,7 +249,7 @@ class ZoonNavbar extends HTMLElement {
 class ZoonLogo extends HTMLElement {
   connectedCallback() {
     let tag = this.getAttribute('tag');
-    this.innerHTML = `${tag} <a href="https://zoon.vuw.nu">Zoon</a>`;
+    this.innerHTML = `<a href="https://zoon.vuw.nu">Zoon</a>`;
   }
 }
 
