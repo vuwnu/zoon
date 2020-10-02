@@ -379,7 +379,6 @@ class ZoonTemplate extends HTMLElement {
       this.render();
       this.rendered = true;
     }
-
   }
 }
 
@@ -396,16 +395,18 @@ class ZoonCards extends HTMLElement {
   }
 }
 
-class ZoonLightswitch extends HTMLElement {
+class ZoonClassToggle extends HTMLElement {
   connectedCallback() {
-    const on = this.getAttribute('on')
-    const off = this.getAttribute('off')
-    this.init();
+    this.input = this.getAttribute('input')
+    this.target = this.getAttribute('target')
+
+    this.setup();
+
     this.addEventListener('click', function() {
-      this.toggle();
+      this.run();
     }, false);
   }
-  init() {
+  setup() {
     const target = $q('#' + this.getAttribute('target'));
     if (window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -414,21 +415,15 @@ class ZoonLightswitch extends HTMLElement {
       target.classList.add(`lightswitch-on`);
     }
   }
-  toggle() {
+  run() {
     const target = $q('#' + this.getAttribute('target'));
     if (target.classList.contains(`lightswitch-off`)) {
-      this.turnOn();
+      target.classList.remove(`lightswitch-off`);
+      target.classList.add(`lightswitch-on`);
     } else {
-      this.turnOff();
+      target.classList.remove(`lightswitch-on`);
+      target.classList.add(`lightswitch-off`);
     }
-  }
-  turnOn() {
-    const target = $q('#' + this.getAttribute('target'));
-    target.classList.replace(`lightswitch-off`, `lightswitch-on`);
-  }
-  turnOff() {
-    const target = $q('#' + this.getAttribute('target'));
-    target.classList.replace(`lightswitch-on`, `lightswitch-off`);
   }
 }
 
@@ -461,6 +456,7 @@ class ZoonButton extends HTMLElement {
   run() {
     console.log('button pressed');
     let target = $q(this.target);
+    // target.window[this.getAttribute('action')]
   }
   connectedCallback() {
     if (!this.rendered) {
@@ -532,7 +528,7 @@ function defineElements() {
   customElements.define("z-template", ZoonTemplate);
   customElements.define("z-cards", ZoonCards);
   customElements.define("z-table", ZoonTable);
-  customElements.define("z-lightswitch", ZoonLightswitch);
+  customElements.define("z-class-toggle", ZoonClassToggle);
 
   setTimeout(() => {
     customElements.define("z-var", ZoonVariable);
