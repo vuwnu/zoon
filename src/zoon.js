@@ -476,17 +476,17 @@ class ZoonSpeech extends HTMLElement {
     // Run speech audio
     window.speechSynthesis.speak(msg)
   }
-  connectedCallback() {
+  update() {
     this.text = this.getAttribute('input')
     this.voice = this.getAttribute('voice')
     this.pitch = this.getAttribute('pitch')
     this.rate = this.getAttribute('rate')
   }
+  connectedCallback() {
+    this.update();
+  }
   attributeChangedCallback(name, oldValue, newValue) {
-    this.text = this.getAttribute('input')
-    this.voice = this.getAttribute('voice')
-    this.pitch = this.getAttribute('pitch')
-    this.rate = this.getAttribute('rate')
+    this.update();
   }
   static get observedAttributes() {
     return ['input', 'voice', 'pitch', 'rate'];
