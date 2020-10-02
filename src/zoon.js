@@ -450,16 +450,33 @@ class ZoonObject extends HTMLElement {
 }
 
 class ZoonButton extends HTMLElement {
-  render() {
+  setup() {
+    this.actiom = this.getAttribute('action')
+    this.target = this.getAttribute('target')
+
     this.addEventListener('click', function() {
-      this.toggle();
+      this.run();
     }, false);
+  }
+  run() {
+    console.log('button pressed');
+    let target = $q(this.target);
   }
   connectedCallback() {
     if (!this.rendered) {
-      this.render();
+      this.setup();
       this.rendered = true;
     }
+  }
+  update() {
+    this.actiom = this.getAttribute('action')
+    this.target = this.getAttribute('target')
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.update();
+  }
+  static get observedAttributes() {
+    return ['action', 'target'];
   }
 }
 
