@@ -398,7 +398,7 @@ class ZoonCards extends HTMLElement {
 class ZoonClassToggle extends HTMLElement {
   connectedCallback() {
     this.input = this.getAttribute('input')
-    this.target = this.getAttribute('target')
+    this.target = $q('#' + this.getAttribute('target'));
 
     this.setup();
 
@@ -407,22 +407,20 @@ class ZoonClassToggle extends HTMLElement {
     }, false);
   }
   setup() {
-    const target = $q('#' + this.getAttribute('target'));
     if (window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      target.classList.add(`lightswitch-off`);
+      this.target.classList.add(`lightswitch-off`);
     } else {
-      target.classList.add(`lightswitch-on`);
+      this.target.classList.add(`lightswitch-on`);
     }
   }
   run() {
-    const target = $q('#' + this.getAttribute('target'));
-    if (target.classList.contains(`lightswitch-off`)) {
-      target.classList.remove(`lightswitch-off`);
-      target.classList.add(`lightswitch-on`);
+    if (this.target.classList.contains(`lightswitch-off`)) {
+      this.target.classList.remove(`lightswitch-off`);
+      this.target.classList.add(`lightswitch-on`);
     } else {
-      target.classList.remove(`lightswitch-on`);
-      target.classList.add(`lightswitch-off`);
+      this.target.classList.remove(`lightswitch-on`);
+      this.target.classList.add(`lightswitch-off`);
     }
   }
 }
