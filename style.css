@@ -53,25 +53,3 @@
 .docsContents h3:nth-of-type(1) {
     padding-top: 0;
 } */
-
-/* Theme */
-section {
-  border: 1px solid rgba(1,1,1,.3);
-  padding: 20px;
-  margin: 5px;
-}
-.default z-nav a {
-  background: #00000050;
-  border: 1px solid rgba(1,1,1,.3);
-  padding: 10px;
-  margin:0;
-}
-.default z-nav a:first-of-type {
-  border-right: 0;
-}
-.default z-nav a:last-of-type {
-  border-left: 0;
-}
-.default z-nav {
-  margin: 5px;
-}
