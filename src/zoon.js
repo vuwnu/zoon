@@ -33,21 +33,8 @@ const $q = document.querySelector.bind(document);
 const $qa = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 
 // CUSTOM ELEMENTS
-class ZoonData extends HTMLElement {
-  connectedCallback() {
-    let self = this;
-    let str = this.innerHTML;
 
-    str = str.replace(/(\n)+/g, '", "').replace(/( = )+/g, '":"').slice(0, -3).slice(2);
-    str = `{${str}}`
-
-    let finalString = JSON.parse(str);
-    Object.assign(zdata, finalString)
-    console.log(finalString);
-    self.remove();
-  }
-}
-
+// Site Handlers ELEMs
 class ZoonFrame extends HTMLElement {
   constructor() {
     super();
@@ -99,6 +86,54 @@ class ZoonFrame extends HTMLElement {
   // }
 }
 
+class ZoonTitle extends HTMLElement {
+  run() {
+    let main = this.getAttribute('title') || ""
+    let prepend = this.getAttribute('prepend') || ""
+    let append = this.getAttribute('append') || ""
+
+    let titleFull = `${prepend}${main}${append}`
+
+    document.title = titleFull;
+
+    zoon.log('z-title', '#2f84de', `title set as ${titleFull}`);
+  }
+  connectedCallback() {
+    this.run();
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.run();
+  }
+  static get observedAttributes() {
+    return ['title', 'prepend', 'append'];
+  }
+}
+
+// Input ELEMs
+
+class Z_URL_Input extends HTMLElement {
+  connectedCallback() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = this.getAttribute('src');
+    const key = this.getAttribute('key');
+    const queryValue = urlParams.get(key);
+
+    let fetchme;
+
+    if (queryValue === null ) {
+      return;
+    } else {
+      fetchme = source + queryValue + '.html'
+      fetch(fetchme)
+      .then(response => response.text())
+      .then(text => {
+        this.innerHTML = text
+      });
+    }
+    zoon.log('z-page', '#2fde45', `query is ${queryValue}`);
+  }
+}
+
 class ZoonHTML extends HTMLElement {
   connectedCallback() {
     this.setFromSource();
@@ -122,26 +157,18 @@ class ZoonHTML extends HTMLElement {
   }
 }
 
-class ZoonTitle extends HTMLElement {
-  run() {
-    let main = this.getAttribute('title') || ""
-    let prepend = this.getAttribute('prepend') || ""
-    let append = this.getAttribute('append') || ""
-
-    let titleFull = `${prepend}${main}${append}`
-
-    document.title = titleFull;
-
-    zoon.log('z-title', '#2f84de', `title set as ${titleFull}`);
-  }
+class ZoonData extends HTMLElement {
   connectedCallback() {
-    this.run();
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    this.run();
-  }
-  static get observedAttributes() {
-    return ['title', 'prepend', 'append'];
+    let self = this;
+    let str = this.innerHTML;
+
+    str = str.replace(/(\n)+/g, '", "').replace(/( = )+/g, '":"').slice(0, -3).slice(2);
+    str = `{${str}}`
+
+    let finalString = JSON.parse(str);
+    Object.assign(zdata, finalString)
+    console.log(finalString);
+    self.remove();
   }
 }
 
@@ -397,6 +424,8 @@ class ZoonCards extends HTMLElement {
 
 class ZoonClassToggle extends HTMLElement {
   connectedCallback() {
+    this.firstClass = this.getAttribute('1')
+    this.secondClass = this.getAttribute('2')
     this.input = this.getAttribute('input')
     this.target = $q('#' + this.getAttribute('target'));
 
@@ -563,6 +592,8 @@ function defineElements() {
   }
 }(window.location));
 
+
+// Setup stuff
 (function () {
   const link = document.createElement('link');
   link.href = 'https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/dist/zoon.min.css';
