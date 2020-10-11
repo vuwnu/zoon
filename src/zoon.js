@@ -597,7 +597,7 @@ function defineElements() {
 (function () {
   // Setup link to CSS styling for elements
   const link = document.createElement('link');
-  link.href = '/dist/zoon.min.css';
+  link.href = 'https://cdn.jsdelivr.net/gh/vuwnu/zoon@master/dist/zoon.min.css';
   link.rel = "stylesheet";
   document.head.append(link);
 })();
