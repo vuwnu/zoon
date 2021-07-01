@@ -9,6 +9,6 @@
   "sourceMap": false,
   "outFile": "dist/zoon_full.js"
 },
-"include": ["src/*"],
+"include": ["src/ts/"],
 "exclude": ["node_modules", "**/*.spec.ts"]
 }
