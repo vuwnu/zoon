@@ -9,7 +9,7 @@
   "removeComments": true,
   "preserveConstEnums": true,
   "sourceMap": false,
-  "outFile": "dist/zoon_full.js"
+  "outFile": "src/zoon.js"
 },
 "include": ["src/ts/"],
 "exclude": ["node_modules", "**/*.spec.ts"]
