@@ -2,7 +2,9 @@
 "compileOnSave": true,
 
 "compilerOptions": {
+  "target": "ESNEXT",
   "module": "system",
+  "allowJs": true,
   "noImplicitAny": true,
   "removeComments": true,
   "preserveConstEnums": true,
