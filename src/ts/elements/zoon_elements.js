@@ -500,6 +500,24 @@ class ZoonSpeech extends HTMLElement {
   }
 }
 
+let componentLibrary = {
+
+  "z-title":"ZoonTitle",
+  "z-frame":"ZoonFrame",
+  "z-speech":"ZoonSpeech"
+
+}
+
+function logElements(data) {
+
+  Object.keys(data).forEach(function(key) {
+    customElements.define(data[key], key);
+    console.log(key + 'has been defined!')
+  })
+
+}
+
+
 // Defining all custom elements
 function defineElements() {
   // Site handler elements
