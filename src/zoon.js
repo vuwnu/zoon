@@ -439,6 +439,17 @@ class ZoonSpeech extends HTMLElement {
         return ['input', 'voice', 'pitch', 'rate'];
     }
 }
+let componentLibrary = {
+    "z-title": "ZoonTitle",
+    "z-frame": "ZoonFrame",
+    "z-speech": "ZoonSpeech"
+};
+function logElements(data) {
+    Object.keys(data).forEach(function (key) {
+        customElements.define(key, data[key]);
+        console.log(data[key] + 'has been defined!');
+    });
+}
 function defineElements() {
     customElements.define("zoon-logo", ZoonLogo);
     customElements.define("z-title", ZoonTitle);

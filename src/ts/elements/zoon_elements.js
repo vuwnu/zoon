@@ -511,8 +511,8 @@ let componentLibrary = {
 function logElements(data) {
 
   Object.keys(data).forEach(function(key) {
-    customElements.define(data[key], key);
-    console.log(key + 'has been defined!')
+    customElements.define(key, data[key]);
+    console.log(data[key] + 'has been defined!')
   })
 
 }
