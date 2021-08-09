@@ -1,28 +1,28 @@
-name: minify
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@master
-        with:
-          directory: 'src'
-          output: 'dist'
-
-      # Runs a set of commands using the runners shell
-      - name: Auto committing minified files
-        uses: stefanzweifel/git-auto-commit-action@v3.0.0
-        with:
-          repository: 'dist'
-          commit_message: "Github Action: Auto Minified JS and CSS files"
-          branch: ${{ github.ref }}
+# name: minify
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
+#
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - uses: actions/checkout@v2
+#
+#       # Runs a single command using the runners shell
+#       - name: Auto Minify
+#         uses: nizarmah/auto-minify@master
+#         with:
+#           directory: 'src'
+#           output: 'dist'
+#
+#       # Runs a set of commands using the runners shell
+#       - name: Auto committing minified files
+#         uses: stefanzweifel/git-auto-commit-action@v3.0.0
+#         with:
+#           repository: 'dist'
+#           commit_message: "Github Action: Auto Minified JS and CSS files"
+#           branch: ${{ github.ref }}
