@@ -9,8 +9,8 @@
   "removeComments": true,
   "preserveConstEnums": true,
   "sourceMap": false,
-  "outFile": "src/zoon.js"
+  "outDir": "dist/components",
 },
-"include": ["src/ts/"],
+"include": ["src/"],
 "exclude": ["node_modules", "**/*.spec.ts"]
 }
